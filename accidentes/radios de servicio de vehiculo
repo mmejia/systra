@@ -1,0 +1,26 @@
+radios de servicio de vehiculo
+Disposicion 
+tipo licencia
+calle1 
+inventario 
+descripcion 
+Quitar el mensaje
+
+Cuando esta detenido y lesionado entonces se traslada a hospitales
+y se queda con custodia
+
+Y cuando es detenido nada mas es detenido en
+Y cuando es lesionado y finado trasladado a 
+
+
+Cuando lo pones normal te desactiva el parte y te valida el campo de custodia
+a disposicion te lo deja al ministerio publico.
+
+ cancelar 
+
+ Quitar se desconoce en la captura de lesionado
+
+ Falla al cargar los datos de la infraccion cuando se esta capturando el inventario
+ Falla cargar Saldo de Sangre Competencia judicial
+
+ No esta cargando los datos de inventario  cuando se quiere liberar

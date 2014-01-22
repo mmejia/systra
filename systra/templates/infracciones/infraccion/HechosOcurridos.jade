@@ -1,0 +1,36 @@
+.controls.controls-row
+	.span4
+		div
+			label Colonia:
+			input#colonia_spa_inf.ui-autocomplete-input.upper(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true",placeholder="Colonia")
+	.span4
+		div
+			label Calle 1:
+			input#calle1_spa_inf.ui-autocomplete-input.upper(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup=,placeholder="Calle1")
+	.span4
+		div
+			label Calle 2:
+			input#calle2_spa_inf.ui-autocomplete-input.upper(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup=,placeholder="Calle2")
+.controls.controls-row
+	.span4
+		label Referencia y/o No.:
+		input#referencia_spa_inf.input-xlarge.upper(type="text",placeholder="Referencia")
+	.span4
+		label Circulacion:
+		select#circulacion_spa_inf(type="text",placeholder="Circulacion")
+	.span4
+		label Tipo de Operativo:
+		select#tipo_operativo_spa_inf
+.controls.controls-row
+	.span4
+		label Latitud:
+		input#lat_inf.upper(type="text", placeholder="Latitud")
+	.span4
+		label Longitud:
+		input#lng_inf.upper(type="text",placeholder="Longitud")
+	.span3
+		br
+		button#buscar_punto_inf.btn(type="button", title="Ubicar punto de referencia")
+			span.icosystra-search
+		button#editar_punto_inf.btn(type="button", title="Editar punto de referencia")
+			span.icosystra-pencil

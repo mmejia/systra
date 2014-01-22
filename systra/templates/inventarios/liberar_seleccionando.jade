@@ -1,0 +1,179 @@
+extends base
+block stylesheet
+	link(rel="stylesheet", href="/static/stylesheets/vendor/bootstrap-image-gallery.min.css")
+	link(rel="stylesheet", href="/static/stylesheets/vendor/blueimp-gallery.min.css")	
+br
+br
+block contenido
+	a.trigger(href="#")
+	.panel
+		ul#ul-liberacion-server
+	{{codigo|safe }}	 
+	br
+	br
+	br
+	.pantalla-captura
+		br
+		include cabecera.jade
+		.controls.controls-row
+			.btn-add
+				label Folio de Inventario
+				select#folio_inventario
+					|<option value="SELECCIONAR">**SELECCIONAR**</option>
+					for folio in folios
+						|<option value="{{folio.id}}">{{folio.folio_inventario}}</option>
+		.row-fluid
+			legend Datos generales
+			#loading
+			.controls.controls-row
+				.span4
+					label Por el Concepto de:
+					span.span-inve#concepto
+				.span4	
+					label NºInfraccion
+					span.span-inve#folio_infraccion
+				.span4	
+					label Nºde parte
+					span.span-inve#no_accidente
+			.controls.controls-row
+				.span4
+					label Calle 1:
+					span.span-inve#calle1
+				.span2
+					label Ext.:
+					span.span-inve#exterior
+				.span2
+					label Int.:
+					span.span-inve#interior
+			.controls.controls-row
+				.span4
+					label Calle2:
+					span.span-inve#calle2
+				.span4
+					label Colonia:
+					span.span-inve#colonia
+				.span4	
+					label Depositado en:(pensión)
+					span.span-inve#depositado
+		.row-fluid
+			.span6
+				legend Datos del Vehículo
+				.bloque
+					.controls.controls-row
+						.span6
+							label Marca
+							span.span-inve#marca
+						.span6	
+							label Tipo
+							span.span-inve#tipo
+					.controls.controls-row
+						.span6	
+							label Modelo
+							span.span-inve#modelo
+						.span6
+							label Placas
+							span.span-inve#placas
+					.controls.controls-row
+						.span6	
+							label Color
+							span.span-inve#color
+						.span6
+							label Serie del Vehículo
+							span.span-inve#serie
+					.controls.controls-row
+						.span6
+							label Conductor
+							span.span-inve#conductor
+			.span6
+				legend Datos de Ingreso a la Pensión
+				.bloque
+					.controls.controls-row
+						.span6
+							label Lugar
+							span.span-inve#lugar_ingreso
+						.span6
+							.control-group
+								label Fecha de entrada
+								span.span-inve#fecha_ingreso
+					.controls.controls-row
+						.span6
+							.control-group 
+								label Hora de entrada
+								span.span-inve#hora_ingreso
+					.controls.controls-row
+						.span12
+							label Recibido por:
+							span.span-inve#recibido_ingreso.input-xxlarge
+					.controls.controls-row
+						.span4
+							label Por sus medios
+							span.span-inve#susmedios
+						.span2
+							label Grua
+							span.span-inve#grua
+						.span3
+							label Particular
+							span.span-inve#particular.input
+					.controls.controls-row
+						.span2
+							label Tránsito	
+							span.span-inve#transito
+						.span3
+							label Nº
+							input#numero_unidad.input-mini
+		include inventarios/inventario/otros-liberacion
+		legend Datos de salida
+		.controls.controls-row
+			.span4
+				label Fecha de Liberación
+				input#fecha_liberacion.input(data-format="yyyy-MM-dd",type="text",placeholder="Fecha")
+			.span4
+				label Hora de la Liberación
+				input#hora_lib(data-format="hh:mm",type="text",placeholder="Hora")
+			.span4
+				label Area donde se realiza la Liberación
+				select#lugar_liberacion(type="text")
+					option(value="NO") **SELECCIONAR**
+					option(value="PLAZA MAYOR") PLAZA MAYOR
+					option(value="TRANSITO MUNICIPAL") TRANSITO MUNICIPAL
+
+		.controls.controls-row
+			.span4
+				label No Recibo Pago:
+				input#no_recibo(type="text")
+		legend Documentos que entrega
+		.controls.controls-row
+			.span7
+				br
+				label.radio.inline
+					input#personaFisica(type="radio",name="fiscal",value="PersonaFisica")
+					|Persona Física
+				label.radio.inline
+					input#personaMoral(type="radio",name="fiscal",value="PersonaMoral")
+					|Persona Moral
+		br
+		include inventarios/inventario/PersonaFisica
+		include inventarios/inventario/PersonaMoral	
+		br
+		.controls.controls-row
+			.span12
+				label Nombre de la persona a quien se le entrega:
+				input#liberacion_recibe.input-xxlarge(type="text")
+		.controls.controls-row
+			br
+			button#liberar.btn.btn-primary(type="button")
+				|Liberar
+				i.icon-thumbs-up.icon-white
+			button#cancelar.btn(type="button", value="Cancelar")
+				|Cancelar
+				i.icon-remove
+			include inventarios/ShowReportePdf
+			include inventarios/inventario/galeria
+block javascripts
+	script(src="/static/javascripts/vendor/jquery.form.min.js")
+	script(src="/static/javascripts/vendor/jquery.blueimp-gallery.min.js")
+	script(src="/static/javascripts/vendor/bootstrap-image-gallery.min.js")
+	script(src="/static/javascripts/util-libera.js")
+	script(src="/static/javascripts/core/socket.io.js")
+	script(src="/static/javascripts/vendor/bootstrap-datetimepicker.js")
+	script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/main-libera.js")	 

@@ -1,0 +1,68 @@
+#CapturaSaldoSangreView(title="Capturar Saldo Sangre")
+	.controls.controls-row
+		.span4
+			.control-group.ss
+				label Nombre
+				input#nombre_ss(type="text", placeholder="Nombre")
+				span.help-inline
+		.span4
+			.control-group.ss
+				label Estado Físico
+				select#estado_ss
+				span.help-inline
+		.span4
+			.control-group.ss
+				label Edad
+				input#edad_ss.input-mini(type="text", placeholder="Edad")
+				span.help-inline
+	.controls.controls-row
+		.span4
+			.control-group.ss
+				label Nacionalidad:
+				select#nacionalidad_ss
+					option(value="SELECCIONAR") **SELECCIONAR**
+					option(value="EXTRANJERO") EXTRANJERO
+					option(value="MEXICANA") MEXICANA
+					option(value="SE DESCONOCE") SE DESCONOCE
+				span.help-inline
+		.span4
+			.control-group.ss
+				label Domicilio
+				input#domicilio_ss(type="text", placeholder="Domicilio")
+				span.help-inline
+		.span4
+			.control-group.ss
+				label Levanta Por:
+				select#levantadopor_ss
+				span.help-inline
+	.controls.controls-row
+		.span4
+			.control-group.ss
+				label Trasladado a:
+				select#trasladadoa_ss
+				span.help-inline
+		.span4
+			.control-group.ss
+				label A disposición de:
+				select#adisposicionde_ss
+					option(value="SELECCIONAR") **SELECCIONAR**
+					option(value="Agente MP") Agente MP
+					option(value="NO") NO
+				span.help-inline
+		.span4
+			.control-group.ss
+				label Se encontraba
+				select#seencontraba_ss
+				span.help-inline
+	.controls.controls-row
+		.span6.offset4
+			br
+			button.btn.btn-primary#dialogo-aceptar-saldo-sangre.btn-primary 
+				|Aceptar
+				span.icosystra-checkmark2
+			button.btn#cancelar-saldo-sangre.btn
+				|Cancelar
+				span.icosystra-cancel-circle
+			
+		
+

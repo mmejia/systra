@@ -1,0 +1,1560 @@
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+
+Error: django project not found
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+
+Error: django project not found
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+
+Error: django project not found
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+
+Error: django project not found
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+
+Error: django project not found
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+
+Error: django project not found
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+
+Error: django project not found
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+
+Error: django project not found
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2013-11-08 18:13:20 [15577] [INFO] Starting gunicorn 18.0
+2013-11-08 18:13:20 [15577] [INFO] Listening at: http://127.0.0.1:8000 (15577)
+2013-11-08 18:13:20 [15577] [INFO] Using worker: sync
+2013-11-08 18:13:20 [15581] [INFO] Booting worker with pid: 15581
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/urls.py", line 133, in my_view
+    return render(request, 'accidentes/hola.jade', {"foo": "bar"})
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 170, in render_to_string
+    t = get_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 146, in get_template
+    template, origin = find_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 139, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: accidentes/hola.jade
+2013-11-08 18:25:24 [15577] [CRITICAL] WORKER TIMEOUT (pid:15581)
+2013-11-08 18:25:24 [15577] [CRITICAL] WORKER TIMEOUT (pid:15581)
+2013-11-08 21:35:21 [15676] [INFO] Booting worker with pid: 15676
+2013-11-08 21:57:14 [15577] [CRITICAL] WORKER TIMEOUT (pid:15676)
+2013-11-08 21:57:14 [15577] [CRITICAL] WORKER TIMEOUT (pid:15676)
+2013-11-09 09:47:21 [15857] [INFO] Booting worker with pid: 15857
+2013-11-09 18:08:14 [15577] [CRITICAL] WORKER TIMEOUT (pid:15857)
+2013-11-09 18:08:16 [15577] [CRITICAL] WORKER TIMEOUT (pid:15857)
+2013-11-09 18:08:17 [20100] [INFO] Booting worker with pid: 20100
+2013-11-09 18:10:00 [15577] [CRITICAL] WORKER TIMEOUT (pid:20100)
+2013-11-09 18:10:00 [15577] [CRITICAL] WORKER TIMEOUT (pid:20100)
+2013-11-09 18:10:00 [20121] [INFO] Booting worker with pid: 20121
+2013-11-10 09:16:00 [15577] [CRITICAL] WORKER TIMEOUT (pid:20121)
+2013-11-10 09:16:01 [15577] [CRITICAL] WORKER TIMEOUT (pid:20121)
+2013-11-10 09:16:02 [15577] [CRITICAL] WORKER TIMEOUT (pid:20121)
+2013-11-10 09:16:02 [20128] [INFO] Booting worker with pid: 20128
+2013-11-10 21:11:17 [15577] [CRITICAL] WORKER TIMEOUT (pid:20128)
+2013-11-10 21:11:33 [24170] [INFO] Booting worker with pid: 24170
+2013-11-11 06:48:15 [15577] [CRITICAL] WORKER TIMEOUT (pid:24170)
+2013-11-11 06:48:16 [15577] [CRITICAL] WORKER TIMEOUT (pid:24170)
+2013-11-11 06:48:19 [24430] [INFO] Booting worker with pid: 24430
+2013-11-11 08:41:36 [15577] [CRITICAL] WORKER TIMEOUT (pid:24430)
+2013-11-11 08:41:38 [15577] [CRITICAL] WORKER TIMEOUT (pid:24430)
+2013-11-11 08:41:38 [25345] [INFO] Booting worker with pid: 25345
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/urls.py", line 133, in my_view
+    return render(request, 'accidentes/hola.jade', {"foo": "bar"})
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 170, in render_to_string
+    t = get_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 146, in get_template
+    template, origin = find_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 139, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: accidentes/hola.jade
+2013-11-11 08:43:00 [15577] [INFO] Handling signal: term
+2013-11-11 08:43:00 [15577] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2013-11-11 08:43:26 [25363] [INFO] Starting gunicorn 18.0
+2013-11-11 08:43:26 [25363] [INFO] Listening at: http://127.0.0.1:8000 (25363)
+2013-11-11 08:43:26 [25363] [INFO] Using worker: sync
+2013-11-11 08:43:26 [25366] [INFO] Booting worker with pid: 25366
+2013-11-11 08:56:22 [25363] [INFO] Handling signal: term
+2013-11-11 08:56:22 [25363] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2013-11-11 08:56:31 [25471] [INFO] Starting gunicorn 18.0
+2013-11-11 08:56:31 [25471] [INFO] Listening at: http://127.0.0.1:8000 (25471)
+2013-11-11 08:56:31 [25471] [INFO] Using worker: sync
+2013-11-11 08:56:31 [25475] [INFO] Booting worker with pid: 25475
+2013-11-11 08:58:25 [25471] [INFO] Handling signal: term
+2013-11-11 08:58:25 [25471] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2013-11-11 08:58:33 [25495] [INFO] Starting gunicorn 18.0
+2013-11-11 08:58:33 [25495] [INFO] Listening at: http://127.0.0.1:8000 (25495)
+2013-11-11 08:58:33 [25495] [INFO] Using worker: sync
+2013-11-11 08:58:33 [25499] [INFO] Booting worker with pid: 25499
+2013-11-11 08:59:47 [25495] [INFO] Handling signal: term
+2013-11-11 08:59:47 [25495] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2013-11-11 08:59:53 [25508] [INFO] Starting gunicorn 18.0
+2013-11-11 08:59:53 [25508] [INFO] Listening at: http://127.0.0.1:8000 (25508)
+2013-11-11 08:59:53 [25508] [INFO] Using worker: sync
+2013-11-11 08:59:53 [25514] [INFO] Booting worker with pid: 25514
+2013-11-11 09:02:25 [25508] [INFO] Handling signal: term
+2013-11-11 09:02:25 [25508] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2013-11-11 09:02:30 [25535] [INFO] Starting gunicorn 18.0
+2013-11-11 09:02:30 [25535] [INFO] Listening at: http://127.0.0.1:8000 (25535)
+2013-11-11 09:02:30 [25535] [INFO] Using worker: sync
+2013-11-11 09:02:30 [25541] [INFO] Booting worker with pid: 25541
+Internal Server Error: /static/stylesheets/vendor/normalize.css
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/Library/Python/2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/Library/Python/2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/urls.py", line 265
+    urlpatterns += staticfiles_urlpatterns()
+   ^
+IndentationError: unexpected indent
+Internal Server Error: /static/stylesheets/vendor/normalize.css
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/Library/Python/2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/Library/Python/2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/urls.py", line 265
+    urlpatterns += staticfiles_urlpatterns()
+   ^
+IndentationError: unexpected indent
+2013-11-11 09:05:33 [25535] [INFO] Handling signal: term
+2013-11-11 09:05:33 [25535] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2013-11-11 09:05:37 [25568] [INFO] Starting gunicorn 18.0
+2013-11-11 09:05:37 [25568] [INFO] Listening at: http://127.0.0.1:8000 (25568)
+2013-11-11 09:05:37 [25568] [INFO] Using worker: sync
+2013-11-11 09:05:37 [25572] [INFO] Booting worker with pid: 25572
+Internal Server Error: /static/stylesheets/vendor/normalize.css
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/Library/Python/2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/Library/Python/2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/urls.py", line 265
+    urlpatterns += staticfiles_urlpatterns()
+   ^
+IndentationError: unexpected indent
+Internal Server Error: /static/stylesheets/vendor/normalize.css
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/Library/Python/2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/Library/Python/2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/urls.py", line 265
+    urlpatterns += staticfiles_urlpatterns()
+   ^
+IndentationError: unexpected indent
+Internal Server Error: /static/stylesheets/vendor/normalize.css
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/Library/Python/2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/Library/Python/2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/urls.py", line 265
+    urlpatterns += staticfiles_urlpatterns()
+   ^
+IndentationError: unexpected indent
+Internal Server Error: /static/stylesheets/vendor/normalize.css
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/Library/Python/2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/Library/Python/2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/urls.py", line 265
+    urlpatterns += staticfiles_urlpatterns()
+   ^
+IndentationError: unexpected indent
+Internal Server Error: /static/stylesheets/vendor/normalize.css
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/Library/Python/2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/Library/Python/2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/urls.py", line 265
+    urlpatterns += staticfiles_urlpatterns()
+   ^
+IndentationError: unexpected indent
+Internal Server Error: /static/stylesheets/vendor/normalize.css
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/Library/Python/2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/Library/Python/2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/urls.py", line 265
+    urlpatterns += staticfiles_urlpatterns()
+   ^
+IndentationError: unexpected indent
+Internal Server Error: /static/stylesheets/vendor/normalize.css
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/Library/Python/2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/Library/Python/2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/urls.py", line 265
+    urlpatterns += staticfiles_urlpatterns()
+   ^
+IndentationError: unexpected indent
+Internal Server Error: /static/stylesheets/vendor/normalize.css
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/Library/Python/2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/Library/Python/2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/urls.py", line 265
+    urlpatterns += staticfiles_urlpatterns()
+   ^
+IndentationError: unexpected indent
+Internal Server Error: /static/stylesheets/vendor/normalize.css
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/Library/Python/2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/Library/Python/2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/urls.py", line 265
+    urlpatterns += staticfiles_urlpatterns()
+   ^
+IndentationError: unexpected indent
+2013-11-11 09:06:44 [25568] [INFO] Handling signal: term
+2013-11-11 09:06:44 [25568] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2013-11-11 09:06:51 [25581] [INFO] Starting gunicorn 18.0
+2013-11-11 09:06:51 [25581] [INFO] Listening at: http://127.0.0.1:8000 (25581)
+2013-11-11 09:06:51 [25581] [INFO] Using worker: sync
+2013-11-11 09:06:51 [25585] [INFO] Booting worker with pid: 25585
+Internal Server Error: /static/stylesheets/vendor/normalize.css
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/Library/Python/2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/Library/Python/2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/urls.py", line 265
+    urlpatterns += staticfiles_urlpatterns()
+   ^
+IndentationError: unexpected indent
+Internal Server Error: /static/stylesheets/vendor/normalize.css
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/Library/Python/2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/Library/Python/2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/urls.py", line 265
+    urlpatterns += staticfiles_urlpatterns()
+   ^
+IndentationError: unexpected indent
+Internal Server Error: /static/stylesheets/vendor/normalize.css
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/Library/Python/2.7/site-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/Library/Python/2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/urls.py", line 265
+    urlpatterns += staticfiles_urlpatterns()
+   ^
+IndentationError: unexpected indent
+Internal Server Error: /getProfile/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/ViewMain.py", line 8, in getProfile
+    if not request.session.get['profile']:
+TypeError: 'instancemethod' object is not subscriptable
+2013-11-11 13:25:12 [25581] [INFO] Handling signal: term
+Exception SystemExit: 0 in <module 'threading' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/threading.pyc'> ignored
+2013-11-11 13:25:14 [25581] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2013-11-11 17:50:57 [30680] [INFO] Starting gunicorn 18.0
+2013-11-11 17:50:57 [30680] [INFO] Listening at: http://127.0.0.1:8000 (30680)
+2013-11-11 17:50:57 [30680] [INFO] Using worker: sync
+2013-11-11 17:50:57 [30684] [INFO] Booting worker with pid: 30684
+2013-11-11 17:54:40 [30680] [INFO] Handling signal: term
+2013-11-11 17:54:40 [30680] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2013-11-12 19:06:54 [39501] [INFO] Starting gunicorn 18.0
+2013-11-12 19:06:54 [39501] [INFO] Listening at: http://127.0.0.1:8000 (39501)
+2013-11-12 19:06:54 [39501] [INFO] Using worker: sync
+2013-11-12 19:06:54 [39505] [INFO] Booting worker with pid: 39505
+Internal Server Error: /getProfile/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/systra/ViewMain.py", line 8, in getProfile
+    if not request.session.get['profile']:
+TypeError: 'instancemethod' object is not subscriptable
+Internal Server Error: /content/content/undefined/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/content/views.py", line 10, in content_content
+    recurso=Resource.objects.get(id=id)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 395, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 669, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 687, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1271, in add_q
+    can_reuse=used_aliases, force_having=force_having)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1202, in add_filter
+    connector)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 71, in add
+    value = obj.prepare(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 339, in prepare
+    return self.field.get_prep_lookup(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 322, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 555, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'undefined'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg.build_pdf()
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg.build_pdf()
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg.build_pdf()
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg.build_pdf()
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /content/content/undefined/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/content/views.py", line 10, in content_content
+    recurso=Resource.objects.get(id=id)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 395, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 669, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 687, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1271, in add_q
+    can_reuse=used_aliases, force_having=force_having)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1202, in add_filter
+    connector)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 71, in add
+    value = obj.prepare(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 339, in prepare
+    return self.field.get_prep_lookup(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 322, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 555, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'undefined'
+Internal Server Error: /content/content/undefined/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/content/views.py", line 10, in content_content
+    recurso=Resource.objects.get(id=id)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 395, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 669, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 687, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1271, in add_q
+    can_reuse=used_aliases, force_having=force_having)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1202, in add_filter
+    connector)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 71, in add
+    value = obj.prepare(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 339, in prepare
+    return self.field.get_prep_lookup(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 322, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 555, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'undefined'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg.build_pdf()
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg.build_pdf()
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg.build_pdf()
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg.build_pdf()
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /content/content/undefined/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/content/views.py", line 10, in content_content
+    recurso=Resource.objects.get(id=id)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 395, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 669, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 687, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1271, in add_q
+    can_reuse=used_aliases, force_having=force_having)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1202, in add_filter
+    connector)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 71, in add
+    value = obj.prepare(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 339, in prepare
+    return self.field.get_prep_lookup(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 322, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 555, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'undefined'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg.build_pdf()
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /content/content/undefined/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/content/views.py", line 10, in content_content
+    recurso=Resource.objects.get(id=id)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 395, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 669, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 687, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1271, in add_q
+    can_reuse=used_aliases, force_having=force_having)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1202, in add_filter
+    connector)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 71, in add
+    value = obj.prepare(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 339, in prepare
+    return self.field.get_prep_lookup(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 322, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 555, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'undefined'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg.build_pdf()
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /content/content/undefined/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/content/views.py", line 10, in content_content
+    recurso=Resource.objects.get(id=id)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 395, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 669, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 687, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1271, in add_q
+    can_reuse=used_aliases, force_having=force_having)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1202, in add_filter
+    connector)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 71, in add
+    value = obj.prepare(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 339, in prepare
+    return self.field.get_prep_lookup(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 322, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 555, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'undefined'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg.build_pdf()
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /content/content/undefined/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/content/views.py", line 10, in content_content
+    recurso=Resource.objects.get(id=id)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 395, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 669, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 687, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1271, in add_q
+    can_reuse=used_aliases, force_having=force_having)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1202, in add_filter
+    connector)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 71, in add
+    value = obj.prepare(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 339, in prepare
+    return self.field.get_prep_lookup(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 322, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 555, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'undefined'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg.build_pdf()
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /content/content/undefined/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/content/views.py", line 10, in content_content
+    recurso=Resource.objects.get(id=id)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 395, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 669, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 687, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1271, in add_q
+    can_reuse=used_aliases, force_having=force_having)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1202, in add_filter
+    connector)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 71, in add
+    value = obj.prepare(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 339, in prepare
+    return self.field.get_prep_lookup(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 322, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 555, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'undefined'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg.build_pdf()
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /content/content/undefined/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/content/views.py", line 10, in content_content
+    recurso=Resource.objects.get(id=id)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 395, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 669, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 687, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1271, in add_q
+    can_reuse=used_aliases, force_having=force_having)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1202, in add_filter
+    connector)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 71, in add
+    value = obj.prepare(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 339, in prepare
+    return self.field.get_prep_lookup(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 322, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 555, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'undefined'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg.build_pdf()
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /content/content/undefined/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/content/views.py", line 10, in content_content
+    recurso=Resource.objects.get(id=id)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 395, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 669, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 687, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1271, in add_q
+    can_reuse=used_aliases, force_having=force_having)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1202, in add_filter
+    connector)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 71, in add
+    value = obj.prepare(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 339, in prepare
+    return self.field.get_prep_lookup(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 322, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 555, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'undefined'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg.build_pdf()
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg.build_pdf()
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg=GeneratePosteriorPdf(data,ruta)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /content/content/undefined/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/content/views.py", line 10, in content_content
+    recurso=Resource.objects.get(id=id)
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 395, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 669, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 687, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1271, in add_q
+    can_reuse=used_aliases, force_having=force_having)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1202, in add_filter
+    connector)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 71, in add
+    value = obj.prepare(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/where.py", line 339, in prepare
+    return self.field.get_prep_lookup(lookup_type, value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 322, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "/Library/Python/2.7/site-packages/django/db/models/fields/__init__.py", line 555, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'undefined'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg=GeneratePosteriorPdf(data,ruta)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+Internal Server Error: /accidente/ventana_reporte_posterior/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/contrib/auth/decorators.py", line 25, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/views.py", line 91, in ventana_reporte_posterior
+    gg=GeneratePosteriorPdf(data,ruta)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 82, in build_pdf
+    doc.build(Story,onFirstPage=self.myFirstPage)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1129, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 889, in build
+    self.clean_hanging()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 517, in clean_hanging
+    self.handle_flowable(self._hanging)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 769, in handle_flowable
+    f.apply(self)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 146, in apply
+    getattr(doc,arn)(*args)
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 1105, in handle_pageBegin
+    self._handle_pageBegin()
+  File "/Library/Python/2.7/site-packages/reportlab/platypus/doctemplate.py", line 542, in handle_pageBegin
+    self.pageTemplate.onPage(self.canv,self)
+  File "/Users/mmejia/Documents/proyecto_transito/systra/accidentes/GeneratePosteriorPdf.py", line 89, in myFirstPage
+    numero= croquis.get('id',0)
+AttributeError: 'unicode' object has no attribute 'get'
+2013-11-12 19:59:36 [39501] [INFO] Handling signal: term
+169
+/Users/mmejia/Documents/proyecto_transito/systra/systra/static/pdfs/accidente/169.pdf
+169
+169
+169
+169
+179
+179
+179
+179
+/Users/mmejia/Documents/proyecto_transito/systra/systra/static/pdfs/accidente/179.pdf
+179
+179
+/Users/mmejia/Documents/proyecto_transito/systra/systra/static/pdfs/accidente/179.pdf
+168
+168
+168
+168
+168
+168
+168
+168
+168
+168
+168
+2013-11-12 19:59:36 [39501] [INFO] Shutting down: Master
+!!!
+!!! WARNING: This command is deprecated.
+!!! 
+!!!     You should now run your application with the WSGI interface
+!!!     installed with your project. Ex.:
+!!! 
+!!!         gunicorn myproject.wsgi:application
+!!! 
+!!!     See https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/gunicorn/
+!!!     for more info.
+!!!
+
+2013-11-12 19:59:42 [40029] [INFO] Starting gunicorn 18.0
+2013-11-12 19:59:42 [40029] [INFO] Listening at: http://127.0.0.1:8000 (40029)
+2013-11-12 19:59:42 [40029] [INFO] Using worker: sync
+2013-11-12 19:59:42 [40033] [INFO] Booting worker with pid: 40033
+2013-11-12 20:00:05 [40029] [INFO] Handling signal: term
+2013-11-12 20:00:05 [40029] [INFO] Shutting down: Master

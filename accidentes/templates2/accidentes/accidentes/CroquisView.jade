@@ -1,0 +1,18 @@
+//482 X 361
+#croquis_pp
+	article#a_croquis
+		h5 Croquis
+		figure
+			img#img_croquis(src="/croquis/croquis.png")
+			
+	
+	article#simbologia_pp
+		h5 Simbología
+		textarea#ta_simbologia_pp
+br
+br
+form#formSubirCroquis(action="upload_croquis",method="post", enctype="multipart/form-data")
+	input(type="file", name="file_name")
+	button#subir_croquis.btn(type="submit") Agregar
+	#resultado_croquis
+

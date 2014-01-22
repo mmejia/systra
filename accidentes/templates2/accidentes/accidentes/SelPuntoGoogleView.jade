@@ -1,0 +1,33 @@
+#selPuntoView
+	#dialog-modal(title="Capturar punto")
+		.controls.controls-row
+			.span6
+				label Dirección:
+				input#addresspicker_map.span6.ui-autocomplete-input(autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+			.controls.controls-row
+					.span3
+						label Ciudad:
+						input#locality(disabled="true")
+						label Estado:
+						input#administrative_area_level_1(disabled="true")
+						br
+						label Pais:
+						input#country(disabled="true")
+						br
+						label Codigo Postal:
+						input#postal_code(disabled="true")
+						br
+						label Latitud:
+						input#lat(disabled="true")
+						br
+						label Longitud:
+						input#lng(disabled="true")
+					.span3
+						.controls.controls-row
+								.map-wrapper
+									label#geo_label(for="reverseGeocode") Ubicar manual el mapa
+									select#reverseGeocode
+										option(value="false" ,selected="true") No
+										option(value="true") Yes
+								#map
+								#legend Tu puede seleccionar la localización

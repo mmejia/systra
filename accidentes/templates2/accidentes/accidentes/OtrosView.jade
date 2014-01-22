@@ -1,0 +1,75 @@
+legend Otros
+.controls.controls-row
+	.span4
+		label Visibilidad
+		select#alumbrado_publico_o
+	.span4
+		label Parte del Dia
+		select#parte_dia_o
+	.span4
+		label Tipo de Calle:
+		select#tipo_calle_o
+.controls.controls-row
+	.span4
+		label No. de Carriles
+		select#no_carriles_o
+	.span4
+		label Sentido de la Calle:
+		select#sentido_calle_o
+legend Estado de las calles:
+.controls.controls-row
+	.span4
+		label Alineación
+		select#alineacion_o
+	.span4
+		label Estado del Pavimento
+		select#estado_pavimento_o
+	.span4
+		label Clima
+		select#clima_o
+.controls.controls-row
+	.span4
+		label Regulación
+		select#regulacion_o
+
+#capturaDanos(title="Captura daños")
+	strong Los daños de objetos fijos serán valuados por peritos en la materia
+	.controls.controls-row
+		.span3
+			label Objetos dañados
+			select#objetos_danados_o
+		.span3
+			label Tipo de daños
+			input#tipo_danos_o
+	.controls.controls-row
+		.span3
+			label Dueños
+			input#dueno_o
+		.span3
+			label Monto de los daños:
+			input#monto_danos_o
+	.controls.controls-row
+		.span3.offset3
+			br
+			button#cancelar-danos.btn Cancelar
+			button#aceptar-danos.btn-primary Aceptar
+
+legend Daños acumulados
+table#tab_otros.table.table-bordered
+	thead
+		th
+			|Objeto
+		th
+			|Tipo de Daños
+		th
+			|Dueño
+		th
+			|Monto
+	tbody
+button#agregar_danos.btn(type="submit") Agregar
+
+
+
+
+
+

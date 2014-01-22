@@ -1,0 +1,30 @@
+td	
+	|<a id="view_{{inv.id}}" class="view-inventario" href="#"><i class="icosystra-file3"  title="Ver inventario"></i></a>
+if usados.order_by == "fecha_incid"
+	td.td-seleccionado  {{inv.fecha_incid}}
+else
+	td  {{inv.fecha_incid}}
+if usados.order_by == "liberacion_fecha"
+	td.td-seleccionado  {{inv.liberacion_fecha}}
+else
+	td  {{inv.liberacion_fecha}}
+if usados.order_by == "folio_inventario"
+	td.td-seleccionado  {{inv.folio_inventario}}
+else
+	td  {{inv.folio_inventario}}
+if usados.order_by == "motivo_de_recojimiento"
+	td.td-seleccionado  {{inv.motivo_de_recojimiento}}
+else
+	td  {{inv.motivo_de_recojimiento}}
+if usados.order_by == "clas_vehiculo"	
+	td.td-seleccionado  {{inv.clas_vehiculo}}
+else
+	td  {{inv.clas_vehiculo}}
+if usados.order_by == "comandancia"
+	td.td-seleccionado  {{inv.comandancia}}
+else
+	td  {{inv.comandancia}}
+if usados.order_by == "turno"
+	td.td-seleccionado  {{inv.turno}}
+else
+	td  {{inv.turno}}

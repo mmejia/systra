@@ -1,0 +1,10 @@
+vehiculo 
+	no_visible
+	tipo_placa
+infractor
+	infractor_presente
+	vigencia_licencia
+fecha_captura
+fecha_final_captura = Esto es cuando se se modifica
+usuario
+observaciones

@@ -1,0 +1,27 @@
+legend
+	span.icosystra-table
+	|&nbsp;Calles conflictivas&nbsp;
+	a#exportarExcel(href="#", title="Refrescar calles")
+		span.icosystra-loop2
+	|&nbsp;&nbsp;&nbsp;
+	a#exportarExcel(href="#", title="Refrescar calles")
+		span.icosystra-bars2
+
+.controls.controls-row
+	.span6
+		label Del
+		#fecha-inicia-append.input-append.date
+			input#fechaI.input.input-medium(name="fecha_inicial",data-format="yyyy-MM-dd",type="text",placeholder="Fecha inicial")
+			span.add-on
+				i(data-time-icon="icosystra-clock", data-date-icon="icosystra-calendar")
+		span.help-inline
+	.span6
+		label Al:
+		#fecha-final-append.input-append.date
+			input#fechaF.input.input-(name="fecha_final",data-format="yyyy-MM-dd",type="text",placeholder="Fecha final")
+			span.add-on
+				i(data-time-icon="icosystra-clock", data-date-icon="icosystra-calendar")
+		span.help-inline
+legend
+	|Resultado
+

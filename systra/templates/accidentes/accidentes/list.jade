@@ -1,0 +1,167 @@
+extends base
+br
+br
+block stylesheet
+	link(rel="stylesheet", href="/static/stylesheets/table/demo_page.css")
+	link(rel="stylesheet", href="/static/stylesheets/table/demo_table_jui.css")
+	link(rel="stylesheet", href="/static/stylesheets/table/smoothness/jquery-ui-1.8.4.custom.css")
+block contenido
+	br
+	br
+	br
+	.pantalla-captura
+		{{codigo|safe }}
+		#atajo
+			| LISTA DE ACCIDENTES
+			a#mostrar-lista-preliminar(href="#")
+				i.icon-list.icon-white
+		include cabecera.jade
+		legend Buscar
+			button.btn.btn-success#show-search
+				i.icosystra-zoom-out
+		#div-search
+			form#form-search-accidente(action="/accidente/list",method="GET")
+				.controls.controls-row
+					.span3
+						label Fecha del
+						#fecha-inicia-append.input-append.date
+							input#fechaI.input.input-medium(value="{{fecha_inicial}}",name="fecha_inicial",data-format="yyyy-MM-dd",type="text",placeholder="Fecha inicial")
+							span.add-on
+								i(data-time-icon="icosystra-clock", data-date-icon="icosystra-calendar")
+						span.help-inline
+					.span3
+						label Al:
+						#fecha-final-append.input-append.date
+							input#fechaF.input.input-medium(value="{{fecha_final}}", name="fecha_final",data-format="yyyy-MM-dd",type="text",placeholder="Fecha final")
+							span.add-on
+								i(data-time-icon="icosystra-clock", data-date-icon="icosystra-calendar")
+						span.help-inline
+					.span3
+						label Status
+						select#statusAccidente(name="status")
+							if usados.status == '0' 
+								option(value="0", selected="selected") INACTIVOS
+							else
+								option(value="0") INACTIVOS
+							if usados.status == '1'
+								option(value="1", selected="selected") ACTIVOS
+							else
+								option(value="1") ACTIVOS
+					#search-append
+					for key,value in usados.items
+						if key != 'fecha_inicial' and key != 'fecha_final' and key != 'status' and key != 'page' and key != 'order_by' and key != 'order_tipo'
+								|<div class="span4">
+								|<label>{{key}}</label>
+								|<input type="text" id="{{key}}" name="{{key}}" value="{{value}}"></input>
+								|</div>
+					.controls.controls-row	
+						.span4
+							label Campos
+							.input-append
+								select#campos
+								button.btn#add-field-search(type="button",href="#")
+									span.icosystra-plus
+						input#page(type="hidden", name="page" , value="{{usados.page}}")
+						input#order_by(type="hidden", name="order_by", value="{{usados.order_by}}")
+						input#order_tipo(type="hidden", name="order_tipo", value="{{usados.order_tipo}}")
+				.controls.controls-row	
+					.span2
+						br
+						button#buscarPartes.btn(type="submit") 
+							|&nbsp;Buscar
+							span.icosystra-search
+		#loading
+		legend 
+			|Resultado
+			a#exportarExcel(href="/accidentes/excel", title="Exportar a excel")
+				span.icosystra-file-excel
+		a(name="res_bus")
+		.controls.controls-row
+				div
+					table#listaPartes-pa.table-bordered
+							thead
+								tr 
+									th.id Opciones
+									th.folio 
+										|Folio
+										a#ordenar_id_preliminar_asc(href="#res-bus") 
+											if usados.order_by == 'id_preliminar' and usados.order_tipo == 'asc' 
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_id_preliminar_desc(href="#res-bus") 
+											if usados.order_by == 'id_preliminar' and usados.order_tipo == 'desc' 
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down
+									th.fecha 
+										|Fecha
+										a#ordenar_convenio_fecha_asc(href="#res-bus") 
+											if usados.order_by == 'convenio_fecha' and usados.order_tipo == 'asc' 
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_convenio_fecha_desc(href="#res-bus") 
+											if usados.order_by == 'convenio_fecha' and usados.order_tipo == 'desc' 
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down
+									th.agente 
+										|Agente
+										a#ordenar_nombre_intervino_asc(href="#res-bus") 
+											if usados.order_by == 'nombre_intervino' and usados.order_tipo == 'asc' 
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_nombre_intervino_desc(href="#res-bus") 
+											if usados.order_by == 'nombre_intervino' and usados.order_tipo == 'desc' 
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down
+									th.unidad 
+										|Unidad
+										a#ordenar_unidad_intervino_asc(href="#res-bus") 
+											if usados.order_by == 'unidad_intervino' and usados.order_tipo == 'asc' 
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_unidad_intervino_desc(href="#res-bus") 
+											if usados.order_by == 'unidad_intervino' and usados.order_tipo == 'desc' 
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down
+									th.clasificacion 
+										|Clasificación
+										a#ordenar_clasificacion_asc(href="#res-bus") 
+											if usados.order_by == 'clasificacion' and usados.order_tipo == 'asc' 
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_clasificacion_desc(href="#res-bus") 
+											if usados.order_by == 'clasificacion' and usados.order_tipo == 'desc' 
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down
+							tbody
+								if object_list
+									for acc in object_list
+										if acc.activo == 0
+											tr(id="{{acc.id_unico}}").viejos
+												include accidentes/accidentes/rows-accidente/row-inactivo.jade
+										if acc.activo == 1
+											tr(id="{{acc.id_unico}}").capturados
+												include accidentes/accidentes/rows-accidente/row-activo.jade
+
+											
+			include accidentes/accidentes/accidentes/pagination-accidente 
+	//!= contentFor('vendor/jquery.dataTables.min','vendor/require.js",data-main="accidentes/list/main.js"')
+block javascripts
+	script(src="/static/javascripts/vendor/bootstrap-datetimepicker.js")	
+	script(src="/static/javascripts/vendor/jquery.dataTables.min.js") 
+	script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/main-lista-accidentes.js")
+
+
+
+
+
+

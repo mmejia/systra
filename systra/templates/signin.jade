@@ -1,0 +1,26 @@
+doctype 5
+html(lang="es")
+	head
+		title Systra-Nin
+		meta(charset="utf8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="/static/stylesheets/vendor/normalize.css")
+		link(rel="stylesheet", href="/static/stylesheets/vendor/bootstrap-responsive.min.css")
+		link(rel="stylesheet", href="/static/stylesheets/vendor/bootstrap.min.css")
+		link(rel="stylesheet", href="/static/stylesheets/estilos.css")
+		script(src="/static/javascripts/vendor/modernizr-2.6.2.min.js")
+
+	body
+		div.container
+			form.form-signin(action="/validatelogin/",method="POST")
+				h2.form-signin-heading Systra-Nin
+				input#login_user.input-block-level(type="text",name="username",placeholder="Usuario")
+				input#login_pwd.input-block-level(type="password", name="password",placeholder="Contraseña")
+				label.checkbox 
+					input(type="checkbox" ,value="remember-me")
+					
+					p Recuerdame
+				button#btn_login.btn.btn-success(type="submit") Enviar
+		script(src="/static/javascripts/vendor/jquery.js")
+		script(src="/static/javascripts/vendor/bootstrap.min.js")
+		script(src="/static/javascripts/login.js")

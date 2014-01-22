@@ -1,0 +1,184 @@
+extends base
+br
+br
+block stylesheet
+	link(rel="stylesheet", href="/static/stylesheets/table/demo_page.css")
+	link(rel="stylesheet", href="/static/stylesheets/table/demo_table_jui.css")
+	link(rel="stylesheet", href="/static/stylesheets/table/smoothness/jquery-ui-1.8.4.custom.css")
+block contenido
+	br
+	br
+	br
+	.pantalla-captura
+	{{codigo|safe }}
+	#pantalla-lista
+		include cabecera.jade
+		legend Buscar
+			button.btn.btn-success#show-search
+				i.icosystra-zoom-out
+		#div-search
+			form#frm-search-infracciones(action="/infraccion/list",method="GET")
+				.controls.controls-row
+				.span4
+					label Fecha del
+					#fecha-inicia-append.input-append.date
+						input#fechaI.input.input-medium(data-format="yyyy-MM-dd",name="fecha_inicial",type="text", value="{{usados.fecha_inicial}}")
+						span.add-on
+							i(data-time-icon="icosystra-clock", data-date-icon="icosystra-calendar")
+					span.help-inline
+				.span4
+					label Al:
+					#fecha-final-append.input-append.date
+						input#fechaF.input.input-medium(data-format="yyyy-MM-dd",name="fecha_final",type="text", value="{{usados.fecha_final}}")
+						span.add-on
+							i(data-time-icon="icosystra-clock", data-date-icon="icosystra-calendar")
+						span.help-inline
+				.span4
+						label Status
+						select#statusInfraccion(name="status")
+							if usados.status == '0' 
+								option(value="0", selected="selected") INACTIVOS
+							else
+								option(value="0") INACTIVOS
+							if usados.status == '1'
+								option(value="1", selected="selected") ACTIVOS
+							else
+								option(value="1") ACTIVOS
+				#search-append
+				for key,value in usados.items
+					if key != 'fecha_inicial' and key != 'fecha_final' and key != 'status' and key != 'page' and key != 'order_by' and key != 'order_tipo' 
+							|<div class="span4">
+							|<label>{{key}}</label>
+							|<input type="text" id="{{key}}" name="{{key}}" value="{{value}}"></input>
+							|</div>
+				.controls.controls-row	
+					.span4
+						label Campos
+						.input-append
+							select#campos
+							button.btn#add-field-search(type="button",href="#")
+								i.icosystra-plus
+					input#page(type="hidden", name="page" , value="{{usados.page}}")
+					input#order_by(type="hidden", name="order_by", value="{{usados.order_by}}")
+					input#order_tipo(type="hidden", name="order_tipo", value="{{usados.order_tipo}}")
+				.controls.controls-row
+					.span2
+						br
+						button#buscarInfracciones.btn(type="submit") 
+							|&nbsp;Buscar
+							span.icosystra-search
+		#loading
+		legend 
+			|Resultado
+			a#exportarExcel(href="/infraccion/excel", title="Exportar a excel") 
+				span.icosystra-file-excel
+			|&nbsp;&nbsp;
+			a#exportarPdf(href="#", title="Exportar a PDF") 
+				span.icosystra-file-pdf
+		a(name="res_bus")
+		.controls.controls-row
+				div
+					table#listaInfracciones.table-bordered
+							thead
+								tr 
+									th.identificador Opciones
+									th.folio 
+										|Folio
+										a#ordenar_folio_asc(href="#res-bus") 
+											if usados.order_by == 'folio' and usados.order_tipo == 'asc' 
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_folio_desc(href="#res-bus") 
+											if usados.order_by == 'folio' and usados.order_tipo == 'desc' 
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down
+
+									th.delegacion 
+										|Delegación
+										a#ordenar_delegacion_asc(href="#res-bus") 
+											if usados.order_by == 'delegacion' and usados.order_tipo == 'asc' 
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_delegacion_desc(href="#res-bus") 
+											if usados.order_by == 'delegacion' and usados.order_tipo == 'desc' 
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down
+									th.comandancia 
+										|Comandancia
+										a#ordenar_comandancia_asc(href="#res-bus") 
+											if usados.order_by == 'comandancia' and usados.order_tipo == 'asc' 
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_comandancia_desc(href="#res-bus") 
+											if usados.order_by == 'comandancia' and usados.order_tipo == 'desc' 
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down
+									th.fecha 
+										|Fecha
+										a#ordenar_fecha_infrac_asc(href="#res-bus") 
+											if usados.order_by == 'fecha_infrac' and usados.order_tipo == 'asc' 
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_fecha_infrac_desc(href="#res-bus") 
+											if usados.order_by == 'fecha_infrac' and usados.order_tipo == 'desc' 
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down
+									th.articulo 
+										|Articulos
+										a#ordenar_motivo_asc(href="#res-bus") 
+											if usados.order_by == 'motivo' and usados.order_tipo == 'asc' 
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_motivo_desc(href="#res-bus") 
+											if usados.order_by == 'motivo' and usados.order_tipo == 'desc' 
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down
+									th.servicio 
+										|Servicio
+										a#ordenar_servicio_asc(href="#res-bus") 
+											if usados.order_by == 'servicio' and usados.order_tipo == 'asc' 
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_servicio_desc(href="#res-bus") 
+											if usados.order_by == 'servicio' and usados.order_tipo == 'desc' 
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down
+							tbody
+								if object_list
+									for inf in object_list
+										if inf.activo == 0
+											tr.viejos
+												include infracciones/row-inactivos.jade
+										if inf.activo == 1
+											tr.ingresados
+												include infracciones/row-activos.jade
+
+											
+			include infracciones/infraccion/pagination  
+//!= contentFor('vendor/jquery.dataTables.min','vendor/require.js",data-main="accidentes/list/main.js"')
+
+block javascripts
+	script(src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places")
+	script(src="/static/javascripts/vendor/bootstrap-datetimepicker.js")
+	script(src="/static/javascripts/vendor/jquery.geocomplete.min.js")
+	script(src="/static/javascripts/util-inf.js")
+	script(src="/static/javascripts/util/infraccion/CargarSelect.js") 
+	script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/main-lista-infraccion.js")
+
+
+
+
+
+

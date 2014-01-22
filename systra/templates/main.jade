@@ -1,0 +1,24 @@
+extends base
+block contenido
+	{{codigo|safe}}
+	br
+	br
+	br
+	.container
+		article.last-folio
+			label#last-folio
+		h1 
+			span.icosystra-newspaper
+			|ULTIMAS NOTICIAS 
+			|(
+			span#num_noticias 2
+			|)
+		#pantalla-noticias.hero-unit
+		.row-fluid
+			.span6
+				include estadisticas/calles-conflictivas
+			.span6
+				|VENTANA
+
+block javascripts
+	script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/main-main.js")

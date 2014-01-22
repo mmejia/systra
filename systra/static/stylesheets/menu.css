@@ -1,0 +1,22 @@
+#menu-main .active {
+  display: block;
+}
+#menu-main .nav > li {
+  float: none;
+}
+#menu-main .nav > li > .parent {
+  background-position: 95% 50%;
+}
+#menu-main .nav li li .parent {
+  background-image: url("images/downArrow.png");
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+}
+#menu-main .nav ul {
+  display: block;
+  width: 100%;
+}
+#menu-main .nav > li.hover > ul,
+#menu-main .nav li li.hover ul {
+  position: static;
+}

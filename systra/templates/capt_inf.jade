@@ -1,0 +1,93 @@
+extends base
+block estilos
+	link(rel="stylesheet", href="/static/css/vendor/normalize.css")
+	link(rel="stylesheet", href="/static/css/vendor/bootstrap-responsive.min.css")
+	link(rel="stylesheet", href="/static/css/vendor/bootstrap.min.css")
+	link(rel="stylesheet", href="/static/css/vendor/prettify.css")
+	link(rel="stylesheet", href="/static/css/vendor/bootstrap-wysihtml5-0.0.2.css")
+	link(rel="stylesheet", href="/static/css/vendor/bootstrap-datetimepicker.min.css")
+	link(rel="stylesheet", href="/static/css/vendor/jquery.ui.all.css")
+	link(rel="stylesheet", href="/static/css/estilos.css")
+	script(src="/static/js/vendor/modernizr-2.6.2.min.js")
+
+block content
+	br
+	.controls.controls-row
+		.span4
+			img(src="/static/image/infracciones/escudo_transito.gif")
+		.span4
+			label
+				|MUNICIPIO DE LEON, GUANAJUATO
+				|SECRETARIA DEL H. AYUNTAMIENTO
+				|DIRECCION GENERAL DE TRANSITO MUNICIPAL
+		.span4
+			br
+			br
+			|FOLIO DE ACCIDENTE No. 
+			|T- 
+			input#folio_infraccion(type="text")
+	br
+	.controls.controls-row
+		form
+			legend Datos Generales
+			.seccion
+				.controls.controls-row
+					.span12
+						label En León Guanajuato, el suscrito AGENTE:
+				.controls.controls-row
+					.span10	
+						label Nombre
+						input#nombre-agente-inf.input-xxlarge.ui-autocomplete-input(placeholder="Selecciona elemento..",type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+					.span2
+						label No. Cobro
+						input#nom-cobro-agente-inf.input-small(type="text" , disabled)
+			.controls.controls-row
+				.span8
+					label.radio.inline
+						input#optServicioParticular(type="radio",name="optServicio",value="servicio_particular")
+						|Servicio Particular
+					label.radio.inline
+						input#optServicioPubico(type="radio",name="optServicio",value="servicio_publico")
+						|Servicio Publico
+				.span4
+					label Fecha:Hora:
+					#fecha-capt-inf.input-append.date
+						input#hora(data-format="dd/MM/yyyy hh:mm:ss",type="text",placeholder="Hora")
+						span.add-on
+							i(data-time-icon="icon-time", data-date-icon="icon-calendar")
+			#ManagerTipoServicioPublico
+			#ManagerServicioParticular
+			.controls.controls-row
+				.span12
+					label
+						| El conductor firmó la infracción correspondiente  
+				.span2
+					label.radio
+						input#si_firmo_inf(type="radio",name="optionsv",value="SI")
+						| SI
+				.span2
+					label.radio
+						input#no_firmo_inf(type="radio",name="optionsv",value="NO")
+						| NO
+				.controls.controls-row
+					.span12
+						legend Observaciones
+						textarea#observaciones_inf
+			.controls.controls-row
+				.span4.offset4
+				button#guargar_pp.btn(type="button") Guardar
+				button#cancelar_punto_pp.btn(type="button") Cancelar
+
+
+block scripts
+	script(src="/static/js/vendor/wysihtml5-0.3.0_rc2.min.js")
+	script(src="/static/js/vendor/jquery.js")
+	script(src="http://maps.google.com/maps/api/js?sensor=false")
+	script(src="/static/js/vendor/bootstrap.min.js")
+	script(src="/static/js/vendor/bootstrap-wysihtml5-0.0.2.min.js")
+	script(src="/static/js/vendor/underscore-min.js")
+	script(src="/static/js/vendor/jquery-ui-1.10.3.custom.min.js")
+	script(src="/static/js/vendor/bootstrap-datetimepicker.js")
+	script(src="/static/js/vendor/jquery.ui.addresspicker.js")
+	script(src="/static/js/util-inf.js")
+	script(src="/static/js/vendor/require.js",data-main="/static/js/main-inf.js")

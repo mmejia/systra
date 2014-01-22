@@ -1,0 +1,58 @@
+#atajo
+	//a(href="#")
+	a#mostrar-captura-preliminar(href="#")
+		i.icon-file.icon-white
+.controls.controls-row
+				.span2
+					img(src="/static/image/infracciones/escudo_transito.gif")
+				.span6
+					h5
+						|Dirección General De Tránsito Municipal
+					h4
+						|H. AYUNTAMIENTO DE LEÓN, GUANAJUATO
+		legend Buscar
+		.controls.controls-row
+			.span3
+				label Fecha del
+				input#fechaI.input.input-medium(type="text",placeholder="Fecha Inicial")
+			.span3
+				label Al:
+				input#fechaF.input.input-medium(type="text",placeholder="Fecha Final")
+			.span3
+				label Tipo Evento
+				input#tipoAccidente.input-medium(type="text",placeholder="Tipo")
+			.span2
+				br
+				button#buscarPartes.btn.btn-primary(type="submit") Buscar
+		legend Resultado
+		
+		.controls.controls-row
+			table#listaPreliminar_p.table-bordered
+				thead
+					tr 
+						th.id 
+						th.fecha Fecha
+						th.folio Folio
+						th.agente Agente
+						th.ocurridos Lugar
+				tbody
+					if object_list 
+						for pre in object_list
+							if pre.activo == 0
+								tr
+									td 
+										|<a id="captura-{{pre.id}}" class="capturar-parte-from-preliminar" href="captura/{{pre.id}}" title="Capturar accidente"><i class="icon-file"></i></a>
+										|<a id="{{pre.id}}" class="cancelar-preliminar" href="#"><i class="icon-hand-down"  title="Cancela preliminar"></i></a>
+										|<a id="eliminar-{{pre.id}}" class="remove-status" href="#"><i class="icon-remove"  title="Eliminar preliminar"></i></a>
+									td {{pre.fecha_evento}} 
+									td {{pre.folio_evento}} 
+									td {{pre.agente_intervino}} 
+									td {{pre.calle1}}  
+							else
+								tr.activo
+									td {{pre.id}}
+									td {{pre.fecha_evento}} 
+									td {{pre.folio_evento}} 
+									td {{pre.agente_intervino}} 
+									td {{pre.calle1}}  
+		include accidentes/accidentes/accidentes/pagination

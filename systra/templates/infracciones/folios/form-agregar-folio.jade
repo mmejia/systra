@@ -1,0 +1,22 @@
+#folio-agregar-folio.bloque
+	legend Agregando folio
+	.controls.controls-row
+		.span4
+			.control-group
+				label Desde
+				input#desde-folio(type="text")
+				span.help-inline
+		.span4
+			.control-group
+				label Hasta
+				input#asta-folio(type="text")
+				span.help-inline
+		input#folio(type="hidden",value="{{profile.cobro}}")
+	.controls.controls-row
+		.span12
+			button#guardar_inf.btn.btn-primary(type="button")
+				|Guardar
+				span.icosystra-checkmark2
+			button#cancelar_inf.btn(type="button")
+				|Cancelar
+				span.icosystra-cancel-circle

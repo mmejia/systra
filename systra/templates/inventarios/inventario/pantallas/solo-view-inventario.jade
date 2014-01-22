@@ -1,0 +1,108 @@
+br
+{{codigo|safe }}
+.row-fluid
+	.controls.controls-row
+			.span4
+				img(src="/static/image/infracciones/escudo_transito.gif")
+			.span4
+				label
+					|MUNICIPIO DE LEON, GUANAJUATO
+					|SECRETARIA DEL H. AYUNTAMIENTO
+					|DIRECCION GENERAL DE TRANSITO MUNICIPAL
+			.span4
+				br
+				.control-group 
+					|FOLIO INVENTARIO No. 
+					|T- 
+					span.span-inve#folio_inventa
+					span.help-inline
+		br
+.row-fluid
+	legend Datos Generales
+	.bloque
+		.controls.controls-row
+			.control-group
+				.span2
+					label.radio
+						input#optInfraccion_inv(type="radio", name="lae")
+						| Infraccion
+				.span4
+					label.radio
+						input#optAccidenteInfraccion_inv(type="radio", name="lae")
+						|Accidente e Infraccion
+				.span2
+					label.radio
+						input#resguardo_inv(type="radio", name="lae")
+						|Resguardo
+				span#msg-tipo-inventario.help-inline
+		.controls.controls-row
+			.span4
+				label Folio de la infraccion 
+				span.span-inve#folioInfraccion_inv
+			.span4
+				.control-group
+					label Folio del Accidente 
+					span.span-inve#folioAccidente_inv
+			.span4
+				.control-group
+					label Fecha de Incidente
+					span.span-inve#fechaIncidente_inv
+		//include inventarios/inventario/tipo_servicio_publico
+		br
+		.controls.controls-row
+			.span4
+				label Delegacion:
+				span.span-inve#delegacion_inv
+			.span4
+				label Comandancia:
+				span.span-inve#comandancia_inv
+			.span4
+				span.span-inve#turnos_inv
+				span.help-inline
+		.controls.controls-row
+			.span4
+				label Corporacion
+				span.span-inve#corporacion_inv
+		.controls.controls-row
+			.span4
+				label Calle 1:
+				span.span-inve#calle1_inv
+			.span4
+				.controls.controls-row
+					.span1
+						label Exterior
+						span.span-inve#exterior_inv
+					.span1
+						label Interior
+						span.span-inve#interior_inv
+			.span4
+				label Calle 2:
+				span.span-inve#calle2_inv
+		.controls.controls-row
+			.span4
+				label Colonia: 
+				span.span-inve#colonia_inv
+			.span4
+				label Depositado en: 
+				span.span-inve#depositadoEn_inv
+			.span4
+				label Autoridad competente: 
+				span.span-inve#autoridadCompetente_inv
+		.controls.controls-row
+			.span4
+				label MP:
+				span.span-inve#mp_inv
+	.controls.controls-row
+include inventarios/inventario/pantallas/view_datos_vehiculo
+include inventarios/inventario/pantallas/view_ingreso_pension
+include inventarios/inventario/pantallas/view_otros
+br
+legend Elaboró
+.controls.controls-row.bloque
+	.span4
+		label Folio
+		span.span-inve#folio_agente
+
+	.span8
+		label Agente  
+		span.span-inve#agente_inv

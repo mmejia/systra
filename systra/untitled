@@ -1,0 +1,12 @@
+insert into auth_permission(codename,name content_type_id) values('add-preliminar', 'El usuario puede agregar preliminar',39);
+insert into auth_permission(codename,name content_type_id) values('save-preliminar', 'El usuario guardar preliminar',39);
+insert into auth_permission(codename,name content_type_id) values('update-preliminar', 'El podra actualizar el preliminar',39);
+insert into auth_permission(codename,name content_type_id) values('down-preliminar', 'El usuario podra dar de baja preliminar',39);
+insert into auth_permission(codename,name content_type_id) values('add-parte', 'El usuario podra agregar partes',39);
+insert into auth_permission(codename,name content_type_id) values('save-parte', 'El usuario podra guardar partes',39);
+insert into auth_permission(codename,name content_type_id) values('save-local', 'El usuario podra guardar  borradores de partes',39);
+insert into auth_permission(codename,name content_type_id) values('update-parte', 'El usuario actualizar partes',39);
+insert into auth_permission(codename,name content_type_id) values('print-parte', 'El usuario podrá imprimir partes',39);
+insert into auth_permission(codename,name content_type_id) values('print-posterior', 'El usuario podra imprimir posteriores del parte',39);
+insert into auth_permission(codename,name content_type_id) values('delete-parte', 'El usuario podra borrar partes',39);
+insert into auth_permission(codename,name content_type_id) values('list-parte', 'El usuario podra buscar partes',39);

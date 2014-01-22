@@ -1,0 +1,1 @@
+define(function(){var e={},t=function(t,n,r){e[t]||(e[t]=[]),e[t].push({callback:n,contexto:r})},n=function(t,n){if(!e[t])return!1;for(var r in e[t])info=e[t][r],info.callback.apply(info.contexto,n)};return{on:t,emit:n,modulos:e}})

@@ -1,0 +1,14 @@
+#links-posterior
+	a#liga-img-posterior.muestra-img(href="/static/img/crojo.jpg" , title="Frente", data-gallery)
+		img#img-posterior(src="/static/img/crojo.jpg", alt="Muestra")
+br
+br
+form#formSubirInventarioPosterior(action="/content/upload_fotografia",method="post", enctype="multipart/form-data")
+	input(type="file", name="file_name")
+	input(type="hidden", name="tipo",value="POSTERIOR")
+	input(type="hidden", name="modulo",value="INVENTARIO")
+	input(type="hidden", name="id_unico",value="")
+	button#subir_img-posterior.btn(type="button")
+		|Agregar
+		i.icon-upload
+	#resultado_inventario-posterior

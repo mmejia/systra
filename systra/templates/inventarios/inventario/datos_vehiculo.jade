@@ -1,0 +1,103 @@
+legend Datos del vehículo
+#managerDatosVehiculo_spa_inv_view.controls.controls-row.bloque
+	.controls.controls-row
+		.control-group
+			.span4
+				label.radio
+					input#radServicioParticular_inv(type="radio", name="servicios")
+					|Servicio Particular
+			.span4
+				label.radio
+					input#radServicioPublico_inv(type="radio", name="servicios")
+					|Servicio Publico
+		span._help-inline
+	br
+	.controls.controls-row
+		.span3
+			.control-group
+				label Clas. Vehículo: 
+				select#desc-vehiculo
+				span._help-inline
+		.span3
+			.control-group
+				label Marca: 
+				select#marca_inv
+				span._help-inline
+		.span3
+			.control-group
+				label Submarca: 
+				select#submarca_inv
+				span._help-inline
+	.controls.controls-row
+		.span3
+			.control-group
+				label Modelo:
+				select#modelo_inv
+				span._help-inline
+		.span3
+			.control-group
+				label Color:
+				select#color_inv
+				span._help-inline
+		.span3
+			.control-group
+				label Detalle:
+				input#detalle_inv(type="text",placeholder="Detalle")
+				span._help-inline
+	.controls.controls-row
+		.span3
+			.control-group
+				label Placas:
+				.input-append
+					input#placas_inv(type="text",placeholder="Placas")
+					button.btn#placas_default
+						span.icosystra-question
+				span.help-inline
+		.span3
+			.control-group
+				label No Econ:
+				.input-append
+					input#noEcon_inv(type="text",placeholder="noEcon")
+					button.btn#noecon_default
+						span.icosystra-info 
+				span.help-inline
+		.span3
+			.control-group
+				label Serie
+				.input-append
+					input#serie_inv(type="text",placeholder="Serie")
+					button.btn#serie_default
+						span.icosystra-info
+				span.help-inline
+	.controls.controls-row
+		.span4
+			.control-group
+				label Tipo Veh:
+				select#tipoVehiculo_inv
+				span.help-inline
+	legend Datos del conductor
+	.controls.controls-row
+		.span3
+			.control-group
+				label Nombre del conductor
+				.input-append
+					input#nombreConductor_inv(type="text",placeholder="Nombre del conductor")
+					button.btn#nombreConductor_inv_default
+						span.icosystra-info
+				span.help-inline
+		.span3
+			.control-group
+				label Apellido Paterno
+				.input-append
+					input#apellidoPaterno_inv(type="text",placeholder="apellido Paterno")
+					button.btn#apellidoPaterno_inv_default
+						span.icosystra-info
+				span.help-inline
+		.span3
+			.control-group
+				label Apellido Materno
+				.input-append
+					input#apellidoMaterno_inv(type="text",placeholder="apellido Materno")
+					button.btn#apellidoMaterno_inv_default
+						span.icosystra-info
+				span.help-inline

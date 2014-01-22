@@ -1,0 +1,42 @@
+{{codigo|safe}}
+form#updatePerfil(action="/perfil/update", method="post")
+	legend Datos Generales
+	input#perf_id(type="hidden", name="id")
+	.controls.controls-row
+		.span4
+			label No. de Cobro
+			input#perf_cobro(type="text", name="cobro")
+		.span4
+			label Nombre
+			input#perf_nombre(type="text", name="nombre")
+	.controls.controls-row
+		.span4
+			label Comandancia
+			select#perf_comandancia(name="comandancia")
+		.span4
+			label Turno
+			select#perf_turno(name="turno")
+	.controls.controls-row
+		.span4
+			label Delegación
+			select#perf_delegacion(name="delegacion")
+		.span4
+			label Comisión
+			input#perf_comision(name="comision", type="text")
+	legend Preferencias
+	.controls.controls-row
+		.span4
+			label Color
+			input#perf_color.pick-a-color(type="text", value="222", name="color")
+		.span4
+			label Tamaño de tablas
+			input#perf_tam_tablas.input(type="text", value="10", nombre="tam_tabla")
+	br
+	br
+	.controls.controls-row
+		button#update-perfil.btn.btn-success(type="button") 
+			|Guardar
+			span.icosystra-checkmark2
+		button#update-cancelar-perfil.btn(type="button")
+			|Cancelar
+			span.icosystra-cancel-circle

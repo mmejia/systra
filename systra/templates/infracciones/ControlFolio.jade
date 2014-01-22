@@ -1,0 +1,35 @@
+extends base
+block contenido
+	br
+	br
+	br
+	.pantalla-captura
+		.controls.controls-row
+			.span2
+				label No. Cobro
+				input#nom-cobro-agente-inf.input-small.ui-autocomplete-input(type="text" )
+			.span8
+				.control-group	
+					label Nombre
+					input#nombre-agente-inf.input-xxlarge(type="text",autocomplete="off")
+					span.help-inline
+			br
+			table#listaFolios.table-bordered
+				thead
+					tr
+						th 
+						th Block
+						th Fecha Exp.
+						th Folio inicial
+						th Folio final
+						th Faltantes
+						th Entregados
+				tbody
+			.controls.controls-row
+				.btn-add
+					a#btn-agregar-block.btn(href="#editar-vehiculo") 
+						span.icosystra-plus
+		include infracciones/AddFolio
+block javascripts 
+	script(src="/static/javascripts/util-inf.js")
+	script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/main-folio.js")

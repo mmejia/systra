@@ -1,0 +1,29 @@
+window.llenarPreliminar=(indice)->
+	preliminar=pre_test[0]
+	$("#fecha-hora_pp").val(preliminar.fecha_hora)
+	$("#folio").val(preliminar.numero_de_folio)
+	$("#delegacio_pp").val(preliminar.delegacion)
+	$("#comandancia_pp").val(preliminar.comandancia)
+	$("#turno_pp").val(preliminar.turno)
+	$("#tipo_evento_pp").val(preliminar.tipo_de_evento)
+	$("#clasificacion_pp").val(preliminar.clasificacion_de_accidente)
+	$("#calle1_pp").val(preliminar.calle_1)
+	$("#calle2_pp").val(preliminar.calle_2)
+	$("#colonia_pp").val(preliminar.colonia)
+	$("#operativo_pp").val(preliminar.operativo)
+	$("#no_vehiculos_pp").val(preliminar.no_vehiculos_participantes)
+	$("#no_detenidos_pp").val(preliminar.no_de_detenidos)
+	$("#no_heridos_pp").val(preliminar.no_de_heridos)
+	$("#no_muertos_pp").val(preliminar.no_de_muertos)
+	$("#pension_pp").val(preliminar.pension)
+	$("#no_de_inventario").val(preliminar.no_de_inventario)
+	$("#intervino_pp").val(preliminar.agente)
+	$("#unidad_pp").val(preliminar.unidad)
+	area1=$('#observaciones_ppp').data('wysihtml5')
+	if area1
+		area1.editor.setValue(preliminar.observaciones)
+	else
+		console.log
+		$('#observaciones_ppp').html(preliminar.observciones)
+	#area.val("hola mundo")
+	return

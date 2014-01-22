@@ -1,0 +1,77 @@
+#ServicioPublicoInf-View
+	.controls.controls-row
+		.span2
+			label.radio
+				input#taxi_spu_inf(type="radio",name="optionsv",value="taxi")
+				| TAXI
+		.span2
+			label.radio
+				input#urbano_spa_inf(type="radio",name="optionsv",value="urbano")
+				| URBANO
+		.span2
+			label.radio
+				input#foraneo_spa_inf(type="radio",name="optionsv",value="foraneo")
+				| FORANEO
+		.span2
+			label.radio
+				input#policia_spa_inf(type="radio",name="optionsv",value="policia")
+				| POLICIA
+		.span2
+			label.radio
+				input#rd_cortesia_spa_inf(type="radio",name="optionsv",value="transito")
+				| TRANSITO
+	.controls.controls-row
+		.span4
+			div
+				label DELEGACION
+				select#delegacion_spu_inf
+		.span4
+			div
+				label COMANDANCIA
+				select#comandancia_spu_inf
+		.span4
+			div
+				label TURNO
+				select#turno_spu_inf
+	.controls.controls-row
+		.span4
+			div
+				label Colonia:
+				input#colonia_spu_inf.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+		.span4
+			div
+				label Calle 1:
+				input#calle1_spu_inf.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+		.span4
+			div
+				label Calle 2:
+				input#calle2_spu_inf.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+
+	.controls.controls-row
+		.span6
+			div
+				label Referencia y/o No.:
+				input#referencia_spu_inf(type="text")
+	.controls.controls-row
+		.span4
+				label Latitud:
+				input#lat_spu_inf(type="text", placeholder="Latitud")
+			.span4
+				label Longitud:
+				input#lng_spu_inf(type="text",placeholder="Longitud")
+			.span4
+				br
+				button#buscar_punto_spu_inf.btn(type="button") Punto
+				#selPunto
+	.controls.controls-row
+		.span6
+			div
+				label Tipo de Operativo:
+				select#tipo_operativo_spu_inf
+	#managerArticulos_spu_inf
+	#managerRecojeDocumento_spu_inf
+	#managerDatosInfractor_spu_inf
+	#managerCaracteristicasVehiculos_spu_inf
+	#managerCertificadoMedico_spu_inf
+
+

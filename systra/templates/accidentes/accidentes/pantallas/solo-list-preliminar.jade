@@ -1,0 +1,154 @@
+#atajo
+	//a(href="#")
+	|&nbsp;LISTA DE CABINA
+	a#mostrar-captura-preliminar(href="#Carro")
+		span.icosystra-file
+include cabecera.jade
+legend Buscar 
+	button.btn.btn-success#show-search
+		span.icosystra-zoom-out
+#div-search
+	form#form-search-preliminar(action="/accidente/listaPreliminaresp",method="GET")
+		.controls.controls-row
+			.span3
+				label Fecha del
+				#fecha-inicia-append.input-append.date
+					input#fechaI.input.input-medium(data-format="yyyy-MM-dd",name="fecha_inicial",type="text", value="{{fecha_inicial}}")
+					span.add-on
+						i(data-time-icon="icosystra-oclock", data-date-icon="icosystra-calendar")
+				span.help-inline
+			.span3
+				label Al:
+				#fecha-final-append.input-append.date
+					input#fechaF.input.input-medium(data-format="yyyy-MM-dd",name="fecha_final",type="text", value="{{fecha_final}}")
+					span.add-on
+						i(data-time-icon="icosystra-oclock", data-date-icon="icosystra-calendar")
+					span.help-inline
+			.span3
+				label Status
+				select#statusAccidente(name="status", value="{{status}}")
+					if status == 0 
+						option(value="0", selected="selected") INICIADOS
+					else
+						option(value="0") INICIADOS
+					if status == 1
+						option(value="1", selected="selected") CANCELADOS
+					else
+						option(value="1") CANCELADOS
+
+					if status == 2
+						option(value="2", selected="selected") CAPTURADOS
+					else
+						option(value="2") CAPTURADOS
+
+					if status == 3
+						option(value="3", selected="selected") ELIMINADOS
+					else
+						option(value="3") ELIMINADOS
+		.controls.controls-row
+			.span3
+				label Comandancia
+				select#comandancia(name="comandancia")
+					option(value="NO") **SELECCIONAR**
+					for com in comandancias
+						if com.comandancia == comandancia
+							option(value="{{com.comandancia}}", selected="selected") {{com.comandancia}}
+						option(value="{{com.comandancia}}") {{com.comandancia}}
+			.span3
+				label Agente
+				input#agente(name="agente" ,type="text", placeholder="Agente", value="{{agente}}")
+			.span3
+				label Lugar
+				input#lugar(name="lugar",type="text", placeholder="Lugar",value="{{lugar}}")
+		input#page(type="hidden", name="page" , value="{{usados.page}}")
+		input#order_by(type="hidden", name="order_by", value="{{usados.order_by}}")
+		input#order_tipo(type="hidden", name="order_tipo", value="{{usados.order_tipo}}")
+		.controls.controls-row
+			.span2
+				br
+				button#buscarPartes.btn(type="submit") 
+					|&nbsp;Buscar
+					span.icosystra-search
+legend Resultado
+.controls.controls-row
+	table#listaPreliminar_p.table-bordered
+		thead
+			tr 
+				th.id Opciones
+				td.agente 
+					|Comandancia
+					a#ordenar_comandancia_asc(href="#res-bus") 
+						if usados.order_by == 'comandancia' and usados.order_tipo == 'asc' 
+							span.ascendente-select.icosystra-arrow-up
+						else
+							span.ordenamiento.icosystra-arrow-up
+					a#ordenar_comandancia_desc(href="#res-bus") 
+						if usados.order_by == 'comandancia' and usados.order_tipo == 'desc' 
+							span.ascendente-select.icosystra-arrow-down
+						else
+							span.ordenamiento.icosystra-arrow-down
+				th.fecha 
+					|Fecha
+					a#ordenar_fecha_asc(href="#res-bus") 
+						if usados.order_by == 'fecha' and usados.order_tipo == 'asc' 
+							span.ascendente-select.icosystra-arrow-up
+						else
+							span.ordenamiento.icosystra-arrow-up
+					a#ordenar_fecha_desc(href="#res-bus") 
+						if usados.order_by == 'fecha' and usados.order_tipo == 'desc' 
+							span.ascendente-select.icosystra-arrow-down
+						else
+							span.ordenamiento.icosystra-arrow-down
+				th.folio 
+					|Folio
+					a#ordenar_folio_asc(href="#res-bus") 
+						if usados.order_by == 'folio' and usados.order_tipo == 'asc' 
+							span.ascendente-select.icosystra-arrow-up
+						else
+							span.ordenamiento.icosystra-arrow-up
+					a#ordenar_folio_desc(href="#res-bus") 
+						if usados.order_by == 'folio' and usados.order_tipo == 'desc' 
+							span.ascendente-select.icosystra-arrow-down
+						else
+							span.ordenamiento.icosystra-arrow-down
+				th.agente 
+					|Agente
+					a#ordenar_agente_asc(href="#res-bus") 
+						if usados.order_by == 'agente' and usados.order_tipo == 'asc' 
+							span.ascendente-select.icosystra-arrow-up
+						else
+							span.ordenamiento.icosystra-arrow-up
+					a#ordenar_agente_desc(href="#res-bus") 
+						if usados.order_by == 'agente' and usados.order_tipo == 'desc' 
+							span.ascendente-select.icosystra-arrow-down
+						else
+							span.ordenamiento.icosystra-arrow-down
+				th.ocurridos 
+					|Lugar
+					a#ordenar_lugar_asc(href="#res-bus") 
+						if usados.order_by == 'lugar' and usados.order_tipo == 'asc' 
+							span.ascendente-select.icosystra-arrow-up
+						else
+							span.ordenamiento.icosystra-arrow-up
+					a#ordenar_folio_desc(href="#res-bus") 
+						if usados.order_by == 'lugar' and usados.order_tipo == 'desc' 
+							span.ascendente-select.icosystra-arrow-down
+						else
+							span.ordenamiento.icosystra-arrow-down
+		tbody
+			if object_list 
+				for pre in object_list
+					if pre.activo == 0
+						tr(id="{{pre.id}}").iniciados
+							include accidentes/accidentes/rows-inicia/row-iniciados.jade
+					if pre.activo == 1
+						tr(id="{{pre.id}}").cancelados
+							include accidentes/accidentes/rows-inicia/row-cancelados.jade
+					if pre.activo == 2
+						tr(id="{{pre.id}}").capturados
+							include accidentes/accidentes/rows-inicia/row-capturados.jade
+					if pre.activo == 3
+						tr(id="{{pre.id}}").eliminados
+							include accidentes/accidentes/rows-inicia/row-eliminados.jade
+	include accidentes/accidentes/accidentes/pagination-preliminar
+	//!= contentFor('vendor/jquery.dataTables.min','vendor/require.js",data-main="accidentes/list/main.js"')

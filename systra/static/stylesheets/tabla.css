@@ -1,0 +1,212 @@
+#tabla_vehiculos_view table,
+#tabla_saldo_sangre_view table,
+#tabla_competencia_judicial_view table,
+#listaPartes table,
+#selPreliminar table,
+#tab_otros table,
+#tab_articulos_pp table,
+#tabla_vehiculos_view tbody,
+#tabla_saldo_sangre_view tbody,
+#tabla_competencia_judicial_view tbody,
+#listaPartes tbody,
+#selPreliminar tbody,
+#tab_otros tbody,
+#tab_articulos_pp tbody,
+#tabla_vehiculos_view th,
+#tabla_saldo_sangre_view th,
+#tabla_competencia_judicial_view th,
+#listaPartes th,
+#selPreliminar th,
+#tab_otros th,
+#tab_articulos_pp th,
+#tabla_vehiculos_view td,
+#tabla_saldo_sangre_view td,
+#tabla_competencia_judicial_view td,
+#listaPartes td,
+#selPreliminar td,
+#tab_otros td,
+#tab_articulos_pp td,
+#tabla_vehiculos_view tr,
+#tabla_saldo_sangre_view tr,
+#tabla_competencia_judicial_view tr,
+#listaPartes tr,
+#selPreliminar tr,
+#tab_otros tr,
+#tab_articulos_pp tr {
+  display: block;
+}
+#tabla_vehiculos_view thead tr,
+#tabla_saldo_sangre_view thead tr,
+#tabla_competencia_judicial_view thead tr,
+#listaPartes thead tr,
+#selPreliminar thead tr,
+#tab_otros thead tr,
+#tab_articulos_pp thead tr {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+#tabla_vehiculos_view tr,
+#tabla_saldo_sangre_view tr,
+#tabla_competencia_judicial_view tr,
+#listaPartes tr,
+#selPreliminar tr,
+#tab_otros tr,
+#tab_articulos_pp tr {
+  border: 1px solid rgba(204,204,204,0.8);
+}
+#tabla_vehiculos_view td,
+#tabla_saldo_sangre_view td,
+#tabla_competencia_judicial_view td,
+#listaPartes td,
+#selPreliminar td,
+#tab_otros td,
+#tab_articulos_pp td {
+  border: none;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 50%;
+}
+#tabla_vehiculos_view td:before,
+#tabla_saldo_sangre_view td:before,
+#tabla_competencia_judicial_view td:before,
+#listaPartes td:before,
+#selPreliminar td:before,
+#tab_otros td:before,
+#tab_articulos_pp td:before {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 45%;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+#tabla_vehiculos_view td:nth-of-type(1):before {
+  content: "OPCIONES";
+}
+#tabla_vehiculos_view td:nth-of-type(2):before {
+  content: "I.C.";
+}
+#tabla_vehiculos_view td:nth-of-type(3):before {
+  content: "PLACA";
+}
+#tabla_vehiculos_view td:nth-of-type(4):before {
+  content: "MARCA";
+}
+#tabla_vehiculos_view td:nth-of-type(5):before {
+  content: "SUBMARCA";
+}
+#tabla_vehiculos_view td:nth-of-type(6):before {
+  content: "TIPO";
+}
+#tabla_vehiculos_view td:nth-of-type(7):before {
+  content: "MODELO";
+}
+#tabla_vehiculos_view td:nth-of-type(8):before {
+  content: "COLOR";
+}
+#tabla_saldo_sangre_view td:nth-of-type(1):before {
+  content: "OPCIONES";
+}
+#tabla_saldo_sangre_view td:nth-of-type(2):before {
+  content: "NOMBRE";
+}
+#tabla_saldo_sangre_view td:nth-of-type(3):before {
+  content: "EDAD";
+}
+#tabla_saldo_sangre_view td:nth-of-type(4):before {
+  content: "DOMICILIO";
+}
+#tabla_saldo_sangre_view td:nth-of-type(5):before {
+  content: "SE ENCONTRABA";
+}
+#tabla_saldo_sangre_view td:nth-of-type(6):before {
+  content: "EDO. PERSONA";
+}
+#tabla_saldo_sangre_view td:nth-of-type(7):before {
+  content: "LEVANTADO POR";
+}
+#tabla_saldo_sangre_view td:nth-of-type(8):before {
+  content: "TRASLADADO A";
+}
+#tabla_competencia_judicial_view td:nth-of-type(1):before {
+  content: "OPCIONES";
+}
+#tabla_competencia_judicial_view td:nth-of-type(2):before {
+  content: "NOMBRE";
+}
+#tabla_competencia_judicial_view td:nth-of-type(3):before {
+  content: "DIRECCION";
+}
+#tabla_competencia_judicial_view td:nth-of-type(4):before {
+  content: "EDO. PERSONA";
+}
+#tabla_competencia_judicial_view td:nth-of-type(5):before {
+  content: "SE ENCONTRABA";
+}
+#tabla_competencia_judicial_view td:nth-of-type(6):before {
+  content: "DETENIDO";
+}
+#tabla_competencia_judicial_view td:nth-of-type(7):before {
+  content: "A DISPOSICIÓN DE";
+}
+#listaPartes td:nth-of-type(1):before {
+  content: "OPCIONES";
+}
+#listaPartes td:nth-of-type(2):before {
+  content: "FOLIO";
+}
+#listaPartes td:nth-of-type(3):before {
+  content: "FECHA";
+}
+#listaPartes td:nth-of-type(4):before {
+  content: "AGENTE";
+}
+#listaPartes td:nth-of-type(5):before {
+  content: "UNIDAD";
+}
+#listaPartes td:nth-of-type(6):before {
+  content: "CLASIFICACIONssss";
+}
+#selPreliminar td:nth-of-type(1):before {
+  content: "SEL";
+}
+#selPreliminar td:nth-of-type(2):before {
+  content: "FECHA";
+}
+#selPreliminar td:nth-of-type(3):before {
+  content: "FOLIO";
+}
+#selPreliminar td:nth-of-type(4):before {
+  content: "AGENTE";
+}
+#selPreliminar td:nth-of-type(5):before {
+  content: "LUGAR";
+}
+#tab_otros td:nth-of-type(1):before {
+  content: "OPCIONES";
+}
+#tab_otros td:nth-of-type(2):before {
+  content: "OBJETOS";
+}
+#tab_otros td:nth-of-type(3):before {
+  content: "TIPOS";
+}
+#tab_otros td:nth-of-type(4):before {
+  content: "DUEÑO";
+}
+#tab_otros td:nth-of-type(5):before {
+  content: "MONTO";
+}
+#tab_articulos_pp td:nth-of-type(1):before {
+  content: "OPCIONES";
+}
+#tab_articulos_pp td:nth-of-type(2):before {
+  content: "ARTICULO";
+}
+#tab_articulos_pp td:nth-of-type(3):before {
+  content: "FRACCION";
+}
+#tab_articulos_pp td:nth-of-type(4):before {
+  content: "DESCRIPCION";
+}

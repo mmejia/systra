@@ -1,0 +1,126 @@
+{{codigo|safe }}
+#atajo
+	a#mostrar-lista-preliminar(href="#")
+		i.icon-list.icon-white
+.tit-dir
+	include cabecera.jade
+		.row
+			h4
+				.span8.offset2
+					|Inicio preliminar de accidente 
+legend Accidente preliminar
+.item-c
+	.item-fila5
+		.control-group
+				label Fecha:
+				#date-fecha-preliminar.input-append.date
+					input#fecha_preliminar.input-fecha(data-format="yyyy-MM-dd",type="text",placeholder="Fecha")
+					span.add-on
+						i(data-time-icon="icon-time", data-date-icon="icon-calendar")
+				span.help-inline
+	.item-fila5
+		.control-group
+			label Hora:
+			#date-hora-preliminar.input-append.date
+				input#hora_preliminar.input-mini(data-format="hh:mm",type="text",placeholder="Hora")
+				span.add-on
+					i(data-time-icon="icon-time", data-date-icon="icon-time")
+			span.help-inline
+.item-c
+	.control-group
+		label.control-label(for="inputError") Delegación:
+		select#delegacion_pre
+		span.help-inline
+
+.item-c
+	.control-group	 
+		label.control-label(for="inputError")  Comandancia:
+		select#comandancia_pre
+		span.help-inline
+.item-c	
+	.control-group	 
+		label.control-label(for="inputError")  Turno:
+		select#turno_pre
+		span.help-inline
+.item-c
+	.control-group	 
+		label.control-label(for="inputError")  Tipo de Evento:
+		select#tipo_evento_pre
+		span.help-inline
+.item-c
+	.control-group	 	 
+		label.control-label(for="inputError")  Clasificación de Accidente:
+		select#clasificacion_pre
+		span.help-inline
+legend Localización del evento
+.item-c	
+	.control-group	 	 
+		label.control-label(for="inputError")  Calle 1:
+		input#calle1_pre.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+		span.help-inline
+.item-c
+	.control-group	 	 
+		label.control-label(for="inputError") Calle 2:
+		input#calle2_pre.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+		span.help-inline
+.item-c
+	.control-group	 	 
+		label.control-label(for="inputError") Referencia:
+		input#ref_pre.ui-autocomplete-input(type="text")
+		span.help-inline
+.item-c
+	.control-group	 
+		label.control-label(for="inputError") Colonia:
+		input#colonia_pre.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+		span.help-inline
+.item-c
+	.control-group
+		label.control-label(for="inputError") Operativo:
+		select#operativo_pre
+		span.help-inline
+legend Resumen
+.item-c
+	.item-fila5
+		.control-group	
+			label.control-label(for="inputError") No. Vehículos participantes
+			input#no_vehiculos_pre.input-mini(type="text" )
+			span.help-inline
+	.item-fila4 
+		.control-group
+			label.control-label(for="inputError") No. de Detenidos
+			input#no_detenidos_pre.input-mini(type="text" )
+			span.help-inline
+.item-c
+	.item-fila5
+		.control-group
+			label.control-label(for="inputError") No. de Heridos
+			input#no_heridos_pre.input-mini(type="text")
+			span.help-inline
+	.item-fila4
+		.control-group
+			label.control-label(for="inputError") No. de Muertros
+			input#no_muertos_pre.input-mini(type="text" )
+			span.help-inline
+legend Intervino
+.item-c
+	.control-group
+		label.control-label(for="inputError") Agente
+		input#intervino_pre(type="text",placeholder="Intervino")
+		span.help-inline
+.item-c
+	.control-group
+		label.control-label(for="inputError") Unidad:
+		input#unidad_pre(type="text",placeholder="Unidad")
+		span.help-inline
+legend Descripción
+.controls-controls-row
+	.control-group
+		textarea#observaciones_pre
+		span.help-inline
+.controls-controls-row
+	button#guardar_preliminar_pre.btn.btn-primary(type="button") 
+		|Guardar
+		i.icon-ok.icon-white
+	button#cancelar_preliminar_pre.btn(type="button") 
+		|Cancelar
+		i.icon-remove

@@ -1,0 +1,81 @@
+#CaracteristicasVehiculoServParticularInf-View.bloque-infracciones
+	.controls.controls-row
+		.span9
+			br
+			label.radio.inline
+				input#radioServicioParticular(type="radio",name="optServicio",value="Servicio Particular")
+				|Servicio Particular
+			label.radio.inline
+				input#radioServicioPublico(type="radio",name="optServicio",value="Servicio Publico")
+				|Servicio Publico
+	br
+	.controls.controls-row
+		.span6
+			.control-group
+				label Marca:
+				select#marca_cv_spa_inf
+				span.help-inline
+		.span6
+			.control-group
+				label Submarca:
+				select#submarca_cv_spa_inf
+				span.help-inline
+	.controls.controls-row
+		.span6
+			.control-group
+				label Modelo:
+				select#modelo_cv_spa_inf
+				span.help-inline
+		.span6
+			.control-group
+				label Color:
+				select#color_cv_spa_inf
+				span.help-inline
+	.controls.controls-row
+		.span6
+			.control-group
+				label Detalle del Color:
+				.input-append
+					input#detalle_color_cv_spa_inf.upper(type="text", placeholder="Detalle")
+					button.btn#detalle_color_cv_spa_inf_default
+						span.icosystra-info
+				span.help-inline
+		.span4
+			.control-group
+				label Placas:
+				.input-append
+					input#placas_cv_spa_inf.upper(type="text", placeholder="Placas")
+					button.btn#placas_cv_spa_inf_default
+						span.icosystra-question
+				span.help-inline
+	.controls.controls-row		
+		.span6
+			label Tipo:
+			select#tipo_cv_spa_inf
+				option(value="NO") **SELECCIONAR**
+				option(value="F") F
+				option(value="O") O
+				option(value="P") P
+				option(value="SE DESCONOCE") SE DESCONOCE
+		.span6
+			.control-group
+				label Estado: 
+				.input-append
+					input#estado_cv_spa_inf.ui-autocomplete-input.upper(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true",placeholder="Estado",value="GUANAJUATO")
+					button.btn#estado_cv_spa_inf_default
+						span.icosystra-info
+				span.help-inline
+	.controls.controls-row	
+		.span6
+			.control-group
+				label Serie:
+				.input-append
+					input#serie_cv_spa_inf.ui-autocomplete-input.upper(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true",placeholder="Serie")
+					button.btn#serie_cv_spa_inf_default
+						span.icosystra-info
+				span.help-inline
+		.span6
+			.control-group
+				label Tipo Vehículo:
+				select#tipo_vehiculo_cv_spa_inf
+				span.help-inline

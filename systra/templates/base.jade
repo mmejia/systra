@@ -1,0 +1,196 @@
+doctype 5
+html(land="es")
+    head
+        title Sistema de Tránsito
+        meta(charset="utf8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/static/stylesheets/vendor/normalize.css")
+        link(href="http://fonts.googleapis.com/css?family=Open+Sans|Nunito:400,300&subset=latin,cyrillic" ,rel='stylesheet', type='text/css')
+        link(rel="stylesheet", href="/static/stylesheets/vendor/bootstrap.css")
+        link(rel="stylesheet", href="/static/stylesheets/vendor/bootstrap-responsive.min.css")
+        link(rel="stylesheet", href="/static/stylesheets/vendor/prettify.css")
+        link(rel="stylesheet", href="/static/stylesheets/vendor/bootstrap-wysihtml5-0.0.2.css")
+        link(rel="stylesheet", href="/static/stylesheets/vendor/bootstrap-datetimepicker.min.css")
+        link(rel="stylesheet", href="/static/stylesheets/vendor/jquery.ui.all.css")
+        link(rel="stylesheet", href="/static/stylesheets/vendor/style.css")
+        {%if estilo == None %}
+        link(rel="stylesheet", href="/static/stylesheets/estilos-{{'chocolate'}}.css")
+        {% else %}
+        link(rel="stylesheet", href="/static/stylesheets/estilos-{{estilo}}.css")
+        {% endif %}
+        block stylesheet
+        script(src="/static/javascripts/vendor/modernizr-2.6.2.min.js")
+
+    body
+        {{codigo_profile|safe }}
+        #wrapper
+            header.navbar.navbar-inverse.navbar-fixed-top
+                .navbar-inner
+                    .container-fluid
+                        button.btn.btn-navbar(type="button", data-toggle="collapse", data-target=".nav-collapse")
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                        a.brand(href="#") Systra-Nin
+                        .nav-collapse.collapse
+                            ul.nav
+                                li#li-inicio.active
+                                    {% if permiso.main  %}
+                                    a(href="/main") 
+                                        span.icosystra-home2
+                                        |&nbsp;Inicio
+                                    {% endif %}
+                                {%if permiso.accidente%}
+                                li#li-accidente.dropdown
+                                    a.dropdown-toggle(href="#", data-toggle="dropdown") 
+                                        span.icosystra-aid
+                                        |&nbsp;ACCIDENTES 
+
+                                        b.caret
+                                    ul.dropdown-menu
+                                        {% if permiso.cabina %}
+                                        li
+                                            a(href="/accidente/inicia")
+                                                span.icosystra-bubbles
+                                                |&nbsp;CABINA
+                                        {% endif %}
+                                        {% if permiso.list_cabina %}
+                                        li
+                                            a(href="/accidente/listaPreliminaresp") 
+                                                span.icosystra-list
+                                                |&nbsp;LISTA DE CABINA
+                                        {% endif %}
+                                        {% if permiso.captura_parte %}
+                                        li.divider
+                                            li.nav-header
+                                                |ACCIDENTES
+                                        li
+                                            a(href="/accidente/captura_para_seleccionar_preliminar/") 
+                                                span.icosystra-file
+                                                |&nbsp;CAPTURAR
+                                        {% endif %}
+                                        {% if permiso.lista_accidente %}
+                                        li
+                                            a(href="/accidente/list")  
+                                                span.icosystra-list
+                                                |&nbsp;LISTA ACCIDENTES
+                                        {% endif %}
+                                        {% if permiso.estadistica_mapa %}
+                                        li.divider
+                                            li.nav-header
+                                                |ESTADISTICAS
+                                       
+                                        li
+                                            a(href="/accidente/mapa_busqueda")
+                                                span.icosystra-earth
+                                                |&nbsp;MAPA
+                                        {% endif %}
+                                {% endif %}
+                                {% if permiso.infraccion %}
+                                li#li-infraccion.dropdown
+                                    a#Infracciones.dropdown-toggle(href="#", data-toggle="dropdown") 
+                                        span.icosystra-ticket
+                                        |&nbsp;INFRACCIONES
+                                        b.caret
+                                    ul.active.dropdown-menu
+                                        {% if permiso.infracciones_captura %}
+                                        li
+                                            a(href="/infraccion/captura")
+                                                span.icosystra-file
+                                                |&nbsp;CAPTURAR
+                                        {% endif %}
+                                        {% if permiso.infracciones_lista %}
+                                        li
+                                            a(href="/infraccion/list")
+                                                span.icosystra-list
+                                                |&nbsp;LISTA
+                                        {% endif %}
+                                        {% if permiso.infracciones_folios %}
+                                        li.divider
+                                        li.nav-header
+                                            |FOLIOS
+                                        li
+                                            a(href="/folios/list") 
+                                                span.icosystra-books
+                                                |&nbsp;FOLIOS
+                                        li
+                                            a(href="/folios/view_elem_folios") 
+                                                span.icosystra-users
+                                                |&nbsp;ELEMENTOS
+                                        li.nav-header
+                                            span.icosystra-bars
+                                            |ESTADISTICAS
+                                        li
+                                            a(href="/infraccion/estadisticas/") 
+                                                span.icosystra-table
+                                                |&nbsp;HISTORIAL DE PLACAS
+                                        {% endif %}
+                                {% endif %}
+                                {% if permiso.devoluciones %}
+                                li#li-liberacion.dropdown
+                                    a#Liberacion.dropdown-toggle(href="#", data-toggle="dropdown") 
+                                        span.icosystra-truck
+                                        |&nbsp;DEVOLUCION
+                                        b.caret
+                                    ul.dropdown-menu
+                                        {% if permiso.devoluciones_devolucion %}
+                                        li
+                                            a(href="/inventario/captura")
+                                                span.icosystra-file
+                                                |&nbsp;DEVOLUCIÓN
+                                        {% endif %}
+                                        {% if permiso.devoluciones_devoluciones %}
+                                        li
+                                            a(href="/inventario/list") 
+                                                span.icosystra-list
+                                                |&nbsp;DEVOLUCIONES
+                                        {% endif %}
+                                        {% if permiso.devoluciones_liberar %}
+                                        li.divider
+                                        li.nav-header LIBERACION
+                                       
+                                        li
+                                            a(href="/inventario/liberar_seleccionando")
+                                                span.icosystra-thumbs-up2
+                                                |&nbsp;LIBERAR
+                                        {% endif %}
+                                {% endif %}
+                                {% if permiso.admin %}
+                                li.dropdown
+                                    a#admin.dropdown-toggle(href="#", data-toggle="dropdown") Admin
+                                        b.caret
+                                    ul.dropdown-menu
+                                        li
+                                            a(href="/admin/") Principal
+                                {%endif%}
+                                li#li-avatar.dropdown
+                                    a(href="#" ,data-toggle="dropdown")
+                                        span.icosystra-bubble 
+                                        |&nbsp;{{nombre_usuario}} 
+                                        b.caret
+                                    ul#avatar-down.dropdown-menu
+                                        li
+                                            include avatar
+                                                    
+
+
+            include accidentes/accidentes/accidentes/modal
+            include accidentes/accidentes/accidentes/error-modal
+            section#contenido
+                block contenido  
+            br           
+            footer.footer
+                .container
+                    p &copy; Tránsito Municipal..
+        script(src="/static/javascripts/vendor/wysihtml5-0.3.0_rc2.min.js")
+        script(src="/static/javascripts/vendor/jquery.js")
+        script(src="/static/javascripts/vendor/bootstrap.min.js")
+        script(src="/static/javascripts/core/socket.io.js")
+        //script(src="/static/javascripts/setup-app.js")
+        script(src="/static/javascripts/vendor/bootstrap-wysihtml5-0.0.2.min.js")
+        script(src="/static/javascripts/vendor/underscore-min.js")
+        script(src="/static/javascripts/vendor/jquery-ui-1.10.3.custom.min.js")
+        script(src="/static/javascripts/vendor/spin.min.js")
+        //script(src="/static/javascripts/vendor/bootstrap-datetimepicker.js")
+        //script(src="/static/javascripts/vendor/jquery.ui.addresspicker.js")
+        block javascripts

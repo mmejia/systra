@@ -1,0 +1,72 @@
+legend Se recoje
+#managerRecojeDocumento_spa_inf_view.controls.controls-row
+	.span12
+		label 
+			|Para garantizar el cumplimiento de la sanción administrativa que en su caso proceda, SE RECOGE AL INFRACTOR LA:       
+	.controls.controls-row	
+		.span4.offset8
+			strong Nota: Tipo de Placa F es Foránea
+	#radios_recoje.controls.controls-row
+		.span2
+			label.radio
+				input#rd_vehiculo_spa_inf(type="radio",name="recoje",value="VEHICULO", checked)
+				| VEHICULO
+		.span2
+			label.radio
+				input#rd_tarjeta_spa_inf(type="radio",name="recoje",value="TARJETA DE CIRCULACION")
+				| TARJETA DE CIRCULACION
+		.span2
+			label.radio
+				input#rd_placa_spa_inf(type="radio",name="recoje",value="PLACAS")
+				| PLACAS
+		.span2
+			label.radio
+				input#rd_licencia_spa_inf(type="radio",name="recoje",value="LICENCIA")
+				| LICENCIA
+		.span2
+			label.radio
+				input#rd_cortesia_spa_inf(type="radio",name="recoje",value="CORTESIA")
+				| CORTESIA
+		.span2
+			label.radio
+				input#rd_pago_movil_spa_inf(type="radio",name="recoje",value="PAGO MOVIL")
+				| PAGO MOVIL
+	#recoje_vehiculo_spa_inf.controls.controls-row.seccion
+		.span3
+			label Pensión:
+			select#recoje_vehiculo_pension_spa_inf.input-medium
+		.span4
+			label No. de Inventario:
+			input#recoje_vehiculo_no_inventario_spa_inf(type="text")
+		.span1
+			label Tipo:
+			select#recoje_tarjeta_tipo_spa_inf.input-mini
+				option(value="F") F
+				option(value="O") O
+				option(value="P") P
+		.span4
+			label Placas :
+			input#recoje_tarjeta_placas_spa_inf(type="text")
+	#recoje_tarjeta_spa_inf.controls.controls.seccion
+		.span1
+			label Tipo:
+			select#recoje_tarjeta_tipo_spa_inf.input-mini
+				option(value="F") F
+				option(value="O") O
+				option(value="P") P
+		.span4
+			label Placas :
+			input#recoje_tarjeta_placas_spa_inf(type="text")
+	#recoje_placa_spa_inf.controls.controls.seccion
+		.span1
+			label Tipo:
+			select#recoje_placa_tipo_spa_inf.input-mini
+				option(value="F") F
+				option(value="O") O
+				option(value="P") P
+		.span4
+			label Placas :
+			input#recoje_placa_placas_spa_inf(type="text")
+	#recoje_licencia_spa_inf.controls.controls.seccion
+		.span12
+			#DatosLicenciaServParticularInv-View

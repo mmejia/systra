@@ -1,0 +1,106 @@
+extends base
+block stylesheet
+		link(rel="stylesheet", href="/static/stylesheets/table/demo_page.css")
+		link(rel="stylesheet", href="/static/stylesheets/table/demo_table_jui.css")
+		link(rel="stylesheet", href="/static/stylesheets/table/smoothness/jquery-ui-1.8.4.custom.css")
+
+block contenido
+	#contenido
+		.controls.controls-row
+			.span4
+				img(src="/image/infracciones/escudo_transito.gif")
+			.span4
+				label
+					|MUNICIPIO DE LEON, GUANAJUATO
+					|SECRETARIA DEL H. AYUNTAMIENTO
+					|DIRECCION GENERAL DE TRANSITO MUNICIPAL
+			.span4
+				br
+				br
+				|FOLIO DE ACCIDENTE No. 
+				|T- 
+				input#folio(type="text")
+		br
+		legend Accidente preliminar
+		.controls.controls-row
+			.span4
+				label.control-label(for="hora") Fecha:Horadd
+					#datetimepicker1.input-append.date
+						input#fecha-hora_pp(data-format="dd/MM/yyyy hh:mm:ss",type="text",placeholder="Hora")
+						span.add-on
+							i(data-time-icon="icon-time", data-date-icon="icon-calendar")
+			.span4
+				label Delegación:
+				select#delegacion_pp
+			.span4	 
+				label Comandancia:
+				select#comandancia_pp
+		.controls.controls-row	
+			.span4	 
+				label Turno:
+				select#turno_pp
+			.span4
+				label Tipo de Evento:
+				select#tipo_evento_pp
+			.span4	 
+				label Clasificación de Accidente:
+				select#clasificacion_pp
+		legend Localización del evento
+		.controls.controls-row	
+			.span4	 
+				label Calle 1:
+				input#calle1_pp.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+			.span4	 
+				label Calle 2:
+				input#calle2_pp.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+			.span4
+				label Colonia:
+				input#colonia_pp.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+			label Operativo:
+			select#operativo_pp
+		legend Resumen
+		.controls.controls-row
+			.span3	
+				label No. Vehículos participantes
+				input#no_vehiculos_pp.input-mini(type="text" )
+			.span3
+				label No. de Detenidos
+				input#no_detenidos_pp.input-mini(type="text" )
+			.span3
+				label No. de Heridos
+				input#no_heridos_pp.input-mini(type="text")
+			.span3
+				label No. de Muertros
+				input#no_muertos_pp.input-mini(type="text" )
+		.controls.controls-row
+			.span4
+				label Pensión
+				select#pension_pp
+			.span4	 
+				label No. de Inventario
+				input#no_de_inventario(type="text" )
+		legend Intervino
+		.controls.controls-row
+			.span4
+				label Agente
+				input#intervino_pp(type="text",placeholder="Intervino")
+			.span4
+				label Unidad:
+				input#unidad_pp(type="text",placeholder="Unidad")
+		legend Descripción
+		.controls.controls-row
+			.span12
+				textarea#observaciones_ppp
+		.controls.controls-row
+			.span4
+				button#guardar_preliminar_pp.btn.btn-primary(type="button") Guardar
+				button#cancelar_preliminar_pp.btn(type="button") Cancelar
+				button#cargar_preliminar_pp.btn(type="button") Cargar
+block javascripts
+	script(src="/static/javascripts/utils.js")
+	script(src="/static/javascripts/datos/pre_test.js")
+	script(src="/static/javascripts/datos/testPreliminar.js")
+	script(src="/static/javascripts/vendor/jquery.dataTables.min.js")  
+	script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/main-prel.js")
+
+

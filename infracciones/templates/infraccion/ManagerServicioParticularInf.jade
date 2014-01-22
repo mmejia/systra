@@ -1,0 +1,70 @@
+#ServicioParticularInf-View
+	.controls.controls-row
+		.span5
+			div
+				label DELEGACION
+				select#delegacion_spa_inf.input-xlarge
+		.span4
+			div
+				label COMANDANCIA
+				select#comandancia_spa_inf
+		.span3
+			div
+				label TURNO
+				select#turno_spa_inf.input-short
+	.controls.controls-row
+		.span4
+			div
+				label Colonia:
+				input#colonia_spa_inf.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+		.span4
+			div
+				label Calle 1:
+				input#calle1_spa_inf.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+		.span4
+			div
+				label Calle 2:
+				input#calle2_spa_inf.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+	.controls.controls-row
+		.span6
+			label Referencia y/o No.:
+			input#referencia_spa_inf.input-xlarge(type="text")
+		.span6
+			label Circulacion:
+			select#circulacion_spa_inf(type="text")
+	.controls.controls-row
+		.span4
+			label Latitud:
+			input#lat_inf(type="text", placeholder="Latitud")
+		.span4
+			label Longitud:
+			input#lng_inf(type="text",placeholder="Longitud")
+		.span1
+			br
+			button#buscar_punto_inf.btn(type="button")	Punto
+	#selPunto
+	.controls.controls-row
+		.span6
+			div
+				label Tipo de Operativo:
+				select#tipo_operativo_spa_inf
+	legend Motivo de Infracción
+	#managerArticulos_spa_inf
+	br
+	include ManagerRecojeDocumentoInf
+	legend Datos de infracción
+	.tabbable
+		ul#myTab.nav.nav-tabs
+			li.active
+				a(href="#pane1", data-toogle="tab") Datos Infractor
+			li
+				a(href="#pane2", data-toogle="tab") Características del Vehículo
+		.tab-content
+			#pane1.tab-pane.active
+				#managerDatosInfractor_spa_inf.seccion
+			#pane2.tab-pane
+				#managerCaracteristicasVehiculo_spa_inf.seccion
+
+	
+	
+	#managerCertificadoMedico_spa_inf

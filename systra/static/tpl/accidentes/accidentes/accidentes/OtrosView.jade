@@ -1,0 +1,114 @@
+.bloque
+
+	.controls.controls-row
+		.span4
+			.control-group.otros-v
+				label Visibilidad
+				select#alumbrado_publico_o
+				span.help-inline
+		.span4
+			.control-group.otros-v
+				label Parte del Dia
+				select#parte_dia_o
+				span.help-inline
+		.span4
+			.control-group.otros-v
+				label Tipo de Calle:
+				select#tipo_calle_o
+				span.help-inline
+	.controls.controls-row
+		.span4
+			.control-group.otros-v
+				label No. de Carriles
+				select#no_carriles_o
+				span.help-inline
+		.span4
+			.control-group.otros-v
+				label Sentido de la Calle:
+				select#sentido_calle_o
+				span.help-inline
+legend Estado de las calles:
+.bloque
+	.controls.controls-row
+		.span4
+			.control-group.otros-v
+				label Alineación
+				select#alineacion_o
+				span.help-inline
+		.span4
+			.control-group.otros-v
+				label Estado del Pavimento
+				select#estado_pavimento_o
+				span.help-inline
+		.span4
+			.control-group.otros-v
+				label Clima
+				select#clima_o
+				span.help-inline
+	.controls.controls-row
+		.span4
+			.control-group.otros-v
+				label Regulación
+				select#regulacion_o
+				span.help-inline
+legend#num_danos Daños acumulados
+a(name="editar-danos")
+#capturaDanos.bloque(title="Captura daños")
+	strong Los daños de objetos fijos serán valuados por peritos en la materia
+	br
+	.controls.controls-row
+		.span4
+			.control-group.danos-v
+				label Objetos dañados
+				select#objetos_danados_o
+				span.help-inline
+		.span4
+			.control-group.danos-v
+				label Tipo de daños
+				input#tipo_danos_o
+				span.help-inline
+		.span4
+			.control-group.danos-v
+				label Dueños
+				input#dueno_o
+				span.help-inline
+	.controls.controls-row
+		.span4
+			.control-group.danos-v
+				label Monto de los daños:
+				input#monto_danos_o
+				span.help-inline
+	.controls.controls-row
+		.span4.offset4
+			button#aceptar-danos.btn.btn-primary
+				|Aceptar
+				i.icon-ok.icon-white
+			button#cancelar-danos.btn
+				|Cancelar
+				.icon-remove
+br
+a(name="tabla-danos")
+.bloque
+	#tab_otros_view
+		table#tab_otros.table-bordered
+			thead
+				th  
+					|Opciones
+				th
+					|Objeto
+				th
+					|Tipo de Daños
+				th
+					|Dueño
+				th
+					|Monto
+			tbody
+		.controls.controls-row
+			.btn-add
+				a#agregar_danos(href="#editar-danos")
+					i.icon-plus-sign
+
+
+
+
+

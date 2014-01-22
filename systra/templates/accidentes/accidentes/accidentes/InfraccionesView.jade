@@ -1,0 +1,21 @@
+#infracciones_pp.bloque
+	.controls.controls-row
+			.span3
+				label Artculo:
+	.controls.controls-row
+		.span9
+			input#articulos_pp.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true", placeholder="Elige un Articulo")
+		.span1
+			button#sel-articulo-pp.btn(type="button") 
+				i.icon-plus
+	.controls.controls-row
+		h5.num_articulos Articulos seleccionados:
+	.controls.controls-row
+		table#tab_articulos_pp.table-bordered
+				thead
+					th Opciones
+					th.articulo Articulo
+					th.fraccion Fracción
+					th.descripcion Descripción
+				tbody
+	br

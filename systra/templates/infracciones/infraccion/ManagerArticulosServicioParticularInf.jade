@@ -1,0 +1,21 @@
+#managerArticulosView_spa_inf.bloque
+	.controls.controls-row
+		.span12
+			br
+			.control-group
+				.input-append.sel-articulo
+					input#articulos_spa_inf.ui-autocomplete(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true",placeholder=" Elige un articulo")
+					button#sel-articulo-spa-inf.btn(type="button")
+						span.icosystra-plus
+				span.help-inline
+	.controls.controls-row
+		h5 Articulos seleccionados:
+		span#mensaje-articulos-vacios.help-inline
+		table#tab_articulos_spa_inf.table-bordered
+			thead
+				th
+				th.articulo Articulo
+				th.fraccion Fracción
+				th.descripcion Descripción
+			tbody
+		br

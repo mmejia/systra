@@ -1,0 +1,40 @@
+link(rel="stylesheet", href="/static/stylesheets/vendor/bootstrap.css")
+link(rel="stylesheet", href="/static/stylesheets/vendor/pick-a-color-1.1.7.min.css")
+form(action="", method="post")
+	legend Datos Generales
+	input(type="hidden" name="id")
+	.controls.controls
+		.span4
+			label No. de Cobro
+			input#perf_cobro(type="text", name="cobro" )
+		.span4
+			label Nombre
+			input#perf_nombre(type="text", name="nombre" )
+		.span4
+			label Comandancia
+			select#perf_comandancia(name="comandancia" )
+	.controls.controls
+		.span4
+			label Turno
+			select#perf_turno( name="turno" )
+		.span4
+			label Delegación
+			select#perf_delegacion(name="nombre" )
+		.span4
+			label Comisión
+			input(name="comision", type="text" )
+	legend Preferencias
+	.controls.controls
+		.span4
+			label Color
+			input.pick-a-color(type="text", value="222", name="color")
+	.controls.controls
+		.span4
+			label Tamaño de tablas
+			input.input(type="text", value="10", nombre="tam_tabla")
+	input(type="submit")
+//script(src="/static/javascripts/vendor/jquery.js")
+//script(src="/static/javascripts/vendor/tinycolor-0.9.15.min.js")
+//script(src="/static/javascripts/vendor/pick-a-color.js")
+//script(src="/static/javascripts/util-perfil.js")
+script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/perfil/main-perfil.js")

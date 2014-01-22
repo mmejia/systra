@@ -1,0 +1,30 @@
+#historia-bloques.bloque
+	if tam_bloques > 0
+		.row
+		for item,i in bloques
+			.col-3.col-sm-3.col-lg-4
+				h2 	
+					span.icosystra-notebook
+					|1Block {{item.id}}
+					.div-remove
+						a.remove-block(href="#", id="block_{{item.id}}")
+							span.icosystra-remove
+				.controls.controls-row
+					.span4
+						label Fecha de ingreso 
+						span {{item.fecha_recibido}}
+					.span2
+						label Folio inicial 
+						span {{item.folio_inicial}}
+					.span2
+						label Folio final 
+						span {{item.folio_final}}
+				br
+				.controls.controls-row
+					a.view-detail-block.btn.btn-default(href="#detail-block", id="id_{{item.id}}", role="button") Ver detalles »
+				a(href="detail-block")
+				div(id="detailblock-{{item.id}}")
+				
+
+	else
+		legend No tiene blocks asignados...

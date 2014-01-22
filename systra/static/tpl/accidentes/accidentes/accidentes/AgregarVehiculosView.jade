@@ -1,0 +1,397 @@
+#datos_vehiculos
+	.bloque
+		.controls.controls-row
+			.span4
+				.control-group.add-ve
+					label Tipo Vehículo:
+					select#tipo_vehiculo_pp
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Inverviene como:
+					input#interviene_como_pp.input-short(type="text", placeholder="Interviene como")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Marca:
+					input#marca_vehiculo_pp.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+					span.help-inline
+		.controls.controls-row	
+			.span4
+				.control-group.add-ve
+					label SubMarca:
+					input#submarca_vehiculo_pp.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Modelo:
+					select#model_vehiculo_pp
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Tipo:
+					select#tipo_vehiculo_pp.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+					span.help-inline
+		.controls.controls-row	
+			.span4
+				.control-group.add-ve
+					label Datos Adicionales:
+					input#datosadicionales_vehiculo_pp(type="text", placeholder="Datos adicionales")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Placas:
+					.input-append
+						input#placas_vehiculo(type="text", placeholder="Placas")
+						button.btn
+							i#placas_default.icon-info-sign 
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label No. Serie:
+					.input-append
+						input#noSerie_vehiculo(type="text", placeholder="No. Serie")
+						button.btn
+							i#noSerie_vehiculo_default.icon-info-sign 
+					span.help-inline
+		.controls.controls-row	
+			.span4
+				.control-group.add-ve
+					label No. Eco.:
+					.input-append
+						input#noeco_pp(type="text", placeholder="No. Econ")
+						button.btn#noeco_pp_default
+							i.icon-info-sign 
+					span.help-inline
+		.controls.controls-row
+			.span4
+				.control-group.add-ve
+					label Capacidad:
+					.input-append
+						input#capacidad_vehiculo_pp(type="text", placeholder="Capacidad")
+						button.btn#capacidad_vehiculo_pp_default
+							i.icon-info-sign 
+
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label No. de grua:
+					.input-append
+						input#nodegrua_vehiculo_pp(type="text", placeholder="No. de Grua")
+						button.btn#nodegrua_vehiculo_pp_default
+							i.icon-info-sign 
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Pensión:
+					select#pension_vehiculo_pp
+					span.help-inline
+		.controls.controls-row
+			.span4
+				.control-group.add-ve
+					label No. de Inventario:
+					.input-append
+						input#noInventario_vehiculo(type="text", placeholder="No de inventario")
+						button.btn#noInventario_vehiculo_default
+							i.icon-info-sign 
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Clase
+					select#clase_vehiculo_pp
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Color
+					select#color_vehiculo_pp
+					span.help-inline
+		.controls.controls-row
+			.span4
+				.control-group.add-ve
+					label Detalle del Color
+					input#detalle_color_vehiculo(type="text", placeholder="Detalle del color")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Estado
+					input#estado_vehiculo_pp.ui-autocomplete-input(type="text", placeholder="Estado")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Municipio
+					input#municipio_vehiculo_pp.ui-autocomplete-input(type="text", placeholder="Municipio")
+					span.help-inline
+	legend Datos del Propietario del vehículo
+	label.checkbox
+			input#IgualConductorPropietario(type="checkbox")
+			|Active esta casilla si los datos del propietario son los mismos que los del conductor.
+	.bloque
+		.controls.controls-row
+			.control-group.add-ve
+				.span2
+					label.radio
+						input#tipoDuenoNombre(type="radio",name="dipodueno",value="0")
+						|Nombre
+				.span2
+					label.radio
+						input#tipoDuenoRazonSocial(type="radio",name="tipodueno",value="1")
+						|Razón Social 
+				span#msg-tipo-propietario.help-inline
+			.span8
+				strong
+					|Utilize esta opción si el propietario del vehìculo pertenece a una empresa
+		.controls.controls-row
+			.span4
+				.control-group.add-ve
+					label Nombre(s) o Razón Social
+					input#nombre_propietario_vehiculo(type="text", placeholder="Nombre del propietario")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Apellido Paterno
+					input#apellido_paterno_propietario_vehiculo(type="text", placeholder="Apellido Paterno")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Apellido Materno
+					input#apellido_materno_propietario_vehiculo(type="text", placeholder="Apellido Materno")
+					span.help-inline
+		.controls.controls-row
+			.span4
+				.control-group.add-ve
+					label Domicilio
+					input#domicilio_propietario_vehiculo(type="text", placeholder="Domicilio")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Telefono
+					input#telefono_propietario_vehiculo(type="text", placeholder="Telefono")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Codigo Postal:
+					input#codigo_postal_propietario_vehiculo(type="text", placeholder="Código Postal")
+					span.help-inline
+		.controls.controls-row
+			.span4
+				.control-group.add-ve
+					label Colonia
+					input#colonia_propietario_vehiculo_pp.ui-autocomplete-input(type="text", placeholder="Colonia")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Municipio
+					input#municipio_propietario_vehiculo_pp.ui-autocomplete-input(type="text", placeholder="Municipio")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Estado
+					input#estado_propietario_vehiculo_pp.ui-autocomplete-input(type="text", placeholder="Estado")
+					span.help-inline
+
+
+
+	legend 
+		|Datos del Conductor
+	label.checkbox
+			input#se-desconoce-conductor(type="checkbox")
+			| Se desconoce datos del conductor
+	.bloque
+		.controls.controls-row	
+			.span4
+				.control-group.add-ve			
+					label Nombre
+					input#nombre_conductor_vehiculo(type="text", placeholder="Nombre")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Apellido Paterno
+					input#appellido_paterno_conductor_vehiculo(type="text", placeholder="Apellido Paterno")
+				span.help-inline
+			.span4
+				.control-group.add-ve
+					label Apellido Materno
+					input#apellido_materno_conductor_vehiculo(type="text", placeholder="Apellido Materno")
+					span.help-inline
+			.controls.controls-row
+			.span4
+				.control-group.add-ve
+					label Domicilio
+					input#domicilio_conductor_vehiculo(type="text", placeholder="Domicilio")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Edad
+					input#edad_conductor_vehiculo.input-small(type="text", placeholder="Edad")
+					select#tipo_de_edad_conductor_vehiculo.input-small
+						option(value="AÑO") AÑOS
+						option(value="MESES") MESES
+						option(value="SE DESCONOCE") SE DESCONOCE
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Sexo
+					select#sexo_conductor_vehiculo
+						option(value="NO") **SELECCIONAR**
+						option(value="HOMBRE") HOMBRE
+						option(value="MUJER") MUJER
+						option(value="SE DESCONOCE") SE DESCONOCE
+					span.help-inline
+		.controls.controls-row
+			.span4
+				.control-group.add-ve
+					label Colonia
+					input#colonia_conductor_vehiculo_pp.ui-autocomplete-input(type="text", placeholder="Colonia")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Folio de Infracción
+					input#folio_infraccion_conductor_vehiculo(type="text", placeholder="Folio de Infraccion")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Folio del Certificado Médico
+					input#folio_certificado_medico_conductor_vehiculo(type="text", placeholder="Colonia")
+					span.help-inline
+		br
+		.controls.controls-row
+			.control-group.add-ve
+				.span2
+					label.radio
+						input#radEstadoConductorEbriedadCompleta(type="radio",name="estadoconductor",value="1")
+						|EBRIEDAD COMPLETA
+				.span2
+					label.radio
+						input#radEstadoConductorBajoInflujoDrogas(type="radio",name="estadoconductor",value="2")
+						|BAJO INFLUJO DE DROGAS
+				.span2
+					label.radio
+						input#radEstadoConductorAlientoAlcoholico(type="radio",name="estadoconductor",value="3")
+						|ALIENTO ALCOHOLICO
+				.span2
+					label.radio
+						input#radEstadoConductorEstadoNormal(type="radio",name="estadoconductor",value="4")
+						|ESTADO NORMAL
+				.span2
+					label.radio
+						input#radEstadoConductorInconsciente(type="radio",name="estadoconductor",value="5")
+						|INCONSCIENTE
+				span#msg-estado-drogas.help-inline
+		br
+		.controls.controls-row
+			.span4
+				.control-group.add-ve
+					label Estado
+					input#estado_certificado_vehiculo_pp.ui-autocomplete-input(type="text", placeholder="Estado")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Municipio
+					input#municipio_certificado_vehiculo_pp.ui-autocomplete-input(type="text", placeholder="Municipio")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Condiciones Físicas
+					select#condiciones_fisicas_certificado_vehiculo_pp
+					span.help-inline
+		.controls.controls-row
+			.span4
+				.control-group.add-ve
+					label Detenido en
+					select#detenido_en_certificado_vehiculo_pp
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label En custodia  de
+					select#custodia_de_certificado_vehiculo(type="text", placeholder="En custodia de")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label A disposición de 
+					select#disposicion_de_certificado_vehiculo(type="text", placeholder="A disposicion de")
+					span.help-inline
+		.controls.controls-row
+			.span4
+				.control-group.add-ve
+					label La persona se encontraba:
+					select#persona_encontraba_certificado_vehiculo_pp
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Levantado por:
+					select#levantado_por_certificado_vehiculo_pp
+					span.help-inline
+
+			.span4
+				.control-group.add-ve
+					label Trasladado a:
+					select#trasladado_a_certificado_vehiculo_pp
+					span.help-inline
+		.controls.controls-row
+			.span4
+				.control-group.add-ve
+					label No. Licencia
+					input#nolicencia_conductor(type="text")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Tipo de Licencia
+					select#tipo_licencia_conductor_vehiculo_pp
+					span.help-inline
+			.span4
+				.control-group.add-ve	
+					label Restricciones
+					select#restricciones_licencia_conductor_vehiculo_pp
+					span.help-inline
+		.controls.controls-row
+			.span4
+				.control-group.add-ve
+					label Vigencia:
+					#date-vigencia-licencia.input-append.date
+						input#vigencia_licencia.input-fecha(data-format="yyyy-MM-dd",type="text",placeholder="Fecha")
+						span.add-on
+							i(data-time-icon="icon-time", data-date-icon="icon-calendar")
+					span.help-inline
+			.span4
+				.control-group.add-ve
+					label Expedida por el Gob. del Edo. de:
+					input#expedida_licencia_conductor_vehiculo_pp.ui-autocomplete-input(type="text", placeholder="Estado de la licencia")
+					span.help-inline
+	
+		.controls.controls-row
+			.btn-add
+				button#guardar_vehiculo_parte.btn.btn-primary(type="submit")
+					|Aceptar
+					i.icon-ok.icon-white
+				button#cancelar_vehiculo_parte.btn(type="submit") 
+					|Cancelar
+					.icon-remove
+				button#cargar_vehiculo_parte1.btn(type="submit") Cargar 1
+				button#cargar_vehiculo_parte2.btn(type="submit") Cargar 2
+				button#cargar_vehiculo_parte3.btn(type="submit") Cargar 3
+				button#cargar_vehiculo_parte4.btn(type="submit") Cargar 4
+				button#cargar_vehiculo_parte5.btn(type="submit") Cargar 4
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+

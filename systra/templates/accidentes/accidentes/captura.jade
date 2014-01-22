@@ -1,0 +1,222 @@
+extends base
+block stylesheet
+	link(rel="stylesheet", href="/static/stylesheets/vendor/galleria.classic")
+	link(rel="stylesheet", href="/static/javascripts/vendor/pickadate/themes/default.css")
+	link(rel="stylesheet", href="/static/javascripts/vendor/pickadate/themes/default.date.css")
+	link(rel="stylesheet", href="/static/javascripts/vendor/pickadate/themes/default.time.css")
+block contenido
+	a.trigger(href="#")
+	.panel
+		div#ul-accidente-local
+		div#ul-accidente-server
+	{{codigo|safe }}	
+	br
+	br
+	br
+	.pantalla-captura
+		#atajo
+			|CAPTURA DE  ACCIDENTE
+			a(href="#")
+				i.icon-file.icon-white
+		include cabecera.jade
+		.row
+			h4
+				.span8.offset2
+					|Modificación de Ficha Informativa Preliminar de Accidente
+		.folios
+			br
+			br
+			br
+			br
+			.control-group.cabecer-parte
+				|FOLIO DE ACCIDENTE No.
+				input#folio_accidente.span2(type="text",disabled="true")
+				span.help-inline
+		include accidentes/accidentes/accidentes/selpreliminar
+		legend Datos Generales
+		.bloque
+			#loading
+			form
+				.item-c
+					.control-group.cabecer-parte
+						label Delegación:
+						select#delegacion_pp
+						span.help-inline
+				.item-c
+					.control-group.cabecer-parte
+						label Comandancia:
+						select#comandancia_pp
+						span.help-inline
+				.item-c
+					.control-group.cabecer-parte
+						label Turno:
+						select#turno_pp.input-medium
+						span.help-inline
+				.item-c
+					fieldset.fieldset.fieldset--demo
+						.fieldset__wrapper
+							.control-group.cabecer-parte
+								label Fecha:
+								#datetimepicker1.input-append.date
+									input#fecha_pp(data-format="yyyy-MM-dd",type="text",placeholder="Fecha")
+									span.add-on
+										i(data-time-icon="icon-time", data-date-icon="icon-calendar")
+								span.help-inline
+								
+				.item-c
+					fieldset.fieldset.fieldset--demo
+						.fieldset__wrapper
+							.control-group.cabecer-parte
+								label Hora:
+								#datetimepicker2.input-append.date
+									input#hora_pp(data-format="hh:mm",type="text",placeholder="Hora")
+									span.add-on
+										i(data-time-icon="icon-time", data-date-icon="icon-time")
+								span.help-inline
+				.item-c
+					.control-group.cabecer-parte
+						label Dinámica de colisión:
+						select#clasAccidente_pp
+						span.help-inline
+				.item-c
+					.control-group.cabecer-parte
+						label Tipo de choque:
+						select#tipoAccidente_pp
+						span.help-inline
+				.item-c
+					.control-group.cabecer-parte
+						label Calle 1:
+						input#calle1_pp.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+						span.help-inline
+				.item-c
+					.control-group.cabecer-parte
+						label Calle 2:
+						input#calle2_pp.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+						span.help-inline
+				.item-c
+					.control-group.cabecer-parte
+						label Frente a Número:
+						input#frente_num(type="text", placeholder="Frente a Número")
+						span.help-inline
+				.item-c
+					.control-group.cabecer-parte
+						label Colonia:
+						input#colonia_pp.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+						span.help-inline
+				.item-c
+					.control-group.cabecer-parte
+						label Latitud:
+						input#lat_pp.input-medium(type="text",disabled, placeholder="Latitud")
+						span.help-inline
+
+				.item-c
+					.control-group.cabecer-parte
+						label Longitud:
+						input#lng_pp.input-medium(type="text",disabled,placeholder="Longitud")
+						span.help-inline
+				.item-c
+					br 
+					button#buscar_punto_pp.btn(type="button")
+						span.icosystra-earth
+				include accidentes/accidentes/accidentes/SelPuntoGoogleView
+
+
+				.item-c
+					.control-group.cabecer-parte
+						label Estado:
+						input#estado_pp.ui-autocomplete-input(type="text", value="GUANAJUATO",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+						span.help-inline
+				a(name="editar-vehiculo")
+				.item-c
+					.control-group.cabecer-parte
+						label Municipio:
+						input#municipio_pp.ui-autocomplete-input(type="text",value="LEÓN",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+						span.help-inline
+		legend#num_vehiculos I Vehículos y Conductores Involucrados
+		#vehiculos-div
+			include accidentes/accidentes/accidentes/TablaVehiculosView
+			include accidentes/accidentes/accidentes/AgregarVehiculosView
+		a(name="editar-sangre")
+		legend#num_sangres II Saldo de Sangre 
+		#saldo-sangre
+			include accidentes/accidentes/accidentes/TablaSaldoSangre
+			include accidentes/accidentes/accidentes/CapturaSaldoSangre
+		a(name="editar-judicial")
+		legend#num_competencia III Competencia Judicial
+		#competencia-judicial
+			include accidentes/accidentes/accidentes/TablaCompetenciaJudicial
+			include accidentes/accidentes/accidentes/CapturaCompetenciaJudicial
+		legend Intervino
+		#intervino_pp
+			include accidentes/accidentes/accidentes/IntervinoPP
+		legend Superviso
+		#superviso_pp
+			include accidentes/accidentes/accidentes/SupervisoView
+		legend Complementarios
+		.tabbable
+			ul#complementarios_pp.nav.nav-tabs
+				li.active
+					a(href="#pp1", data-toogle="tab") Observaciones
+				li
+					a(href="#pp2", data-toogle="tab") Ficha técnica
+				li
+					a(href="#pp3" ,data-toogle="tab") Croquis
+				li
+					a(href="#pp4" ,data-toogle="tab") Investigaciones
+				li
+					a(href="#pp5" ,data-toogle="tab") Infracciones 
+				li
+					a(href="#pp6" ,data-toogle="tab") Fotografias 
+			.tab-content
+				#pp1.tab-pane.active
+					include accidentes/accidentes/accidentes/ObservacionesPPView
+				#pp2.tab-pane
+					#otros_pp
+						include accidentes/accidentes/accidentes/OtrosView
+				#pp3.tab-pane
+					include accidentes/accidentes/accidentes/CroquisView
+				#pp4.tab-pane
+					include accidentes/accidentes/accidentes/InvestigacionesView
+				#pp5.tab-pane
+					include accidentes/accidentes/accidentes/InfraccionesView
+				#pp6.tab-pane
+					include accidentes/accidentes/accidentes/FotografiasView
+					include accidentes/accidentes/accidentes/SubirFotografiaView
+
+
+
+		//include accidentes/accidentes/accidentes/ShowReportePdf
+
+		br
+		button#guardar_accidente_pp.btn.btn-primary(type="button") 
+			|Guardar
+			span.icosystra-checkmark2
+		button#guardar_local_accidente_pp.btn(type="button") 
+			|Guardar Local
+			span.icosystra-storage
+		button#cancelar_accidente_pp.btn(type="button") 
+			|Cancelar
+			span.icosystra-cancel-circle
+		//button#cargar_accidente_parte1.btn(type="submit") Cargar 1
+		//button#cargar_accidente_parte2.btn(type="submit") Cargar 2
+		//button#cargar_accidente_parte3.btn(type="submit") Cargar 3
+		//button#cargar_accidente_parte4.btn(type="submit") Cargar 4
+		//button#cargar_accidente_parte5.btn(type="submit") Cargar 4
+		include accidentes/accidentes/accidentes/ShowReportePdf
+		include accidentes/accidentes/accidentes/modal
+block javascripts 
+	script(src="/static/javascripts/vendor/moment.min.js")
+	script(src="/static/javascripts/vendor/min/lang/es.js")
+	script(src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places")
+	script(src="/static/javascripts/vendor/jquery.geocomplete.min.js")
+	script(src="/static/javascripts/vendor/bootstrap-datetimepicker.js")
+	script(src="/static/javascripts/vendor/jspdf/basic.js")
+	script(src="/static/javascripts/vendor/galleria-1.2.9.min.js")
+	script(src="/static/javascripts/vendor/jquery.form.min.js")
+	script(src="/static/javascripts/utils.js")
+	//script(src="/static/javascripts/util-gen.js")
+	script(src="/static/javascripts/util-acc.js")
+	script(src="/static/javascripts/datos/acc_vehiculos_test.js")
+	script(src="/static/javascripts/datos/testAccidente.js")
+	script(src="/static/javascripts/core/socket.io.js")
+	script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/main3.js")

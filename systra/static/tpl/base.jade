@@ -1,0 +1,100 @@
+doctype 5
+html(land="es")
+	head
+		title Sistema de Tránsito
+		meta(charset="utf8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="/static/stylesheets/vendor/normalize.css")
+		link(href="http://fonts.googleapis.com/css?family=Open+Sans|Nunito:400,300&subset=latin,cyrillic" ,rel='stylesheet', type='text/css')
+		link(rel="stylesheet", href="/static/stylesheets/vendor/bootstrap.css")
+		link(rel="stylesheet", href="/static/stylesheets/vendor/bootstrap-responsive.min.css")
+		link(rel="stylesheet", href="/static/stylesheets/vendor/prettify.css")
+		link(rel="stylesheet", href="/static/stylesheets/vendor/bootstrap-wysihtml5-0.0.2.css")
+		link(rel="stylesheet", href="/static/stylesheets/vendor/bootstrap-datetimepicker.min.css")
+		link(rel="stylesheet", href="/static/stylesheets/vendor/jquery.ui.all.css")
+		{%if estilo == None %}
+		link(rel="stylesheet", href="/static/stylesheets/estilos-{{'chocolate'}}.css")
+		{% else %}
+		link(rel="stylesheet", href="/static/stylesheets/estilos-{{estilo}}.css")
+		{% endif %}
+		block stylesheet
+		script(src="/static/javascripts/vendor/modernizr-2.6.2.min.js")
+
+	body
+		#wrapper
+			header.navbar.navbar-inverse.navbar-fixed-top
+				.navbar-inner
+					.container-fluid
+						button.btn.btn-navbar(type="button", data-toggle="collapse", data-target=".nav-collapse")
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.brand(href="#") Systra-Nin
+						.nav-collapse.collapse
+							ul.nav
+								li.active
+									a(href="/main") 
+										i.icon-home.icon-white 
+										|Inicio
+								li.dropdown
+									a.dropdown-toggle(href="#", data-toggle="dropdown") Incidentes 
+										b.caret
+									ul.dropdown-menu
+										li
+											a(href="/accidente/inicia") Iniciar
+										li
+											a(href="/accidente/listaPreliminaresp") List Preliminares
+										li
+											a(href="/accidente/captura") Capturar
+										li
+											a(href="/accidente/list") Lista
+										 li
+											a(href="/accidente/mapa_busqueda") Mapa
+									li.dropdown
+										a#Infracciones.dropdown-toggle(href="#", data-toggle="dropdown") Infracciones
+											b.caret
+										ul.active.dropdown-menu
+											li
+												a(href="/infraccion/captura") Capturar
+											li
+												a(href="/infraccion/list") Lista
+
+									li.dropdown
+										a#Liberacion.dropdown-toggle(href="#", data-toggle="dropdown") Inventario
+											b.caret
+										ul.dropdown-menu
+											li
+												a(href="/inventario/captura") Capturar
+											li
+												a(href="/inventario/list") Lista
+									li.dropdown
+										a#admin.dropdown-toggle(href="#", data-toggle="dropdown") Admin
+											b.caret
+										ul.dropdown-menu
+											li
+												a(href="/admin/index") Principal
+							.navbar-text.pull-right.avatar-right
+								ul.nav
+									li.dropdown
+										a(href="#" ,data-toggle="dropdown") {{nombre_usuario}}      
+											b.caret
+										ul.dropdown-menu
+											li
+												include avatar
+			include accidentes/accidentes/accidentes/modal
+			section#contenido
+				block contenido  
+			br           
+			footer.footer
+				.container
+					p &copy; Tránsito Municipal de León Gto..
+		script(src="/static/javascripts/vendor/wysihtml5-0.3.0_rc2.min.js")
+		script(src="/static/javascripts/vendor/jquery.js")
+		script(src="/static/javascripts/vendor/bootstrap.min.js")
+		script(src="/static/javascripts/setup-app.js")
+		script(src="/static/javascripts/vendor/bootstrap-wysihtml5-0.0.2.min.js")
+		script(src="/static/javascripts/vendor/underscore-min.js")
+		script(src="/static/javascripts/vendor/jquery-ui-1.10.3.custom.min.js")
+		//script(src="/static/javascripts/vendor/bootstrap-datetimepicker.js")
+		//script(src="/static/javascripts/vendor/jquery.ui.addresspicker.js")
+		block javascripts

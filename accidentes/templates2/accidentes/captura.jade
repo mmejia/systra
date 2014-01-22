@@ -1,0 +1,175 @@
+extends base
+block stylesheet
+	link(rel="stylesheet", href="/static/stylesheets/vendor/galleria.classic")
+block contenido
+	{{codigo|safe }}	
+	br
+	.controls.controls-row
+		.span2
+			img(src="/image/infracciones/escudo_transito.gif")
+		.span6
+			h5
+				|Dirección General De Tránsito Municipal
+			h4
+				|H. AYUNTAMIENTO DE LEÓN, GUANAJUATO
+			h5
+				|Modificación de Ficha Informativa Preliminar de Accidente
+		.span4
+			br
+			br
+			|FOLIO DE ACCIDENTE No. 
+			input#folio_accidente(type="text")
+	br
+	legend Datos Generales
+	.controls.controls-row
+		form
+			div.controls.controls-row
+				div.span4
+					label Delegación:
+					select#delegacion_pp
+				div.span4
+					label Comandancia:
+					select#comandancia_pp
+				.span4
+					label Turno:
+					select#turno_pp
+			.controls.controls-row
+				.span4
+					label Fecha:Hora:
+					#datetimepicker1.input-append.date
+						input#fecha-hora_pp(data-format="dd/MM/yyyy hh:mm:ss",type="text",placeholder="Hora")
+						span.add-on
+							i(data-time-icon="icon-time", data-date-icon="icon-calendar")
+				.span4
+					label Clasificación:
+					select#clasAccidente_pp
+				.span4
+					label Tipo de choque:
+					select#tipoAccidente_pp
+			.controls.controls-row
+				.span4
+					label Latitud:
+					input#lat_pp.input-midium(type="text", placeholder="Latitud")
+				.span4
+					label Longitud:
+					input#lng_pp.input-midium(type="text",placeholder="Longitud")
+				.span2
+					br
+					button#buscar_punto_pp.btn(type="button") Punto
+					#selPunto
+						include accidentes/accidentes/SelPuntoGoogleView
+			.controls.controls-row
+				.span4
+					label Calle 1:
+					input#calle1_pp.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+				.span4
+					label Calle 2:
+					input#calle2_pp.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+				.span4
+					label Calle 3:
+					input#calle3_pp.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+			.controls.controls-row		
+				.span2
+					label Frente a Número:
+					input#frente_a_numero.input-mini(type="text", placeholder="Frende a Número")
+				.span5
+					label Colonia:
+					input#colonia_pp.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+				.span5
+					label Estado:
+					input#estado_pp.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+			.controls.controls-row			
+				.span4
+					label Municipio:
+					input#municipio_pp.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+	legend I Vehículos y Conductores Involucrados
+	.tabbable
+		ul#vehiculosConductores_pp.nav.nav-tabs
+			li.active
+				a(href="#pane1", data-toogle="tab") Tabla Vehiculo
+			li
+				a(href="#pane2" ,data-toogle="tab") Captura Vehiculo
+		.tab-content
+			#pane1.tab-pane.active
+				#tab_vehiculos
+					include accidentes/accidentes/TablaVehiculosView
+			#pane2.tab-pane
+				#vehiculos_pp
+					include accidentes/accidentes/AgregarVehiculosView
+	legend II Saldo de Sangre
+	#saldo-sangre
+		include accidentes/accidentes/TablaSaldoSangre
+		include accidentes/accidentes/CapturaSaldoSangre
+	legend III Competencia Judicial
+	#competencia-judicial
+		include accidentes/accidentes/TablaCompetenciaJudicial
+		include accidentes/accidentes/CapturaCompetenciaJudicial
+	legend Intervino
+	#intervino_pp
+		include accidentes/accidentes/IntervinoPP
+	legend Superviso
+	#superviso_pp
+		include accidentes/accidentes/SupervisoView
+	.tabbable
+		ul#complementarios_pp.nav.nav-tabs
+			li.active
+				a(href="#pp1", data-toogle="tab") Observaciones
+			li
+				a(href="#pp2", data-toogle="tab") Otros
+			li
+				a(href="#pp3" ,data-toogle="tab") Croquis
+			li
+				a(href="#pp4" ,data-toogle="tab") Investigaciones
+			li
+				a(href="#pp5" ,data-toogle="tab") Infracciones 
+			li
+				a(href="#pp6" ,data-toogle="tab") Fotografias 
+		.tab-content
+			#pp1.tab-pane.active
+				#observaciones_pp
+					include accidentes/accidentes/ObservacionesPPView
+			#pp2.tab-pane
+				#otros_pp
+					include accidentes/accidentes/OtrosView
+			#pp3.tab-pane
+				include accidentes/accidentes/CroquisView
+			#pp4.tab-pane
+				include accidentes/accidentes/InvestigacionesView
+			#pp5.tab-pane
+				include accidentes/accidentes/InfraccionesView
+			#pp6.tab-pane
+				include accidentes/accidentes/FotografiasView
+				include accidentes/accidentes/SubirFotografiaView
+
+
+
+	include accidentes/accidentes/ShowReportePdf
+
+	
+	button#guardar_accidente_pp.btn(type="button") Guardar
+	button#cancelar_accidente_pp.btn(type="button") Cancelar
+	button#guardar_local_accidente_pp.btn(type="button") GuardarLocal
+	button#cargar_local_accidente_pp.btn(type="button") CargarLocal
+	button#cargar_accidente_parte1.btn(type="submit") Cargar 1
+	button#cargar_accidente_parte2.btn(type="submit") Cargar 2
+	button#cargar_accidente_parte3.btn(type="submit") Cargar 3
+	button#cargar_accidente_parte4.btn(type="submit") Cargar 4
+	button#cargar_accidente_parte5.btn(type="submit") Cargar 4
+block javascripts 
+	script(src="/static/javascripts/vendor/moment.min.js")
+	script(src="/static/javascripts/vendor/min/lang/es.js")
+	script(src="/static/javascripts/vendor/jspdf/jspdf.js")
+	script(src="/static/javascripts/vendor/jspdf/libs/FileSaver.js/FileSaver.js")
+	script(src="/static/javascripts/vendor/jspdf/libs/BlobBuilder.js/BlobBuilder.js")
+	script(src="/static/javascripts/vendor/jspdf/jspdf.plugin.addimage.js")
+	script(src="/static/javascripts/vendor/jspdf/jspdf.plugin.standard_fonts_metrics.js")
+	script(src="/static/javascripts/vendor/jspdf/jspdf.plugin.split_text_to_size.js")
+	script(src="/static/javascripts/vendor/jspdf/jspdf.plugin.from_html.js")
+	script(src="/static/javascripts/vendor/jspdf/basic.js")
+	script(src="/static/javascripts/vendor/galleria-1.2.9.min.js")
+	script(src="/static/javascripts/vendor/jquery.form.min.js")
+	script(src="/static/javascripts/utils.js")
+	script(src="/static/javascripts/util-acc.js")
+	script(src="/static/javascripts/datos/acc_vehiculos_test.js")
+	script(src="/static/javascripts/datos/testAccidente.js")
+	script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/main3.js")

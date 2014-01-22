@@ -1,0 +1,26 @@
+td 
+	|<a id="edit_{{acc.id_unico}}" class="editar-parte" href="/accidente/cargarAccidente/{{acc.id_unico}}/" title="Editar parte"><span class="icosystra-pencil"></i></a>
+	|<a id="frente_{{acc.id_unico}}" class="parte-frente" href="#" title="Parte del frente"><i class="icosystra-file-pdf"></i></a>
+	|<a id="posterior_{{acc.id_unico}}" class="parte-posterior" href="#" title="Parte posterior"><i class="icosystra-newspaper"></i></a>
+	|<a id="remove_{{acc.id_unico}}" class="remove-parte" href="#"><i class="icosystra-remove"  title="Eliminar parte"></i></a>
+	|<a id="view_{{acc.id_unico}}" class="view-parte" href="#"><i class="icosystra-file3"  title="Ver parte"></i></a>
+if usados.order_by == "id_preliminar"
+	td.td-seleccionado {{acc.id_preliminar}}
+else
+	td  {{acc.id_preliminar}}
+if usados.order_by == "convenio_fecha"
+	td.td-seleccionado {{acc.convenio_fecha}}
+else
+	td  {{acc.convenio_fecha}}
+if usados.order_by == "nombre_intervino" 
+	td.td-seleccionado {{acc.nombre_intervino}}
+else
+	td  {{acc.nombre_intervino}}
+if usados.order_by == "unidad_intervino" 
+	td.td-seleccionado {{acc.unidad_intervino}}
+else
+	td  {{acc.unidad_intervino}}
+if usados.order_by == "clasificacion"
+	td.td-seleccionado {{acc.clasificacion}}
+else
+	td  {{acc.clasificacion}}

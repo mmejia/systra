@@ -1,0 +1,106 @@
+label.checkbox
+			input#se-desconoce-conductor(type="checkbox")
+			|Se desconoce datos del conductor.
+#DatosInfractorServParticularInf-View.bloque-infracciones
+	.controls.controls-row
+		.span6
+			.control-group
+				label Nombre(s):
+				.input-append
+					input#nombre_di_sp_inf.upper(type="text", placeholder="Nombre")
+					button.btn#nombre_di_sp_inf_default
+						span.icosystra-info
+				span.help-inline
+		.span6
+			.control-group
+				label App Paterno:
+				.input-append
+					input#appPaterno_di_sp_inf.upper(type="text", placeholder="Apellido Paterno")
+					button.btn#appPaterno_di_sp_inf_default
+						span.icosystra-info
+				span.help-inline
+	.controls.controls-row	
+		.span7
+			.control-group
+				label App Materno:
+				.input-append
+					input#appMaterno_di_sp_inf.upper(type="text", placeholder="Apellido Materno")
+					button.btn#appMaterno_di_sp_inf_default
+						span.icosystra-info
+				span.help-inline
+		.span2
+			.control-group
+				label Sexo:
+				select#sexo_di_sp_inf.input-mini
+					option(value="SELECCIONAR") **SEL**
+					option(value="HOMBRE") H
+					option(value="MUJER") M
+					option(value="SE DESCONOCE") DESC
+				span.help-inline
+		.span3
+			.control-group
+				label Edad:
+				.input-append
+					input#edad_di_sp_inf.input-mini.only-number(type="text", placeholder="AÑOS")
+					button.btn#edad_di_sp_inf_default
+						span.icosystra-info
+				span.help-inline
+	.controls.controls-row	
+		.span9
+			.control-group
+				label Domicilio:
+				.input-append
+					input#domicilio_di_sp_inf.input-xlarge.input.upper(type="text", placeholder="Domicilio") 
+					button.btn#domicilio_di_sp_inf_default
+						span.icosystra-info
+				span.help-inline
+		.span1
+			.control-group
+				label No.:
+				.input-append
+					input#nom_di_sp_inf.input-mini.upper(type="text", placeholder="Nom.")
+					button.btn#nom_di_sp_inf_default
+						span.icosystra-info
+				span.help-inline
+	.controls.controls-row
+		.span6
+			.control-group
+				label Colonia:
+				.input-append
+					input#colonia_di_sp_inf.ui-autocomplete-input.upper(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true",placeholder="Colonia")
+					button.btn#colonia_di_sp_inf_default
+						span.icosystra-info
+				span.help-inline
+		.span6
+			.control-group
+				label Ciudad:
+				.input-append
+					input#ciudad_di_sp_inf.ui-autocomplete-input.upper(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true",placeholder="Ciudad", value="LEÓN")		
+					button.btn#ciudad_di_sp_inf_default
+							span.icosystra-info
+					span.help-inline
+	.controls.controls-row
+		.span6
+			.control-group
+				label Estado:
+				.input-append
+					input#estado_di_sp_inf.ui-autocomplete-input.upper(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true",placeholder="Estado", value="GUANAJUATO")
+					button.btn#estado_di_sp_inf_default
+						span.icosystra-info
+					span.help-inline
+		.span6
+			.control-group
+				label No Licencia:
+				.input-append
+					input#no_licencia_di_sp_inf.upper(type="text",placeholder="No Licencia")
+					button.btn#no_licencia_di_sp_inf_default
+						span.icosystra-question
+					span.help-inline
+
+
+
+
+
+
+
+

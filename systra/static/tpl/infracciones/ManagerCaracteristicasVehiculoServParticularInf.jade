@@ -1,0 +1,84 @@
+#CaracteristicasVehiculoServParticularInf-View
+	div.controls.controls-row
+		.span2
+			label.radio
+				input#auto_cv_spa_inf(type="radio",name="tipovv",value="Auto")
+				| Auto
+		.span2
+			label.radio
+				input#camioneta_cv_spa_inf(type="radio",name="tipovv",value="Camioneta")
+				| Camioneta
+		.span2
+			label.radio
+				input#camion_cv_spa_inf(type="radio",name="tipovv",value="Camión")
+				| Camión
+		.span2
+			label.radio
+				input#bicicleta_cv_spa_inf(type="radio",name="tipovv",value="Bicicleta")
+				| Bicicleta
+		.span2
+			label.radio
+				input#otros_cv_spa_inf(type="radio",name="tipovv",value="Otros")
+				| Otros
+	div.controls.controls-row
+		.span4
+			label Marca:
+			select#marca_cv_spa_inf
+		.span4
+			label Submarca:
+			select#submarca_cv_spa_inf
+		.span2
+			label Modelo:
+			select#modelo_cv_spa_inf.input-small
+		.span2
+			label Color:
+			select#color_cv_spa_inf.input-small
+	div.controls.controls-row
+		.span4
+			label Detalle del Color:
+			input#detalle_color_cv_spa_inf
+		.span2
+			br
+			label.checkbox
+				input#tipo_cv_spa_inf(type="checkbox") 
+				|S/P
+		.span2
+			label Tipo:
+			select#tipo_cv_spa_inf.input-mini
+				option(value="F") F
+				option(value="O") O
+				option(value="P") P
+		.span4
+			label Placas:
+			input#placas_cv_spa_inf(type="text", placeholder="Placas")
+	div.controls.controls-row
+		.span4
+			label Estado: 
+			input#estado_cv_spa_inf.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+		.span4
+			label Serie: 
+			input#serie_cv_spa_inf.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+		.span2
+			br
+			label.checkbox
+				input#serie_no_visible_cv_spa_inf(type="checkbox") 
+				|No Visible	
+	div.controls.controls-row
+		.span4
+			label Tipo Vehículo:
+			select#tipo_vehiculo_cv_spa_inf
+	legend Servicio Público
+	div.controls.controls-row
+		.span4
+				label Empresa:
+				input#empresa_cv_spa_inf(type="text", placeholder="Empresa")
+		.span4
+				label Ruta:
+				input#ruta_cv_spa_inf(type="text", placeholder="Ruta")
+	div.controls.controls-row
+		.span4
+				label No. Económico:
+				input#no_economico_cv_spa_inf(type="text", placeholder="No. Económico")
+		.span4
+				label No. Tarjetón:
+				input#no_tarjeton_cv_spa_inf(type="text", placeholder="No. Tarjeton")

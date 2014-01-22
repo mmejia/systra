@@ -1,0 +1,15 @@
+#links-frente
+	a#liga-img-frente.muestra-img(href="/static/img/crojo.jpg" , title="Frente", data-gallery)
+		img#img-frente(src="/static/img/crojo.jpg", alt="ROJO")
+br
+br
+form#formSubirInventarioFrente(action="/content/upload_fotografia",method="post", enctype="multipart/form-data")
+	input(type="file", name="file_name")
+	input(type="hidden", name="tipo",value="FRENTE")
+	input(type="hidden", name="modulo",value="INVENTARIO")
+	input(type="hidden", name="id_unico",value="")
+	
+	button#subir_img-frente.btn(type="button")
+		|Agregar
+		i.icon-upload
+	#resultado_inventario-frente

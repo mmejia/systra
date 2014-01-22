@@ -1,0 +1,64 @@
+include cabecera.jade
+.row
+	h4
+		.span8.offset2
+			|CAPTURA DE INFRACCIÓN
+br
+.row-fluid
+		.btn-add
+			|FOLIO DE INFRACCION No. T- 
+			span.span-inf#view_folio_infraccion
+legend Datos Generales
+.controls.controls-row.bloque
+	h5.agente En León Guanajuato, el suscrito AGENTE:
+	.row-fluid
+		.span2
+			label No. Cobro
+			span.span-inf#view_nom-cobro-agente-inf
+		.span8
+			.control-group	
+				label Nombre
+				span.span-inf#view_nombre-agente-inf
+	.row-fluid
+		.span4
+			.control-group 
+				label Fecha:
+				span.span-inf#view_fecha_inf
+		.span4
+			.control-group 
+				label Hora:
+				span.span-inf#view_hora_inf 
+		.span3
+			.control-group
+				label DELEGACION
+				span.span-inf#view_delegacion_spa_inf
+	.row-fluid
+		.span4
+			.control-group 
+				label COMANDANCIA
+				span.span-inf#view_comandancia_spa_inf
+		.span4
+			.control-group 
+				label TURNO
+				span.span-inf#view_turno_spa_inf
+include infracciones/view-infraccion/ViewManagerServicioParticular
+br
+.controls.controls-row.bloque
+	.span12
+		label
+			| El conductor firmó la infracción correspondiente  
+	.span2
+		label.radio
+			input#si_firmo_inf(type="radio",name="optionsv",value="SI")
+			| SI
+	.span2
+		label.radio
+			input#no_firmo_inf(type="radio",name="optionsv",value="NO")
+			| NO
+legend Observaciones
+.controls.controls-row
+	span#observaciones_inf
+br
+//script(src="/static/javascripts/vendor/jquery.js")
+script(src="/static/javascripts/infracciones/utils/util-view.js")
+{{codigo|safe }}

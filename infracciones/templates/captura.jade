@@ -1,0 +1,90 @@
+extends base
+br
+br
+block contenido
+	.controls.controls-row
+		.span4
+			img#img_leonesuno(src="/croquis/LeonEsUno.jpg")
+		.span4
+			label
+				|MUNICIPIO DE LEON, GUANAJUATO
+				|SECRETARIA DEL H. AYUNTAMIENTO
+				|DIRECCION GENERAL DE TRANSITO MUNICIPAL
+		.span4
+			img#img_tansito(src="/croquis/EscudoTransito.jpg")
+		
+	br
+	.controls.controls-row
+		.span4
+			br
+			br
+			|FOLIO DE INFRACCION No. 
+			|T- 
+			input#folio_infraccion(type="text")
+	.controls.controls-row
+		form
+			legend Datos Generales
+			.seccion
+				.controls.controls-row
+					.span12
+						label En León Guanajuato, el suscrito AGENTE:
+				.controls.controls-row
+					.span10	
+						label Nombre
+						input#nombre-agente-inf.input-xxlarge.ui-autocomplete-input(placeholder="Selecciona elemento..",type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+					.span2
+						label No. Cobro
+						input#nom-cobro-agente-inf.input-small(type="text" , disabled)
+			.controls.controls-row
+				.span8
+					label.radio.inline
+						input#radioServicioParticular(type="radio",name="optServicio",value="Servicio Particular")
+						|Servicio Particular
+					label.radio.inline
+						input#radioServicioPublico(type="radio",name="optServicio",value="Servicio Publico")
+						|Servicio Publico
+				.span4
+					label Fecha:Hora:
+					#fecha-capt-inf.input-append.date
+						input#hora(data-format="dd/MM/yyyy hh:mm:ss",type="text",placeholder="Hora")
+						span.add-on
+							i(data-time-icon="icon-time", data-date-icon="icon-calendar")
+			#ManagerTipoServicioPublico
+				//include infracciones/infraccion/ManagerTipoServicioPublico
+			//#ManagerServicioParticular
+	include infraccion/ManagerServicioParticularInf
+			.controls.controls-row
+				.span12
+					label
+						| El conductor firmó la infracción correspondiente  
+				.span2
+					label.radio
+						input#si_firmo_inf(type="radio",name="optionsv",value="SI")
+						| SI
+				.span2
+					label.radio
+						input#no_firmo_inf(type="radio",name="optionsv",value="NO")
+						| NO
+				.controls.controls-row
+					.span12
+						legend Observaciones
+						textarea#observaciones_inf
+
+				//include infracciones/infraccion/ShowReportePdf
+			.controls.controls-row
+				.span4.offset4
+				button#guardar_inf.btn(type="button") Guardar
+				button#guardar_local_infraccion.btn(type="button") GuardarLocal
+				button#cancelar_inf.btn(type="button") Cancelarrrrr
+		block javascripts 
+			script(src="/static/javascripts/vendor/jspdf/jspdf.js")
+			script(src="/static/javascripts/vendor/jspdf/libs/FileSaver.js/FileSaver.js")
+			script(src="/static/javascripts/vendor/jspdf/libs/BlobBuilder.js/BlobBuilder.js")
+			script(src="/static/javascripts/vendor/jspdf/jspdf.plugin.addimage.js")
+			script(src="/static/javascripts/vendor/jspdf/jspdf.plugin.standard_fonts_metrics.js")
+			script(src="/static/javascripts/vendor/jspdf/jspdf.plugin.split_text_to_size.js")
+			script(src="/static/javascripts/vendor/jspdf/jspdf.plugin.from_html.js")
+			script(src="/static/javascripts/vendor/jspdf/basic.js")
+			script(src="/static/javascripts/util-inf.js")
+			script(src="/static/javascripts/datos/test_inf.js") 
+			script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/main-inf.js")

@@ -1,0 +1,77 @@
+#documentos_moral
+	h4  VEHICULO A NOMBRE DE PERSONA MORAL
+	.controls.controls-row
+			.linea
+				label.checkbox
+					input#factura_moral(type="checkbox")
+					| Factura(Original o copia)
+			.linea
+				label.checkbox
+					input#titulo_propiedad_moral(type="checkbox")
+					| Título de propiedad
+			.linea
+				label.checkbox
+					input#tarjeta_circulacion_moral(type="checkbox")
+					| Tarjeta de circulación
+			.linea
+				label.checkbox
+					input#carta_factura_moral(type="checkbox")
+					| Carta Factura
+	br
+	.linea
+			label.radio
+				input#rd_documentos_moral_legal(type="radio",name="recoje",value="PLACAS")
+				| Si acude el representante legal deberá presentar además
+	.linea
+		label.radio
+			input#rd_documentos_moral_diversa(type="radio",name="recoje",value="TARJETA DE CIRCULACION")
+			| Diversa a representante legal
+	br
+	br
+	#documentos-sub-moral-legal
+		strong Representante Legal
+		.controls.controls-row
+			.linea
+				label.checkbox
+					input#cred_electoral_moral1(type="checkbox")
+					| Credencial elector
+			.linea
+				label.checkbox
+					input#cartilla_moral1(type="checkbox")
+					| Cartilla del S.M.N.
+			.linea
+				label.checkbox
+					input#licencia_conductor_moral1(type="checkbox")
+					| Licencia de conductor
+			.linea
+				label.checkbox
+					input#cedula_moral1(type="checkbox")
+					| Cédula profesional
+			.linea
+				label.checkbox
+					input#pasaporte_moral1(type="checkbox")
+					| Pasaporte
+		.controls.controls-row
+			.linea
+				label.checkbox
+					input#carta_poder_moral1(type="checkbox")
+					| Carta Poder
+	#documentos-sub-moral-diversa
+		strong Diversa a representante legal
+		.controls.controls-row
+			.linea
+				label.checkbox
+					input#cred_electoral_moral1(type="checkbox")
+					| Carta de autorización
+			.linea
+				label.checkbox
+					input#cartilla_moral1(type="checkbox")
+					| Copia del poder legal del representante
+			.linea
+				label.checkbox
+					input#licencia_conductor_moral1(type="checkbox")
+					| Identificacion oficial de ambos
+
+
+
+

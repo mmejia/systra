@@ -1,0 +1,12 @@
+{% if is_paginated %}
+.pagination
+	.page-links
+		{% if page_obj.has_previous %}
+		|<a href="#" class="url-nav" id="{{page_obj.previous_page_number}}")> <Prev.</a>
+		{% endif %}
+		span.page-current
+			|Pág. {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+		{% if page_obj.has_next %}
+		|<a href="#" class="url-nav" id="{{page_obj.next_page_number}}">Sig.</a>
+		{%endif%}
+{%endif%}

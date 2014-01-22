@@ -1,0 +1,60 @@
+extends base
+br
+br
+block stylesheet
+	link(rel="stylesheet", href="/static/stylesheets/table/demo_page.css")
+	link(rel="stylesheet", href="/static/stylesheets/table/demo_table_jui.css")
+	link(rel="stylesheet", href="/static/stylesheets/table/smoothness/jquery-ui-1.8.4.custom.css")
+block contenido
+	.controls.controls-row
+			.span2
+				img(src="/static/image/infracciones/escudo_transito.gif")
+			.span6
+				h5
+					|Dirección General De Tránsito Municipal
+				h4
+					|H. AYUNTAMIENTO DE LEÓN, GUANAJUATO
+	legend Buscar
+	.controls.controls-row
+		.span3
+			label Fecha del
+			input#fechaI.input.input-medium(type="text",placeholder="Fecha inicial")
+		.span3
+			label Al:
+			input#fechaF.input.input-medium(type="text",placeholder="Fecha final")
+		.span3
+			label Tipo
+			input#tipoAccidente.input-medium(type="text",placeholder="Tipo")
+		.span2
+			br
+			button#buscarPartes.btn(type="submit") Buscar
+	legend Resultado
+	.controls.controls-row
+			div
+				table#listaPartes.table-bordered
+						thead
+							tr 
+								th.id
+								th.folio Folio
+								th.fecha Fecha
+								th.agente Agente
+								th.unidad Unidad
+								th.clasificacion Clasificación
+						tbody
+							tr
+								td  
+								td  
+								td  
+								td  
+								td
+								td 
+	//!= contentFor('vendor/jquery.dataTables.min','vendor/require.js",data-main="accidentes/list/main.js"')
+block javascripts	
+	script(src="/static/javascripts/vendor/jquery.dataTables.min.js") 
+	script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/main-lista-accidentes.js")
+
+
+
+
+
+

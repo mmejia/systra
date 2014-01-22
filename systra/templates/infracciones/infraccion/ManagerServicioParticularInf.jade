@@ -1,0 +1,23 @@
+.row-fluid
+	.span6
+		legend Datos Personales
+		include infracciones/infraccion/ManagerDatosInfractorServParticularInf
+	.span6
+		legend Caracteristicas del Vehículo
+		include infracciones/infraccion/ManagerCaracteristicasVehiculoServParticularInf
+
+include infracciones/infraccion/ServicioPublico
+br
+//#managerArticulos_spa_inf
+legend Artículos
+include infracciones/infraccion/ManagerArticulosServicioParticularInf
+legend Hechos ocurridos:
+include infracciones/infraccion/HechosOcurridos
+include infracciones/infraccion/SelPuntoGoogleViewInf
+
+//#managerRecojeDocumento_spa_inf
+include infracciones/infraccion/ManagerRecojeDocumentoInf
+//legend Datos de infracción
+
+//#managerCertificadoMedico_spa_inf
+include infracciones/infraccion/ManagerCertificadoMedicoServParticularInf

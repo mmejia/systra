@@ -1,0 +1,59 @@
+.row-fluid
+	legend Datos del vehículo
+	#managerDatosVehiculo_spa_inv_view.controls.controls-row.bloque
+		.controls.controls-row
+			.control-group
+				.span4
+					label.radio
+						input#radServicioParticular_inv(type="radio", name="servicios")
+						|Servicio Particular
+				.span4
+					label.radio
+						input#radServicioPublico_inv(type="radio", name="servicios")
+						|Servicio Publico
+		br
+		.controls.controls-row
+			.span3
+				label Clas. Vehículo: 
+				span.span-inve#desc-vehiculo
+			.span3
+				label Marca: 
+				span.span-inve#marca_inv
+			.span3
+				label Submarca: 
+				span.span-inve#submarca_inv
+		.controls.controls-row
+			.span3
+				label Modelo:
+				span.span-inve#modelo_inv
+			.span3
+				label Color:
+				span.span-inve#color_inv
+			.span3
+				label Detalle:
+				span.span-inve#detalle_inv
+		.controls.controls-row
+			.span3
+				label Placas:
+				span.span-inve#placas_inv 
+			.span3
+				label No Econ:
+				span.span-inve#noEcon_inv	 
+			.span3
+				label Serie
+				span.span-inve#serie_inv	 
+		.controls.controls-row
+			.span4
+				label Tipo Veh:
+				span.span-inve#tipoVehiculo_inv
+		legend Datos del conductor
+		.controls.controls-row
+			.span3
+				label Nombre del conductor
+				span.span-inve#nombreConductor_inv
+			.span3
+				label Apellido Paterno
+				span.span-inve#apellidoPaterno_inv
+			.span3
+				label Apellido Materno
+				span.span-inve#apellidoMaterno_inv

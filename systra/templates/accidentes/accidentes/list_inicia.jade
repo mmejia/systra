@@ -1,0 +1,24 @@
+extends base
+br
+br
+block stylesheet
+	link(rel="stylesheet", href="/static/stylesheets/table/demo_page.css")
+	link(rel="stylesheet", href="/static/stylesheets/table/demo_table_jui.css")
+	link(rel="stylesheet", href="/static/stylesheets/table/smoothness/jquery-ui-1.8.4.custom.css")
+block contenido
+	br
+	br
+	br
+	.pantalla-captura
+	{{codigo|safe }}
+	#pantalla-lista
+		include ./accidentes/accidentes/pantallas/solo-list-preliminar
+block javascripts
+	script(src="/static/javascripts/vendor/bootstrap-datetimepicker.js")
+	script(src="/static/javascripts/util-gen.js")
+	script(src="/static/javascripts/utils.js")
+	script(src="/static/javascripts/util-pre.js")
+	script(src="/static/javascripts/util/preliminar/CargarSelect.js") 
+	script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/main-lista-preliminar2.js")
+
+//	script(src="/static/javascripts/util/preliminar/CargarSelectBusqueda.js")

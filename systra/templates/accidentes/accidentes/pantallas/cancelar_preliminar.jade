@@ -1,0 +1,17 @@
+.controls.controls-row
+	.span4
+		label Folio:
+			span#folio-cancelar-preliminar
+.controls.controls-row
+	.span4
+		label Motivo:
+			select#status-cancelar-preliminar
+				option(value="Reporte en falso") Reporte en falso
+				option(value="Mala captura") Mala captura
+				option(value="No aplica") No aplica
+br
+.controls.controls-row
+	button#cancelar-folio-preliminar.btn.btn-primary(data-dismiss="modal",type="button") 
+		|Aceptar
+		i.icon-ok.icon-white
+				

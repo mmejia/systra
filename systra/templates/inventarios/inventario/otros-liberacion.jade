@@ -1,0 +1,18 @@
+legend Otros
+.tabbable
+	ul#myTab.nav.nav-tabs
+		li.active
+			a(href="#pp1", data-toogle="tab") Frente
+		li
+			a(href="#pp2", data-toogle="tab") Posterior
+		li
+			a(href="#pp3", data-toogle="tab") Fotos
+	.tab-content
+		#pp1.tab-pane.active
+			include inventarios/inventario/otros-frente-liberacion
+		#pp2.tab-pane
+			include inventarios/inventario/otros-posterior-liberacion
+		#pp3.tab-pane
+			include inventarios/inventario/otros-fotos-liberacion
+
+

@@ -1,0 +1,19 @@
+table#tab-perfil-list.table-bordered
+	thead
+		tr
+			th Opciones
+			th Cobro
+			th Nombre
+			th Comandancia
+			th Turno
+	tboby
+		if object_list
+			for perfil in object_list
+				tr 
+					td 
+						|<a id="edit_{{perfil.id}}" class="editar-perfil" href="#" title="Editar"><i class="icosystra-pencil"></i></a>
+					td {{perfil.cobro}}
+					td {{perfil.nombre}}
+					td {{perfil.comandancia}}
+					td {{perfil.turno}}
+include perfil/pagination

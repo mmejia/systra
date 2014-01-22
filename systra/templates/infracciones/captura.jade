@@ -1,0 +1,111 @@
+extends base
+block contenido
+	a.trigger(href="#")
+	.panel
+		ul#ul-infraccion-local
+		ul#ul-infraccion-server
+
+	{{codigo|safe }}	 
+	br
+	br
+	br
+	.pantalla-captura
+		br
+		#distintivo
+		include cabecera.jade
+		.row
+			h4
+				.span8.offset2
+					|CAPTURA DE INFRACCIÓN
+		br
+		.controls.controls-row
+				.btn-add
+					|FOLIO DE INFRACCION No. T- 
+					input#folio_infraccion.upper.only-number(type="text",placeholder="Folio")
+		legend Datos Generales
+		.controls.controls-row.bloque
+			h5.agente En León Guanajuato, el suscrito AGENTE:
+			.controls.controls-row
+				.span2
+					label No. Cobro
+					input#nom-cobro-agente-inf.input-small.ui-autocomplete-input(type="text",placeholder="No. Cobro")
+				.span8
+					.control-group	
+						label Nombre
+						input#nombre-agente-inf.input-xxlarge(type="text",autocomplete="off",placeholder="Nombre del agente", readonly)
+						span.help-inline
+			.controls.controls-row
+				.span4
+					.control-group 
+						label Fecha:
+						#fecha-capt-inf2.input-append.date
+							input#fecha_inf.cls-fecha(data-format="dd-MM-yyyy",type="tel",placeholder="Fecha")
+							span.add-on
+								i(data-time-icon="icosystra-clock", data-date-icon="icosystra-calendar")
+						span.help-inline
+				.span4
+					.control-group 
+						label Hora:
+						#hora-capt-inf2.input-append.date
+							input#hora_inf(data-format="hh:mm",type="text",placeholder="Hora")
+							span.add-on
+								i(data-time-icon="icosystra-clock", data-date-icon="icosystra-clock")
+						span.help-inline
+				.span3
+					.control-group
+						label DELEGACION
+						select#delegacion_spa_inf
+						span.help-inline
+			.controls.controls-row
+				.span4
+					.control-group 
+						label COMANDANCIA
+						select#comandancia_spa_inf
+						span.help-inline
+				.span4
+					.control-group 
+						label TURNO
+						select#turno_spa_inf.input-short
+						span.help-inline
+		include infracciones/infraccion/ManagerServicioParticularInf
+		br
+		.controls.controls-row.bloque
+			.span12
+				label
+					| El conductor firmó la infracción correspondiente  
+			.span2
+				label.radio
+					input#si_firmo_inf(type="radio",name="optionsv",value="SI")
+					| SI
+			.span2
+				label.radio
+					input#no_firmo_inf(type="radio",name="optionsv",value="NO")
+					| NO
+		legend Observaciones
+		.controls.controls-row
+			textarea#observaciones_inf
+		br
+		.controls.controls-row
+			.span12
+				button#guardar_inf.btn.btn-primary(type="button")
+					|Guardar
+					span.icosystra-checkmark2
+				button#guardar_local_infraccion.btn(type="button") 
+					|Guardar Local
+					span.icosystra-storage
+				button#cancelar_inf.btn(type="button")
+					|Cancelar
+					span.icosystra-cancel-circle
+				//button#cargar_inf.btn(type="button")
+				//	|Cargar
+				include infracciones/infraccion/ShowReportePdf
+block javascripts 
+	script(src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places")
+	script(src="/static/javascripts/vendor/jquery.geocomplete.min.js")
+	script(src="/static/javascripts/vendor/bootstrap-datetimepicker.js")
+	script(src="/static/javascripts/vendor/jquery.numeric.js")
+	script(src="/static/javascripts/util-inf.js")
+	//script(src="/static/javascripts/datos/test_inf.js")
+	script(src="/static/javascripts/core/socket.io.js")
+	script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/main-inf.js")
+			

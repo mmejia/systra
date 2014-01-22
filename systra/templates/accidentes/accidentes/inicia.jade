@@ -1,0 +1,157 @@
+extends base
+block stylesheet
+		link(rel="stylesheet", href="/static/stylesheets/table/demo_page.css")
+		link(rel="stylesheet", href="/static/stylesheets/table/demo_table_jui.css")
+		link(rel="stylesheet", href="/static/stylesheets/table/smoothness/jquery-ui-1.8.4.custom.css")
+block contenido
+	a.trigger(href="#")
+	.panel
+		ul#ul-preliminares
+	
+	br
+	br
+	br
+	#pantalla-lista
+	.pantalla-captura
+		{{codigo|safe }}
+		#atajo
+			//a(href="#")
+			//	i.icon-file.icon-white
+			|&nbsp;CABINA
+			a#mostrar-lista-preliminar(href="#")
+				span.icosystra-list
+		include cabecera.jade
+		.row
+			.span8.offset2
+				h4
+					|INICIO PRELIMINAR DE ACCIDENTE
+		legend Accidente preliminar
+		.item-c
+			.item-fila5
+				.control-group
+						label Fecha:
+						#date-fecha-preliminar.input-append.date
+							input#fecha_preliminar.input-fecha(data-format="yyyy-MM-dd",type="text",placeholder="Fecha")
+							span.add-on
+								i(data-time-icon="icosystra-oclock", data-date-icon="icosystra-calendar")
+						span.help-inline
+			.item-fila5
+				.control-group
+					label Hora:
+					#date-hora-preliminar.input-append.date
+						input#hora_preliminar.input-mini(data-format="hh:mm",type="text",placeholder="Hora")
+						span.add-on
+							i(data-time-icon="icosystra-clock", data-date-icon="icosystra-clock")
+					span.help-inline
+		.item-c
+			.control-group
+				label.control-label(for="inputError") Delegación:
+				select#delegacion_pre
+				span.help-inline
+
+		.item-c
+			.control-group	 
+				label.control-label(for="inputError")  Comandancia:
+				select#comandancia_pre
+				span.help-inline
+		.item-c	
+			#loading
+			.control-group	 
+				label.control-label(for="inputError")  Turno:
+				select#turno_pre
+				span.help-inline
+		.item-c
+			.control-group	 	 
+				label.control-label(for="inputError")  Clasificación de Accidente:
+				select#clasificacion_pre
+				span.help-inline
+		legend Localización del evento
+		.item-c	
+			.control-group	 	 
+				label.control-label(for="inputError")  Calle 1:
+				input#calle1_pre.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+				span.help-inline
+		.item-c
+			.control-group	 	 
+				label.control-label(for="inputError") Calle 2:
+				input#calle2_pre.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+				span.help-inline
+		.item-c
+			.control-group	 	 
+				label.control-label(for="inputError") Referencia:
+				input#ref_pre.ui-autocomplete-input(type="text")
+				span.help-inline
+		.item-c
+			.control-group	 
+				label.control-label(for="inputError") Colonia:
+				input#colonia_pre.ui-autocomplete-input(type="text",autocomplete="off", role="textbox",arial-autocomplete="list" ,aria-haspopup="true")
+				span.help-inline
+		legend Resumen
+		.item-c
+			.item-fila5
+				.control-group	
+					label.control-label(for="inputError") No. Veh. Part.
+					input#no_vehiculos_pre.input-mini(type="text" )
+					span.help-inline
+			.item-fila4 
+				.control-group
+					label.control-label(for="inputError") No. de Detenidos
+					input#no_detenidos_pre.input-mini(type="text" )
+					span.help-inline
+		.item-c
+			.item-fila5
+				.control-group
+					label.control-label(for="inputError") No. de Heridos
+					input#no_heridos_pre.input-mini(type="text")
+					span.help-inline
+			.item-fila4
+				.control-group
+					label.control-label(for="inputError") No. de Muertros
+					input#no_muertos_pre.input-mini(type="text" )
+					span.help-inline
+		legend Intervino
+		.item-c
+			.control-group
+				label.control-label(for="inputError") Folio
+				input#gafete_agente_pre.ui-autocomplete-input(type="text",placeholder="Cobro")
+				span.help-inline
+		.item-2c
+			.control-group
+				label.control-label(for="inputError") Nombre
+				input#nombre_agente_pre.input-xxlarge(type="text",placeholder="Nombre",disabled)
+				span.help-inline
+		.item-c
+			.control-group
+				label.control-label(for="inputError") Unidad:
+				input#unidad_pre.ui-autocomplete-input(type="text",placeholder="Unidad")
+				span.help-inline
+		.item-c
+			.control-group
+				label.control-label(for="inputError") Sector:
+				input#sector_pre.ui-autocomplete-input(type="text",placeholder="Sector", disabled)
+				span.help-inline
+		legend Descripción
+		.controls-controls-row
+			.control-group
+				textarea#observaciones_pre
+				span.help-inline
+		.controls-controls-row
+			button#guardar_preliminar_pre.btn.btn-success(type="button") 
+				|Guardar
+				span.icosystra-disk
+			button#cancelar_preliminar_pre.btn(type="button") 
+				|Cancelar
+				span.icosystra-cancel-circle
+			//button#cargar_preliminar_pp.btn(type="button") Cargar
+block javascripts
+	script(src="/static/javascripts/vendor/bootstrap-datetimepicker.js")
+	script(src="/static/javascripts/util-gen.js")
+	script(src="/static/javascripts/utils.js")
+	script(src="/static/javascripts/util-pre.js")
+	script(src="/static/javascripts/util/preliminar/CargarSelect.js") 
+	script(src="/static/javascripts/datos/pre_test.js")
+	script(src="/static/javascripts/datos/testPreliminar.js")
+	script(src="/static/javascripts/vendor/jquery.dataTables.min.js")  
+	script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/main-prel1.js")
+
+

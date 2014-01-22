@@ -1,0 +1,77 @@
+extends base
+block stylesheet
+	link(rel="stylesheet", href="/static/stylesheets/vendor/galleria.classic")
+block contenido
+	br
+	br
+	br
+	br
+	.pantalla-captura
+		#lista-pensiones
+			ul
+			for pension in pensiones
+				li {{pension.nombre_pension}} 
+		#history-pension
+			select
+				for anio in anios
+					option(value="{{anio}}") {{anio}}
+		legend Historial
+		.tabbable
+			ul#cal-folios.nav.nav-tabs
+				li.active
+					a(href="#enero", data-toogle="tab") Enero
+				li
+					a(href="#febrero", data-toogle="tab") Febrero
+				li
+					a(href="#marzo", data-toogle="tab") Marzo
+				li
+					a(href="#abril", data-toogle="tab") Abril
+				li
+					a(href="#mayo", data-toogle="tab") Mayo
+				li
+					a(href="#junio", data-toogle="tab") Junio
+				li
+					a(href="#julio", data-toogle="tab") Julio
+				li
+					a(href="#agosto", data-toogle="tab") Agosto
+				li
+					a(href="#septiembre", data-toogle="tab") Sept.
+				li
+					a(href="#octubre", data-toogle="tab") Oct.
+				li
+					a(href="#noviembre", data-toogle="tab") Nov.
+				li
+					a(href="#diciembre", data-toogle="tab")Dic.
+			.tab-content
+				#enero.tab-pane.active
+					label Enero
+				#febrero.tab-pane.active
+					label Febrero
+				#marzo.tab-pane.active
+					label Marzo
+				#marzo.tab-pane.active
+					label Marzo
+				#abril.tab-pane.active
+					label Abril
+				#mayo.tab-pane.active
+					label Mayo
+				#junio.tab-pane.active
+					label Junio
+				#julio.tab-pane.active
+					label Julio
+				#agosto.tab-pane.active
+					label Agosto
+				#septiembre.tab-pane.active
+					label Septiembre
+				#octubre.tab-pane.active
+					label Octubre
+				#noviembre.tab-pane.active
+					label Noviembre
+				#diciembre.tab-pane.active
+					label Diciembre
+block javascripts 
+	script(src="/static/javascripts/vendor/galleria-1.2.9.min.js")
+	script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/inventario/folio/main-folio.js")
+
+
+			

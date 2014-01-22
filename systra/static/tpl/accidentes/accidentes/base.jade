@@ -1,0 +1,70 @@
+doctype 5
+html(land="es")
+	head
+		title Sistema de Tránsito
+		meta(charset="utf8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="static/stylesheets/vendor/normalize.css")
+		link(rel="stylesheet", href="/static/stylesheets/vendor/bootstrap-responsive.min.css")
+		link(rel="stylesheet", href="/static/stylesheets/vendor/bootstrap.min.css")
+		link(rel="stylesheet", href="/static/stylesheets/vendor/prettify.css")
+		link(rel="stylesheet", href="/static/stylesheets/vendor/bootstrap-datetimepicker.min.css")
+		link(rel="stylesheet", href="/static/stylesheets/vendor/jquery.ui.all.css")
+		link(rel="stylesheet", href="/static/stylesheets/estilos.css")
+		block stylesheet
+		script(src="/static/js/vendor/modernizr-2.6.2.min.js")
+
+	body
+		#wrapper
+			#menu-main
+				ul.nav
+					li.active
+						a(href="#") Inicio
+					li.dropdown
+						a.dropdown-toggle(href="#", data-toggle="dropdown") Incidentes 
+							b.caret
+						ul.dropdown-menu
+							li
+								a(href="/accidente/inicia") Iniciar
+							li
+								a(href="/accidente/listaPreliminarp") List Preliminares
+							li
+								a(href="/accidente/captura") Capturar
+							li
+								a(href="/accidente/list") Lista
+						li.dropdown
+							a#Infracciones.dropdown-toggle(href="#", data-toggle="dropdown") Infracciones
+								b.caret
+							ul.dropdown-menu
+								li
+									a(href="/infraccion/captura") Capturar
+								li
+									a(href="/infraccion/list") Lista
+
+						li.dropdown
+							a#Liberacion.dropdown-toggle(href="#", data-toggle="dropdown") Inventario
+								b.caret
+							ul.dropdown-menu
+								li
+									a(href="/inventario/captura") Capturar
+						li.dropdown
+							a#admin.dropdown-toggle(href="#", data-toggle="dropdown") Admin
+								b.caret
+							ul.dropdown-menu
+								li
+									a(href="/admin/index") Principal
+			section
+				section#contenido
+					section.contenido
+						block contenido             
+				footer.footer
+					.container
+						p &copy; Tránsito Municipal de León Gto..
+		script(src="/static/js/vendor/jquery.js")
+		script(src="/static/js/vendor/bootstrap.min.js")
+		script(src="/static/js/vendor/ckeditor.js")
+		script(src="/static/js/vendor/underscore-min.js")
+		script(src="/static/js/vendor/jquery-ui-1.10.3.custom.min.js")
+		script(src="/static/js/vendor/bootstrap-datetimepicker.js")
+		script(src="/static/js/vendor/jquery.ui.addresspicker.js")
+		block javascripts

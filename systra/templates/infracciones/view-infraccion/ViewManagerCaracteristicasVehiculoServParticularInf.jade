@@ -1,0 +1,45 @@
+#CaracteristicasVehiculoServParticularInf-View.bloque-infracciones
+	.row-fluid
+		.span9
+			br
+			label.radio.inline
+				input#radioServicioParticular(type="radio",name="optServicio",value="Servicio Particular")
+				|Servicio Particular
+			label.radio.inline
+				input#radioServicioPublico(type="radio",name="optServicio",value="Servicio Publico")
+	br
+	.row-fluid
+		.span6
+			label Marca:
+			span.span-inf#view_marca_cv_spa_inf
+		.span6
+			label Submarca:
+			span.span-inf#view_submarca_cv_spa_inf
+	.row-fluid
+		.span6
+			label Modelo:
+			span.span-inf#view_modelo_cv_spa_inf
+		.span6
+			label Color:
+			span#view_color_cv_spa_inf
+	.row-fluid
+		.span6
+			label Detalle del Color:
+			span.span-inf#view_detalle_color_cv_spa_inf
+		.span4
+			label Placas:
+			span.span-inf#view_placas_cv_spa_inf
+	.row-fluid		
+		.span6
+			label Tipo:
+			span.span-inf#view_tipo_cv_spa_inf
+		.span6
+			label Estado: 
+			span.span-inf#view_estado_cv_spa_inf 
+	.row-fluid	
+		.span6
+			label Serie:
+			span.span-inf#view_serie_cv_spa_inf
+		.span6
+			label Tipo Vehículo:
+			span.span-inf#view_tipo_vehiculo_cv_spa_inf

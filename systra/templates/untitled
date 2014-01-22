@@ -1,0 +1,2 @@
+                //link(rel="stylesheet", href="/static/stylesheets/estilos-{{'verdes'}}.css")
+                link(rel="stylesheet", href="/static/stylesheets/estilos-{{estilo}}.css")

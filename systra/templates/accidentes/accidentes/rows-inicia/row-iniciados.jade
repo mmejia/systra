@@ -1,0 +1,25 @@
+td   
+	|<a id="{{pre.id}}" class="editar-preliminar" href="#" title="Editar"><span class="icosystra-pencil"></i></a>
+	|<a id="captura-{{pre.id}}" class="capturar-parte-from-preliminar" href="captura/{{pre.id}}" title="Capturar accidente"><span class="icosystra-file"></i></a>
+	|<a id="{{pre.id}}" class="cancelar-preliminar" href="#" title="Cancela preliminar"><span class="icosystra-thumbs-up"></i></a>
+	|<a id="status-{{pre.id}}" class="remove-status" href="#"><span class="icosystra-remove"  title="Eliminar preliminar"></i></a>
+if usados.order_by == "comandancia"
+	td.td-seleccionado {{pre.comandancia}}
+else
+	td {{pre.comandancia}}
+if usados.order_by == "fecha_evento"
+	td.td-seleccionado {{pre.fecha_evento}} 
+else
+	td {{pre.fecha_evento}} 
+if usados.order_by == "folio_evento"
+	td.td-seleccionado {{pre.folio_evento}}
+else
+	td {{pre.folio_evento}} 
+if usados.order_by == "agente_intervino"
+	td.td-seleccionado {{pre.agente_intervino}} 
+else
+	td {{pre.agente_intervino}}
+if usados.order_by == "calle1" 
+	td.td-seleccionado {{pre.calle1}}  
+else
+	td {{pre.calle1}}  

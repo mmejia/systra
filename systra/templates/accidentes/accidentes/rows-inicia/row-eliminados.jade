@@ -1,0 +1,22 @@
+td   
+	|<a id="{{pre.id}}" class="view-preliminar" href="#" title="Ver"><span class="icosystra-file2"></span></a>
+if usados.order_by == "comandancia"
+	td.td-seleccionado {{pre.comandancia}}
+else
+	td {{pre.comandancia}}
+if usados.order_by == "fecha_evento"
+	td.td-seleccionado {{pre.fecha_evento}} 
+else
+	td {{pre.fecha_evento}} 
+if usados.order_by == "folio_evento"
+	td.td-seleccionado {{pre.folio_evento}}
+else
+	td {{pre.folio_evento}} 
+if usados.order_by == "agente_intervino"
+	td.td-seleccionado {{pre.agente_intervino}} 
+else
+	td {{pre.agente_intervino}}
+if usados.order_by == "calle1" 
+	td.td-seleccionado {{pre.calle1}}  
+else
+	td {{pre.calle1}}  

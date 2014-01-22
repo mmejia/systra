@@ -1,0 +1,1 @@
+define(["/static/javascripts/core/eventos.js"],function(e){function t(e){this.module=e}var n={eventos:e,init:function(e){return this.module=e,this},on:function(e,t){this.eventos.on(e,t,this.module)},emit:function(e){args=Array.prototype.slice.call(arguments,1),this.eventos.emit(e,args)}};return t.prototype=n,t})

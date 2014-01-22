@@ -1,0 +1,19 @@
+.item-agente
+	.col-3.col-sm-3.col-lg-4
+		h2
+			span.icosystra-user
+			|  Agente {{item.cobro}} 
+			.div-edit
+				a.edit-profile(href="#", id="block_{{item.cobro}")
+					span.icosystra-pencil
+
+		.controls.controls-row
+			.span8
+				|Nombre: {{item.nombre}}
+				label Block Asignados
+				for b in  item.bloques
+					span.icosystra-notebook
+					|Block: # {{b.id}}
+					|Desde:{{b.folio_inicial}}
+					|Hasta:{{b.folio_final}}
+

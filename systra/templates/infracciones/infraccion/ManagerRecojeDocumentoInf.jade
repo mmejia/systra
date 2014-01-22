@@ -1,0 +1,41 @@
+legend Garantia
+#managerRecojeDocumento_spa_inf_view.controls.controls-row.bloque
+	.span12
+		h5
+			|Para garantizar el cumplimiento de la sanción administrativa que en su caso proceda, SE RECOGE AL INFRACTOR LA:       
+	.controls.controls-row	
+		.btn-add
+			label Nota: Tipo de Placa F es Foránea
+	#radios_recoje.controls.controls-row
+		.linea
+			label.radio
+				input#rd_placa_spa_inf(type="radio",name="recoje",value="PLACAS")
+				| PLACAS
+		.linea
+			label.radio
+				input#rd_tarjeta_spa_inf(type="radio",name="recoje",value="TARJETA DE CIRCULACION")
+				| TARJETA DE CIRCULACION
+		.linea
+			label.radio
+				input#rd_licencia_spa_inf(type="radio",name="recoje",value="LICENCIA")
+				| LICENCIA
+		.linea
+			label.radio
+				input#rd_vehiculo_spa_inf(type="radio",name="recoje",value="VEHICULO")
+				| VEHICULO
+		.linea
+			label.radio
+				input#rd_cortesia_spa_inf(type="radio",name="recoje",value="CORTESIA")
+				| CORTESIA
+		.linea
+			label.radio
+				input#rd_pago_movil_spa_inf(type="radio",name="recoje",value="PAGO MOVIL")
+				| PAGO MOVIL
+	#recoje_vehiculo_spa_inf.controls.controls-row
+		.span4
+			label Pensión:
+			select#recoje_vehiculo_pension_spa_inf.input-medium
+		.span4
+			label No. de Inventario:
+			input#recoje_vehiculo_no_inventario_spa_inf(type="text")
+	include infracciones/infraccion/ManagerDatosLicenciaServParticularInf

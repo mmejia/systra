@@ -1,0 +1,5 @@
+truncate dbo_Accidentes1;
+truncate Acc_vehiculos1;
+truncate Acc_Involucrados1;
+truncate Acc_Objetos1;
+truncate Acc_Inve_detalles1;

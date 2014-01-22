@@ -1,0 +1,12 @@
+CREATE TABLE FolioInfraccion (
+	id int(11) NOT NULL AUTO_INCREMENT,
+	block int(11) NOT NULL,
+	folio int(11) NOT NULL,
+	comandancia varchar(255) DEFAULT NULL,
+	delegacion varchar(255) DEFAULT NULL,
+	turno varchar(255) DEFAULT NULL,
+	fecha_liberacion datetime,
+	status varchar(50),
+	usuario = varchar(50) DEFAULT NULL,
+	PRIMARY KEY (`id`)
+);

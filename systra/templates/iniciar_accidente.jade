@@ -1,0 +1,92 @@
+extends base
+block content
+	form.form-horizontal
+		fieldset
+			legend Accidente preliminar
+			label.control-label(for="hora") Hora
+			input#hora(type="text", placeholder="Hora")
+			label 24 Hrs.
+			label.control-label(for="fecha") Fecha del Indidente
+			input#fecha(type="text",placeholder="Fecha actual")
+			label FICHA INFORMATIVA DE ACCIDENTE(CABINA)
+			label.control-label(for="folio") Numero de folio:
+			input#folio(type="text",placeholder="Folio")
+			label Delegación:
+			select
+				option 1
+				option 2
+				option 3
+			label Comandancia:
+			select
+				option 1
+				option 2
+				option 3
+			label Turno:
+			select
+				option 1
+				option 2
+				option 3
+			label Tipo de Evento:
+			select
+				option 1
+				option 2
+				option 3
+			label Clasificación de Accidente:
+			select
+				option 1
+				option 2
+				option 3
+			label Localización del Evento
+			input(type="text" ,placeholder="Localización del evento")
+			label Operativo:
+			select
+				option 1
+				option 2
+				option 3
+			label RESUMEN
+			label No. Vehículos participantes
+			input(type="text")
+			label No. de Detenidos
+			input(type="text")
+			label No. de Heridos
+			input(type="text")
+			label No. de Muertros
+			input(type="text")
+			label Pensión
+			select
+				option 1
+				option 2
+				option 3
+			label No. de Inventario
+			input(type="text")
+			label INTERVINO
+			label Gafete Agente
+			div.input-append
+				input(type="text")
+				button.btn(type="button") Buscar
+			label Nombre Agente
+			input(type="text")
+			label Unidad:
+			div.input-append
+				input(type="text")
+				button.btn(type="button") Buscar
+			label Observaciones:
+			textarea(row="3")
+
+block scripts
+	script(src="/static/js/vendor/wysihtml5-0.3.0_rc2.min.js")
+	script(src="/static/js/vendor/jquery.js")
+	script(src="http://maps.google.com/maps/api/js?sensor=false")
+	script(src="/static/js/vendor/bootstrap.min.js")
+	script(src="/static/js/vendor/bootstrap-wysihtml5-0.0.2.min.js")
+	script(src="/static/js/vendor/underscore-min.js")
+	script(src="/static/js/vendor/jquery-ui-1.10.3.custom.min.js")
+	script(src="/static/js/vendor/bootstrap-datetimepicker.js")
+	script(src="/static/js/vendor/jquery.ui.addresspicker.js")
+	script(src="/static/js/utils.js")
+	script(src="/static/js/util-acc.js")
+
+
+
+
+

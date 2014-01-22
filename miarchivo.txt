@@ -1,0 +1,6 @@
+accidentes
+infracciones
+manage.py
+miarchivo.txt
+models.py
+systra

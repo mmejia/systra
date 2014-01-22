@@ -1,0 +1,95 @@
+.bloque
+
+	.controls.controls-row
+		.span4
+			.control-group.otros-v
+				label Visibilidad
+				span#alumbrado_publico_o
+		.span4
+			.control-group.otros-v
+				label Parte del Dia
+				span#parte_dia_o
+		.span4
+			.control-group.otros-v
+				label Tipo de Calle:
+				span#tipo_calle_o
+	.controls.controls-row
+		.span4
+			.control-group.otros-v
+				label No. de Carriles
+				span#no_carriles_o
+		.span4
+			.control-group.otros-v
+				label Sentido de la Calle:
+				span#sentido_calle_o
+legend Estado de las calles:
+.bloque
+	.controls.controls-row
+		.span4
+			.control-group.otros-v
+				label Alineación
+				span#alineacion_o	
+		.span4
+			.control-group.otros-v
+				label Estado del Pavimento
+				span#estado_pavimento_o
+		.span4
+			.control-group.otros-v
+				label Clima
+				span#clima_o
+	.controls.controls-row
+		.span4
+			.control-group.otros-v
+				label Regulación
+				span#regulacion_o
+legend#num_danos Daños acumulados
+a(name="editar-danos")
+#capturaDanos.bloque(title="Captura daños")
+	strong Los daños de objetos fijos serán valuados por peritos en la materia
+	br
+	.controls.controls-row
+		.span4
+			.control-group.danos-v
+				label Objetos dañados
+				span#objetos_danados_o
+		.span4
+			.control-group.danos-v
+				label Tipo de daños
+				span#tipo_danos_o(type="text", placeholder="Tipo de daños")
+		.span4
+			.control-group.danos-v
+				label Dueños
+				span#dueno_o
+	.controls.controls-row
+		.span4
+			.control-group.danos-v
+				label Monto de los daños:
+				span#monto_danos_o
+	.controls.controls-row
+		.span4.offset4
+				
+a(name="tabla-danos")
+.bloque
+	#tab_otros_view
+		table#tab_otros.table-bordered
+			thead
+				th  
+					|Opciones
+				th
+					|Objeto
+				th
+					|Tipo de Daños
+				th
+					|Dueño
+				th
+					|Monto
+			tbody
+		.controls.controls-row
+			.btn-add
+				a#agregar_danos(href="#editar-danos")
+					i.icon-plus-sign
+
+
+
+
+

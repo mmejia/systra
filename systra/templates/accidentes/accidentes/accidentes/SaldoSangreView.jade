@@ -1,0 +1,53 @@
+#saldo_sangre_view
+	#dialog-form-ss-pp(title="Agregar saldo de sangre")
+		form
+			fieldset
+				legend Datos de la Persona Incolucrada
+				label.checkbox
+					input#SeDesconoceSaldoSangre(type="checkbox")
+					p SE DESCONOCE
+				label Nombre(s):
+				input#nombre_ss_pp(type="textbox")
+				label Apellido Paterno:
+				input#apellido_paterno_ss_pp(type="textbox")
+				label Apellido Materno:
+				input#apellido_materno_ss_pp(type="textbox")
+				label Domicilio:
+				input#domicilio_ss_pp(type="textbox")
+				label Edad:
+				input#edad_ss_pp(type="textbox")
+				select#tipo_edad_ss_pp
+					option AÑOS
+					option MESES
+					option SE DESCONOCE
+				label Sexo:
+				input#sexo_ss_pp(type="textbox")
+				label Colonia:
+				input#colonia_ss_pp.ui-autocomplete-input(type="textbox", placeholder="Colonia")
+				label Estado:
+				input#estado_ss_pp.ui-autocomplete-input(type="textbox", placeholder="Estado")
+				label Municipio:
+				input#municipio_ss_pp.ui-autocomplete-input(type="textbox", placeholder="Municipio")
+				label Condiciones Físicas:
+				input#condiciones_fisicas_ss_pp..ui-autocomplete-input(type="textbox", placeholder="Condiciones Físicas")
+				label Detenido en:
+				input#detenidoen_ss_pp.ui-autocomplete-input(type="textbox", placeholder="Detenido en")
+				label Levantado por:
+				input#levantadopor_ss_pp.ui-autocomplete-input(type="textbox", placeholder="Levantad por")
+				label La persona se encontraba:
+				input#persona_se_encontraba_ss_pp.ui-autocomplete-input(type="textbox", placeholder="La persona se encontraba")
+				label Trasladado a:
+				input#trasladado_a_ss_pp.ui-autocomplete-input(type="textbox", placeholder="Trasladado a")
+				label A disposiciónSS:
+				input#adisposicion_ss_pp.ui-autocomplete-input(type="textbox", placeholder="A disposición")
+				label En custodia de:
+				input#custodiade_ss_pp.ui-autocomplete-input(type="textbox", placeholder="En custodia de")
+				button#guardar_ss_pp.btn(type="submit") Aceptar
+				button#cancelar_ss_pp.btn(type="submit") Cancelar
+
+
+
+
+
+
+

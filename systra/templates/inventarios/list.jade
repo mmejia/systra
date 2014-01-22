@@ -1,0 +1,199 @@
+extends base
+br
+br
+block stylesheet
+	link(rel="stylesheet", href="/static/stylesheets/table/demo_page.css")
+	link(rel="stylesheet", href="/static/stylesheets/table/demo_table_jui.css")
+	link(rel="stylesheet", href="/static/stylesheets/table/smoothness/jquery-ui-1.8.4.custom.css")
+block contenido
+	br
+	br
+	br
+	.pantalla-captura
+		#atajo
+			| LISTA DE INVENTARIOS
+			a(href="#")
+				i.icon-list.icon-white
+	{{codigo|safe }}
+	#pantalla-lista
+		include cabecera.jade
+		legend Buscar
+			button.btn.btn-success#show-search
+				i.icosystra-zoom-out
+		#div-search
+			form#form-search-inventarios(action="/inventario/list",method="GET")
+				.controls.controls-row
+					.span4
+						label Fecha del
+						#fecha-inicia-append.input-append.date
+							input#fechaI.input.input-medium(data-format="yyyy-MM-dd",name="fecha_inicial",type="text", value="{{fecha_inicial}}")
+							span.add-on
+								i(data-time-icon="icosystra-clock", data-date-icon="icosystra-calendar")
+						span.help-inline
+					.span4
+						label Al:
+						#fecha-final-append.input-append.date
+							input#fechaF.input.input-medium(data-format="yyyy-MM-dd",name="fecha_final",type="text", value="{{fecha_final}}")
+							span.add-on
+								i(data-time-icon="icosystra-clock", data-date-icon="icosystra-calendar")
+							span.help-inline
+					.span4
+						label Status
+						select#statusInventario(name="status")
+							if usados.status == '0' 
+								option(value="0", selected="selected") INACTIVOS
+							else
+								option(value="0") INACTIVOS
+							if usados.status == '1'
+								option(value="1", selected="selected") INGRESADOS
+							else
+								option(value="1") INGRESADOS
+							if usados.status == "2"
+								option(value="2", selected="selected") LIBERADOS    
+							else
+								option(value="2") LIBERADOS
+					#search-append
+						for key,value in usados.items
+							if key != 'fecha_inicial' and key != 'fecha_final' and key != 'status' and key != 'page' and key != 'order_by' and key != 'order_tipo' 
+									|<div class="span4">
+									|<div class="span4">
+									|<label>{{key}}</label>
+									|<input type="text" id="{{key}}" name="{{key}}" value="{{value}}"></input>
+									|</div>
+					.controls.controls-row	
+						.span4
+							label Campos
+							.input-append
+								select#campos
+								button.btn#add-field-search(type="button",href="#")
+									i.icosystra-plus
+				input#page(type="hidden", name="page" , value="{{usados.page}}")
+				input#order_by(type="hidden", name="order_by", value="{{usados.order_by}}")
+				input#order_tipo(type="hidden", name="order_tipo", value="{{usados.order_tipo}}")
+				.controls.controls-row
+					.span2
+						br
+						button#buscarInventarios.btn(type="submit") 
+							|&nbsp;Buscar
+							span.icosystra-search
+		legend 
+			|Resultado
+			a#exportarExcel(href="/inventario/excel", title="Exportar a excel")
+				span.icosystra-file-excel
+		a(name="res_bus")
+		.controls.controls-row
+				div
+					table#listaInventarios.table-bordered
+							thead
+								tr 
+									th.opciones Opciones
+									th.fecha_inventario 
+										|Fecha
+										a#ordenar_fecha_inventario_asc(href="#res-bus") 
+											if usados.order_by == 'fecha_incid' and usados.order_tipo == 'asc' 
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_fecha_inventario_desc(href="#res-bus") 
+											if usados.order_by == 'fecha_incid' and usados.order_tipo == 'desc' 
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down
+									th.fecha_entrega
+										|Entrega
+										a#ordenar_fecha_entrega_asc(href="#res-bus") 
+											if usados.order_by == 'liberacion_fecha' and usados.order_tipo == 'asc' 
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_fecha_entrega_desc(href="#res-bus")
+											if usados.order_by == 'liberacion_fecha' and usados.order_tipo == 'desc'  
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down
+									th.folio
+										|Folio
+										a#ordenar_folio_asc(href="#res-bus") 
+											if usados.order_by == "folio_inventario" and usados.order_tipo == 'asc'
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_folio_desc(href="#res-bus") 
+											if usados.order_by == "folio_inventario" and usados.order_tipo == 'desc'
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down	
+									th.folio_accidente
+										|Accid/Infrac
+										a#ordenar_folio_accidente_asc(href="#") 
+											if usados.order_by == "motivo_de_recojimiento" and usados.order_tipo == 'asc'
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_folio_accidente_desc(href="#")
+											if usados.order_by == "motivo_de_recojimiento" and usados.order_tipo == 'desc' 
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down
+									th.tipo_vehiculo 
+										|T. Vehículo
+										a#ordenar_tipo_vehiculo_asc(href="#")
+											if usados.order_by == "clas_vehiculo" and usados.order_tipo == 'asc' 
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_tipo_vehiculo_desc(href="#")
+											if usados.order_by == "clas_vehiculo" and usados.order_tipo == 'desc' 
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down
+									th.comandancia 
+										|Cmdia.
+										a#ordenar_comandancia_asc(href="#")
+											if usados.order_by == "comandancia" and usados.order_tipo == 'asc'
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_comandancia_desc(href="#") 
+											if usados.order_by == "comandancia" and usados.order_tipo == 'desc'
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down
+									th.turno 
+										|Turno
+										a#ordenar_turno_asc(href="#")
+											if usados.order_by == "turno" and usados.order_tipo == 'asc'
+												span.ascendente-select.icosystra-arrow-up
+											else
+												span.ordenamiento.icosystra-arrow-up
+										a#ordenar_turno_desc(href="#") 
+											if usados.order_by == "turno" and usados.order_tipo == 'desc'
+												span.ascendente-select.icosystra-arrow-down
+											else
+												span.ordenamiento.icosystra-arrow-down
+							tbody
+								if object_list
+									for inv in object_list
+										if inv.activo == 0
+											tr.viejos
+												include inventarios/row-viejo.jade
+										if inv.activo == 1
+											tr.ingresados
+												include inventarios/row-ingresados.jade
+										if inv.activo == 2
+											tr.liberados
+												include inventarios/row-liberados.jade
+			include inventarios/inventario/pagination
+	//!= contentFor('vendor/jquery.dataTables.min','vendor/require.js",data-main="accidentes/list/main.js"')
+block javascripts
+	script(src="/static/javascripts/vendor/jquery.blueimp-gallery.min.js")
+	script(src="/static/javascripts/vendor/bootstrap-datetimepicker.js")
+	script(src="/static/javascripts/util-inv.js")
+	script(src="/static/javascripts/util/inventario/CargarSelect.js") 
+	script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/main-lista-inventario.js")
+
+
+
+
+
+

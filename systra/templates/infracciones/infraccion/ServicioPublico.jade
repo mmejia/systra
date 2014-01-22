@@ -1,0 +1,38 @@
+#cont-servicio-publico
+	legend Servicio Público
+	.bloque
+		#managerTipoServicioPublico_spa_inf_view.controls.controls-row
+			.span2
+				label.radio
+					input#rd_taxi_spa_inf(type="radio",name="ttPublico",value="taxi")
+					| Taxi
+			.span2
+				label.radio
+					input#rd_urbano_spa_inf(type="radio",name="ttPublico",value="urbano")
+					| Urbano
+			.span2
+				label.radio
+					input#rd_foraneo_spa_inf(type="radio",name="ttPublico",value="foraneo")
+					| Foráneo
+			.span2
+				label.radio
+					input#rd_policia_spa_inf(type="radio",name="ttPublico",value="policia")
+					| Policía
+			.span2
+				label.radio
+					input#rd_transito_spa_inf(type="radio",name="ttPublico",value="transito")
+					| Tránsito
+		.controls.controls-row
+			.span4
+				label Empresa:
+				input#empresa_cv_spa_inf(type="text", placeholder="Empresa")
+			.span4
+				label Ruta:
+				input#ruta_cv_spa_inf(type="text", placeholder="Ruta")
+			.span4
+				label No. Económico:
+				input#no_economico_cv_spa_inf(type="text", placeholder="No. Económico")
+		.controls.controls-row	
+			.span4
+				label No. Tarjetón:
+				input#no_tarjeton_cv_spa_inf(type="text", placeholder="No. Tarjeton")

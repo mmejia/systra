@@ -1,0 +1,35 @@
+legend Datos Generales
+.controls.controls-row.bloque
+	.controls.controls-row
+			.span4
+				label No. Cobro
+				span#view_cobro	
+					|{{profile.cobro}}
+			.span4
+				label Nombre
+				span#view_nombre
+					|{{profile.nombre}}
+	.controls.controls-row
+			.span4
+				label Comandancia
+				span#view_comandancia
+					|{{profile.comandancia}}	
+			.span4
+				label Turno
+				span#view_turno
+					|{{profile.turno}}	
+	.controls.controls-row
+			.span4
+				label Delegacion
+				span#view_delegacion
+					|{{profile.delegacion}}	
+			.span4
+				label Comisión
+				span#view_comision	
+					|{{profile.comision}}
+legend 
+	|Historial de infracciones 
+	a#agregar-bloque.btn.btn-success(title="Agregar block",href="#")
+		i.icosystra-plus
+include infracciones/folios/form-agregar-folio
+include infracciones/folios/history_from_folio

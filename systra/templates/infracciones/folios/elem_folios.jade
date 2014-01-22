@@ -1,0 +1,50 @@
+extends base
+block contenido
+	br
+	br
+	br
+	br
+	.pantalla-captura
+		#arbol-elementos
+			label Buscar
+			select#todos_profiles
+				option(value="NO") **SELECCIONAR**
+				for i in todos
+					option(value="{{i.cobro}}") {{i.cobro}}
+			a.btn#lista-perfil.btn-success(href="#editar-profile")
+				i.icosystra-list
+			.tree.well
+				ul
+					li
+						span
+							i.icon-folder-open
+							|Direccion
+						ul
+							li
+								span
+									i.icon-minus-sign
+									|Oriente
+								include infracciones/folios/comandancia4
+								include infracciones/folios/comandancia10
+								include infracciones/folios/feria
+								include infracciones/folios/comandancia5
+								include infracciones/folios/comandancia7
+								include infracciones/folios/comandancia6
+								include infracciones/folios/comandancia3
+							li
+								span
+									i.icon-minus-sign
+									|Poniente
+								include infracciones/folios/comandancia9
+								include infracciones/folios/comandancia8
+								include infracciones/folios/comandancia1
+								include infracciones/folios/comandancia2
+			#loading
+		#fichas-infracciones
+
+block javascripts
+	script(src="/static/javascripts/util/infraccion/util-arbol.js")
+	script(src="/static/javascripts/vendor/jquery.form.min.js")
+	script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/main-arbol.js")
+
+				

@@ -1,0 +1,23 @@
+legend Block 
+table#tab-detail-block
+	for row in tabla
+		tr
+		for elem in row
+			if elem.status == "INICIADO"
+				td.folio_iniciado 
+					span.icosystra-ticket
+					p
+						a(hrer="#")
+							{{elem.folio}}
+			if elem.status == "CAPTURADO"
+				td.folio_capturado 
+					span.icosystra-ticket
+					p
+						a(hrer="#")
+							{{elem.folio}}
+			if elem.status == "CANCELADO"
+				td.folio_cancelado 
+					span.icosystra-ticket
+					p
+						a(hrer="#")
+							{{elem.folio}}

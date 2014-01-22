@@ -1,0 +1,29 @@
+{% if has_previous %}
+span.page
+	a(href="?page={{previous}}") &lt; Prev
+{% endif %}
+{{ show_first }}
+{%if show_first%}
+span.page
+	a(href="?page=1") 1
+span.ellipsis ...
+{% endif %}
+{% for  linkpage in page_numbers %}
+{% ifequal linkpage page %}
+span.current {{page}}
+	{%else%}
+span.page
+	a(href="?page={{linkpage}}") >{{linkpage}}
+
+{%endifequal%}
+{%endfor%}
+{% if show_last %}
+span.ellipsis ...
+span.page
+	a(href="?page=last") {{pages}}
+{%endif%}
+{%if has_next %}
+{{next}}
+span.page
+	a(href="?page={{next}}") Next &gt;
+{%endif%}

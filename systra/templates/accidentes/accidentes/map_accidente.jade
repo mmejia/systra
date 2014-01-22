@@ -1,0 +1,97 @@
+extends base
+block contenido
+	br
+	br
+	br
+	br
+	.pantalla-captura
+		.controls.controls-row
+			.span4
+				#accordion2.accordion
+					.accordion-group
+						.accordion-heading
+							a#boton_buscar.accordion-toogle(href="#collapseOne", data-toggle="collapse", data-parent="#accordion2") Buscar
+						#collapseOne.accordion-body.collapse
+							#busqueda
+								form#frm-bus-map(method="POST",action="/accidente/listPuntosAccidentes")
+									.controls.controls-row
+										#ctrl-busqueda
+											.controls.controls-row
+												.controls.controls-row
+													label Delegación:
+													select#bus_delegacion(name="bus_delegacion")
+												.controls.controls-row
+													label Comandancia:
+													select#bus_comandancia(name="bus_comandancia")
+												.controls.controls-row
+													label Fecha Inicio:
+													#bus-mapa-fechai.input-append.date
+														input#bus_fechai.input-medium(data-format="yyyy-MM-dd",type="text",placeholder="Fecha Inicial",name="fechai")
+														span.add-on
+															i(data-time-icon="icon-time", data-date-icon="icon-calendar")
+												.controls.controls-row
+													label Fecha Final:
+													#bus-mapa-fechaf.input-append.date
+														input#bus_fechaf.input-medium(data-format="yyyy-MM-dd",type="text",placeholder="Fecha Final",name="fechaf")
+														span.add-on
+															i(data-time-icon="icon-time", data-date-icon="icon-calendar")
+											.controls.controls-row
+												.controls.controls-row
+													label.checkbox
+														input#bus_consignacion(type="checkbox",name="bus_consignacion") 
+														|Consignacion
+												.controls.controls-row
+													label.checkbox
+														input#bus_querella(type="checkbox",name="bus_querella") 
+														|Querella
+												.controls.controls-row
+													label.checkbox
+														input#bus_convenio(type="checkbox",name="bus_convenio") 
+														|Convenio
+												.controls.controls-row
+													label.checkbox
+														input#bus_consignacion(type="checkbox",name="bus_consignacion") 
+														|Infracciones
+												.controls.controls-row
+													input#buscar-mapa-accidentes.btn.btn-primary(type="submit") Buscar
+					#accordion2.accordion
+					.accordion-group
+						.accordion-heading
+							a#boton_resultado.accordion-toogle(href="#collapseTwo", data-toggle="collapse", data-parent="#accordion2") Resultado
+						#collapseTwo.accordion-body.collapse
+							#resultado
+								table#resultado-bus-map.table-bordered
+									thead
+										tr
+											th
+												input#mostrar-todo-mapa(type="checkbox") 
+											th 
+												|Parte
+											th 
+												|Tipo
+											th 
+												|Fecha
+									tbody
+										tr
+											tb 
+											td
+											td
+								table#nav-res-map
+									thead
+										tr
+											th 
+												a#firstMarcas-mapa(href="#") <<
+											th 
+												a#previoMarcas-mapa(href="#") <
+											th 
+												a#nextMarcas-mapa(href="#") >
+											th 
+												a#lastMarcas-mapa(href="#") >>
+			.span8
+				#map1
+block javascripts
+	script(src="/static/javascripts/vendor/bootstrap-datetimepicker.js")
+	script(src="http://maps.google.com/maps/api/js?sensor=false")
+	script(src="/static/javascripts/util-map.js")
+	//script(src="/static/javascripts/util-map.js")
+	script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/main-map-acc.js")

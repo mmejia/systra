@@ -1,0 +1,54 @@
+#CapturaCompetenciaJudicialView(title="Captura competencia Judicial")
+	.controls.controls-row
+		.span4 
+			.control-group.cj
+				label Nombre
+				input#nombre_cj(type="text", placeholder="Nombre")
+				span.help-inline
+		.span4
+			.control-group.cj
+				label Estado Físico
+				select#estado_cj
+				span.help-inline
+		.span4
+			.control-group.cj
+				label Edad
+				input#edad_cj.input-mini(type="text", placeholder="Edad")
+				span.help-inline
+	.controls.controls-row
+		.span4
+			.control-group.cj
+				label Domicilio
+				input#domicilio_cj(type="text", placeholder="Domicilio")
+				span.help-inline
+		.span4
+			.control-group.cj
+				label Detenido en:
+				select#detenidoen_cj
+				span.help-inline
+		.span4
+			.control-group.cj
+				label A disposición de:
+				select#adisposicionde_cj
+					option(value="SELECCIONAR") **SELECCIONAR**
+					option(value="Agente MP") Agente MP
+					option(value="SE DESCONOCE") SE DESCONOCE
+				span.help-inline
+	.controls.controls-row
+		.span3
+			.control-group.cj
+				label Se encontraba
+				select#seencontraba_cj
+				span.help-inline
+	.controls.controls-row
+		.span6.offset4
+			br
+			button.btn#dialogo-aceptar-competencia-judicial.btn-primary 
+				|Aceptar
+				span.icosystra-checkmark2
+			button.btn#dialogo-cancelar-competencia-judicial.btn
+				|Cancelar
+				span.icosystra-cancel-circle
+			//button.btn#cargar-competencia-judicial
+			//	|Cancelar
+			

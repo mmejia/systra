@@ -1,0 +1,56 @@
+legend Datos Ingreso a pensión
+#managerDatosPension_spa_inv_view.controls.controls-row.bloque
+	.controls.controls-row
+		.span3
+			.control-group
+				label Lugar
+				select#lugar_inv
+				span.help-inline
+		.span3
+			.control-group 
+				label Fecha Entrada:
+				#fecha-entrada-inventario-append.input-append.date
+					input#fecha-entrada-inventario(data-format="yyyy-MM-dd",type="text",placeholder="Fecha")
+					span.add-on
+						i(data-time-icon="icosystra-oclock", data-date-icon="icosystra-calendar")
+				span.help-inline
+		.span3
+			.control-group
+				label Hora de Entrada
+				#hora-entrada-inventario-append.input-append.date
+					input#hora-entrada-inventario(data-format="hh:mm",type="text",placeholder="Hora")
+					span.add-on
+						i(data-time-icon="icosystra-clock", data-date-icon="icosystra-clock")
+				span.help-inline
+
+	.controls.controls-row
+		.span12
+			.control-group
+				label Recibido por
+				input#recibidoPor_inv.input-xxlarge(type="text",placeholder="Persona que recibe el vehículo")
+				span.help-inline
+	h5 Trasladado por 
+	.controls.controls-row
+		.control-group
+			span.help-inline
+			.span2
+					br
+					label.radio
+						input#propiosMedios_inv(type="radio", name="dero")
+						| Propios Medios
+			.span2
+				br
+				label.radio
+					input#grua_inv.input-medium(type="radio", name="dero")
+					| Grua Particular
+			.span4
+				label Pension Particular
+				select#pensionPart_inv
+			.span2
+					br
+					label.radio
+						input#deTransito(type="radio", name="dero")
+						| De Transito
+					.span2
+						label Unidad
+						input#llevadoUnidad_inv.input-mini(type="text")

@@ -1,0 +1,234 @@
+include cabecera.jade
+	br
+	.controls.controls-row
+			.btn-add
+				label |FOLIO DE INFRACCION No. T- 
+				span {{folio}}
+	legend Datos Generales
+	.controls.controls-row.bloque
+		h5.agente En León Guanajuato, el suscrito AGENTE:
+		.controls.controls-row
+			.span3
+				label No. Cobro
+				span.span-inf {{noCobro}}
+		br
+		br		
+		.controls.controls-row
+			.span3
+				label Fecha: 
+				span {{fecha_infrac}}
+				#fecha-capt-inf
+				
+			.span3
+				label Hora:
+				#hora-capt-inf.input-append.date
+				span {{hora_infrac}}
+			.span3
+				label DELEGACION
+				span {{delegacion}}
+		br		
+		.controls.controls-row
+			.span3
+				label COMANDANCIA
+				span {{comandancia}}
+			.span3
+				label TURNO
+				span {{turno}}
+		br		
+		.controls.controls-row
+			.span2
+				h5	DATOS PERSONALES
+			.span4
+				h5 Caracteristicas del Vehiculo
+		br
+		// aqui va bien
+		.controls.controls-row
+			.span
+				label.checkbox
+				input#ebriedad_incompleta_cm_spa_inf(type="checkbox") 
+				|Se desconose datos del conductor.
+			.span3
+				label.radio.inline
+				input#radioServicioParticular(type="radio",name="optServicio",value="Servicio Particular")
+				|Servicio Particular			
+			.span3
+				label.radio.inline
+				input#radioServicioParticular(type="radio",name="optServicio",value="Servicio Particular")
+				|Servicio Publico
+		br	
+								
+		.controls.controls-rowå
+			.span2
+				label Nombre:
+				span {{infractor_nombre}}
+			.span2
+				label App Paterno:
+				span {{infractor_apepaterno}}
+			.span2
+				label Marca:
+				span {{Marca}}		
+			.span2
+				label Submarca:
+				span {{Submarca}}
+		br		
+		.controls.controls-row
+			.span1
+				label App Materno:
+				span {{infractor_apematerno}}
+			.span1
+				label Sexo:
+				span {{infractor_sexo}}
+			.span1
+				label Edad
+				span {{infractor_edad}}
+			.span1
+				label Modelo:
+				span {{veh_modelo}}
+			.span1
+				label Color:
+				span {{veh_color}}
+		br		
+		.controls.controls-row
+			.span2
+				label Domicilio:
+				span {{infractor_domicilio}}
+			
+			.span2
+				label Detalle del Color:
+				span {{veh_color_detalle}}
+			.span2
+				label Placas:
+				span {{veh_placas}}
+		br		
+		.controls.controls-row
+			.span2
+				label Colonia:
+				span {{colonia}}
+			.span2
+				label Ciudad:
+				span {{Ciudad}}
+			.span2
+				label Tipo:
+				span {{sp_tipo}}
+			.span2
+				label Estado:
+				span {{estado_placa}}
+		br		
+		.controls.controls-row
+			.span2
+				label Estado:
+				span {{Estado}}
+			.span2
+				label No Licencia:
+				span {{infractor_num_licencia}}
+			.span2
+				label Serie:
+				span {{veh_serie}}
+			.span2
+				label Tipo Vehiculo:
+				span {{sp_tipo}}
+		legend Articulos:		
+		.controls.controls-row.bloque
+			.span9			
+				table#tab_articulos_spa_inf.table-bordered
+					thead
+						tr
+						th.art Articulo
+						th.art Fracción
+						th.art Descripción	
+					tbody
+						for art in articulos
+							tr
+								td {{art.id}}
+								td {{art.parrafo}}
+								td {{art.concepto}}
+		br	
+		.controls.controls-row
+			.span2
+				label Colonia:
+				span {{Colonia2}}
+			.span2
+				label Calle 1:
+				span {{Calle1}}
+			.span2
+				label Calle 2:
+				span {{Calle2}}
+		br		
+		.controls.controls-row
+			.span2
+				label Circulacion:
+				span {{circulacion}}
+			.span2
+				label Tipo de Operativo:
+				span {{tipo_operativo}}
+		br		
+		.controls.controls-row
+			.span2
+				label Latitud:
+				span {{latitud}}
+			.span2
+				label longitud:
+				span {{longitud}}
+		br		
+		legend Se recoje		
+		.controls.controls-row.bloque
+			h5 para garantizar el cumprimiento de la sancion administrativa que en su caso proceda, RECOGE AL INFRACTOR LA:
+			br
+			.controls.controls-row
+			.span1
+				label.radio.inline
+						input#radioServicioParticular(type="radio",name="optServicio",value="Servicio Particular")
+			.span1
+				label.radio.inline
+						input#radioServicioParticular(type="radio",name="optServicio",value="Servicio Particular")
+			.span1
+				label.radio.inline
+						input#radioServicioParticular(type="radio",name="optServicio",value="Servicio Particular")
+			.span1
+				label.radio.inline
+						input#radioServicioParticular(type="radio",name="optServicio",value="Servicio Particular")
+			.span1
+				label.radio.inline
+						input#radioServicioParticular(type="radio",name="optServicio",value="Servicio Particular")
+			.span1
+				label.radio.inline
+						input#radioServicioParticular(type="radio",name="optServicio",value="Servicio Particular")
+		legend Certificado		
+		.controls.controls-row.bloque
+			h5 En caso Violación al articulo 133 A del regramento de Tránsito para el Municipio de LEON,GTO, se remitio al conductor ante el Medico legistal quien atraves de CERTIFICADO MEDICO NUMERO
+			br
+			.controls.controls-row
+				.span1
+					label.checkbox uno
+					input#ebriedad_incompleta_cm_spa_inf1(type="checkbox") 
+				.span1
+					label.checkbox dos
+					input#ebriedad_incompleta_cm_spa_inf2(type='checkbox') 
+				.span1
+					label.checkbox tres
+					input#ebriedadf3(type='checkbox')
+				.span1
+					label.checkbox cuatro
+					input#ebriedad_incompleta_cm_spa_inf4(type="checkbox") 
+				.span1
+					label.checkbox cinco
+					input#ebriedad_incompleta_cm_spa_inf5(type="checkbox") 
+		br				
+		.controls.controls-row.bloque
+			h5 El conductor firmo la infraccion correspondiente
+			br
+			.controls.controls-row
+				label
+					span2.radio.inline
+						input#radioServicioParticular(type="radio",name="optServicio",value="Servicio Particular")
+						|Si
+				.span3
+					label.radio.inline
+						input#radioServicioParticular(type="radio",name="optServicio",value="Servicio Particular")																									
+						|No
+
+//legend Observaciones		
+//.controls.controls-row.bloque														
+//include infracciones/infraccion/ShowReportePdf 					
+
+

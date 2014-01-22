@@ -1,0 +1,178 @@
+br
+{{codigo|safe }}
+br
+br
+br
+.pantalla-captura
+	#atajo
+		| CAPTURA DE INVENTARIO
+		a(href="#")
+			i.icon-file.icon-white
+	include cabecera.jade
+	.controls.controls-row
+		.folio-inventario
+			br
+			.control-group.folio-inventario 
+				|FOLIO INVENTARIO No. 
+				|T- 
+				input#folio_inventa(type="text",placeholder="folio del inventario")
+				span.help-inline
+		br
+	legend Datos Generales
+	.bloque
+		.controls.controls-row
+			.control-group
+				.span2
+					label.radio
+						input#optInfraccion_inv(type="radio", name="lae")
+						| Infraccion
+				.span4
+					label.radio
+						input#optAccidenteInfraccion_inv(type="radio", name="lae")
+						|Accidente e Infraccion
+				.span2
+					label.radio
+						input#resguardo_inv(type="radio", name="lae")
+						|Resguardo
+				span.help-inline
+		.controls.controls-row
+			.span3
+				.control-group
+					label Folio de la infraccion 
+					input#folioInfraccion_inv(type="text",placeholder="folio de la infraccion"))
+					span.help-inline
+			.span3
+				.control-group
+					label Folio del Accidente 
+					input#folioAccidente_inv(type="text",placeholder="folio del Accidente")
+					span.help-inline
+			.span3
+				.control-group
+					label Fecha de Incidente
+					#fecha-incidente.input-append.date 
+						input#fechaIncidente_inv(data-format="yyyy-MM-dd",type="text",placeholder="Fecha")
+						span.add-on
+								i(data-time-icon="icosystra-oclock", data-date-icon="icosystra-calendar")
+					span.help-inline
+		
+		//include inventarios/inventario/tipo_servicio_publico
+		br
+		.controls.controls-row
+			.span3
+				.control-group
+					label Delegacion:
+					select#delegacion_inv
+					span.help-inline
+			.span3
+				.control-group
+					label Comandancia:
+					select#comandancia_inv
+					span.help-inline
+			.span3
+				.control-group
+					label Turno:
+					select#turnos_inv
+					span.help-inline
+		.controls.controls-row
+			.span4
+				.control-group
+					label Corporacion
+					select#corporacion_inv
+					span.help-inline
+		.controls.controls-row
+			.span3
+				.control-group
+					label Calle 1:
+					input#calle1_inv.ui-autocomplete-input(type="text",placeholder="la calle1"))
+					span.help-inline
+			.span3
+				.controls.controls-row
+					.span1
+						.control-group	
+							label Exterior
+							input#exterior_inv.input-mini(type="text",placeholder="Exterior")))
+							span.help-inline
+					.span1
+						.control-group
+							label Interior
+							input#interior_inv.input-mini(type="text",placeholder="Interior"))))
+							span.help-inline
+			.span3
+				.control-group
+					label Calle 2:
+					input#calle2_inv.ui-autocomplete-input(type="text",placeholder="la calle2")))))
+					span.help-inline
+		.controls.controls-row
+			.span3
+				.control-group
+					label Colonia: 
+					input#colonia_inv.ui-autocomplete-input(type="text",placeholder="la Colonia"))))))
+					span.help-inline
+			.span3
+				.control-group
+					label Depositado en: 
+					select#depositadoEn_inv
+					span.help-inline
+			.span3
+				.control-group
+					label Autoridad competente: 
+					select#autoridadCompetente_inv
+					span.help-inline
+		.controls.controls-row
+			.span4
+				.control-group
+					label MP:
+					select#mp_inv
+					span.help-inline
+	.controls.controls-row
+	include inventarios/inventario/datos_vehiculo
+	include inventarios/inventario/ingreso_pension
+	include inventarios/inventario/otros
+	br
+	legend Elaboró
+	.controls.controls-row.bloque
+		.span4
+			.control-group
+				label Folio
+				input#folio_agente(type="text")
+				span.help-inline
+
+		.span6
+			.control-group
+				label Agente  
+				input#agente_inv.input-xxlarge(type="text")
+				span.help-inline
+	br
+	.controls.controls-row
+		.span8
+			button#guardar.btn.btn-primary(type="button")
+				|Aceptar
+				span.icosystra-checkmark2
+			button#guardarLocal.btn(type="button", value="Guardar Local")
+				|Guardar Local
+				span.icosystra-storage
+			button#cancelar.btn(type="button", value="Cancelar")
+				|Cancelar
+				span.icosystra-cancel-circle
+	#blueimp-gallery.blueimp-gallery
+		.slides
+		h3.title
+		a.prev ‹
+		a.next ›
+		a.close ×
+		a.play-pause
+		ol.indicator
+		.modal.fade
+			.modal-dialog
+				.modal-content
+					.modal-header
+						button.close(type="button",aria-hidden="true") &times
+						h4.modal-title
+					.modal-body.next
+					.modal-footer
+						button.btn.btn-default.pull-left.prev(type="button")
+							i.glyphicon.glyphicon-chevron-left
+								|Previos
+						button.btn.btn-primary.next
+							|Sig.
+							i.glyphicon.glyphicon-chevron-righ
