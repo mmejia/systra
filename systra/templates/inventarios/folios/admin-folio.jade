@@ -10,9 +10,10 @@ block contenido
 		#lista-pensiones
 			ul
 			for pension in pensiones
-				li {{pension.nombre_pension}} 
+				li 
+					a(href="#",class="cargar-folio-pension",id="pension_{{pension.id}}"){{pension.nombre_pension}}
 		#history-pension
-			select
+			select#anios-folios-inventario
 				for anio in anios
 					option(value="{{anio}}") {{anio}}
 		legend Historial
@@ -74,4 +75,3 @@ block javascripts
 	script(src="/static/javascripts/vendor/require.js", data-main="/static/javascripts/inventario/folio/main-folio.js")
 
 
-			

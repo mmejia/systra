@@ -130,7 +130,6 @@ def ventana_reporte_infraccion(request):
 	data= loads(infraccion_str)
 	folio= data['folio_infraccion']
 	print folio
-	#folio= data['folio_accidente']
 	ruta=STATICFILES_DIRS[0] + "pdfs/infraccion/"+ str(folio) +".pdf"
 	gg=GenerateInfraccionPdf(data,ruta)
 	gg.build_pdf()

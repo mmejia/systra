@@ -18,8 +18,8 @@ define [
 			that.iniciarDate()
 			this.radServicioPublico=document.getElementById("radioServicioPublico")
 			this.radServicioParticular=document.getElementById("radioServicioParticular")
-			window.refsync=window.ip_sys_msg
-			window.client=io.connect(window.refsync)
+			#window.refsync=window.ip_sys_msg
+			#window.client=io.connect(window.refsync)
 			$('#guardar_local_infraccion').on  'click',->
 				that.sandbox.emit 'guardar-infraccion-local'
 			$('#guardar_inf').on  'click',->
@@ -155,7 +155,7 @@ define [
 						archivos:"/static/fotos_subidas/foto.jpg"
 						capturado_por:window.profile.nombre
 						fecha:a.format("%Y-%m-%d %H:%M:%S", true)
-					window.client.emit 'add-new', noticia
+					#window.client.emit 'add-new', noticia
 					that.showMensaje("Mensaje de captura",'Se guardo la infracción con numero de folio <span class="new-folio">' + that.infr.folio_infraccion + '</span> exitosamente!!!')
 					that.sandbox.emit 'limpiar-view-infraccion'
 				error:(error)->

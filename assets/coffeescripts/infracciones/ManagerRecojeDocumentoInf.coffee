@@ -23,7 +23,8 @@ define [
 			this.llenarPensiones()
 			datos_licencia.iniciar()
 			this.iniciarCalendario()
-			$('input[name="recoje"]').on "click", ->
+			$('input[name="recoje"]').on "click", (evento)->
+				console.log evento
 				if "" + this.value == "VEHICULO"
 					that.showRecojeVehiculo()
 					that.ocultarRecojeLicencia()
@@ -61,6 +62,7 @@ define [
 			el.css(cambios)
 		showRecojeVehiculo:->
 			el=$("#recoje_vehiculo_spa_inf")
+			console.log el
 			cambios=
 				width: "100%"
 				height: "auto"
@@ -104,16 +106,17 @@ define [
 			else if rd_movil.checked
 				se_recoje.tipo="PAGO MOVIL"
 		limpiarSeRecoje:()->
+			that=this
 			document.getElementById("rd_vehiculo_spa_inf").checked=false
 			document.getElementById("rd_tarjeta_spa_inf").checked=false
 			document.getElementById("rd_placa_spa_inf").checked=false
 			document.getElementById("rd_licencia_spa_inf").checked=false
 			document.getElementById("rd_cortesia_spa_inf").checked=false
 			document.getElementById("rd_pago_movil_spa_inf").checked=false
-			$("#recoje_vehiculo_spa_inf").hide()
-			$("#recoje_tarjeta_spa_inf").hide()
-			$("#recoje_placa_spa_inf").hide()
-			$("#recoje_licencia_spa_inf").hide()
+			#$("#recoje_vehiculo_spa_inf").hide()
+			#$("#recoje_tarjeta_spa_inf").hide()
+			#$("#recoje_placa_spa_inf").hide()
+			#$("#recoje_licencia_spa_inf").hide()
 			$('#recoje_vehiculo_pension_spa_inf').val('')
 			$("#recoje_vehiculo_no_inventario_spa_inf").val('')
 			$("#recoje_tarjeta_tipo_spa_inf").val('')

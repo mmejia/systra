@@ -57,8 +57,8 @@ def inventarios_admin_folio(request):
 	contexto['anios']= anios
 	contexto['pensiones']= pensiones
 	return render(request,'inventarios/folios/admin-folio.jade',contexto)
-def inventarios_foliosaniobypension(request,id_pension):
-	bloques= BlockInventario.objects.filter(pension__id= id_pension)
+def inventarios_foliosaniobypension(request,id_pension, anio):
+	bloques= BlockInventario.objects.filter(pension__id= id_pension,fecha_recibido__year=anio)
 	mes={}
 	for bloque in bloques:
 		fecha=bloque.fecha_recibido

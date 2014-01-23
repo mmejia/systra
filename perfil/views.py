@@ -54,10 +54,25 @@ def perfil_update(request):
 		perfil.delegacion=post.get('delegacion',"")
 		perfil.comision=post.get('comision',"")
 		perfil.color=post.get('color',"")
-		perfil.tam_tabla=post.get('tam_tabla',"")
+		perfil.tam_tabla=post.get('tam_tabla',10)
 		perfil.save()
 		res= "{\"id\":\"" + str(perfil.id) + "\"}"
 		return HttpResponse(res,content_type='application/json;charset=utf-8', status=200)
 	else:
 		res= "{\"ERROR\"}"
 		return HttpResponse(res,content_type='application/json;charset=utf-8', status=200)
+@csrf_exempt
+def perfil_create(request):
+	post= request.POST
+	perfil= Perfil()
+	perfil.cobro=post.get('cobro',"")
+	perfil.nombre=post.get('nombre',"")
+	perfil.comandancia=post.get('comandancia',"")
+	perfil.turno=post.get('turno',"")
+	perfil.delegacion=post.get('delegacion',"")
+	perfil.comision=post.get('comision',"")
+	perfil.color=post.get('color',"")
+	perfil.tam_tabla=post.get('tam_tablas',10)
+	perfil.save()
+	res= "{\"id\":\"" + str(perfil.id) + "\"}"
+	return HttpResponse(res,content_type='application/json;charset=utf-8', status=200)

@@ -3,10 +3,24 @@ define(['/static/javascripts/core/sandbox.js'], function(sandbox) {
   var IniciarLibera;
   return IniciarLibera = {
     iniciar: function() {
-      return $('#cal-folios a').click(function(event) {
+      var that;
+      that = this;
+      $('#cal-folios a').click(function(event) {
         event.preventDefault();
         $(this).tab('show');
       });
+      return $('.cargar-folio-pension').on('click', function(evento) {
+        var her, id, ident;
+        ident = evento.currentTarget.id;
+        her = ident.split('_');
+        id = her[1];
+        return that.cargarFoliosPension(id);
+      });
+    },
+    cargarFoliosPension: function(id) {
+      var anio;
+      anio = $('#anios-folios-inventario').val();
+      return console.log(anio);
     }
   };
 });

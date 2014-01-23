@@ -5,7 +5,7 @@ form#updatePerfil(action="/perfil/update", method="post")
 	.controls.controls-row
 		.span4
 			label No. de Cobro
-			input#perf_cobro(type="text", name="cobro")
+			input#perf_cobro(type="text", name="cobro"	,readonly)
 		.span4
 			label Nombre
 			input#perf_nombre(type="text", name="nombre")
@@ -30,7 +30,7 @@ form#updatePerfil(action="/perfil/update", method="post")
 			input#perf_color.pick-a-color(type="text", value="222", name="color")
 		.span4
 			label Tamaño de tablas
-			input#perf_tam_tablas.input(type="text", value="10", nombre="tam_tabla")
+			input#perf_tam_tablas.input(type="text", value="10", nombre="tam_tablas")
 	br
 	br
 	.controls.controls-row

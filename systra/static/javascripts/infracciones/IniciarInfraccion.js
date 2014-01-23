@@ -18,8 +18,6 @@ define(['core/sandbox'], function(sandbox, reporte_pdf) {
       that.iniciarDate();
       this.radServicioPublico = document.getElementById("radioServicioPublico");
       this.radServicioParticular = document.getElementById("radioServicioParticular");
-      window.refsync = window.ip_sys_msg;
-      window.client = io.connect(window.refsync);
       $('#guardar_local_infraccion').on('click', function() {
         return that.sandbox.emit('guardar-infraccion-local');
       });
@@ -190,7 +188,6 @@ define(['core/sandbox'], function(sandbox, reporte_pdf) {
             capturado_por: window.profile.nombre,
             fecha: a.format("%Y-%m-%d %H:%M:%S", true)
           };
-          window.client.emit('add-new', noticia);
           that.showMensaje("Mensaje de captura", 'Se guardo la infracción con numero de folio <span class="new-folio">' + that.infr.folio_infraccion + '</span> exitosamente!!!');
           return that.sandbox.emit('limpiar-view-infraccion');
         },

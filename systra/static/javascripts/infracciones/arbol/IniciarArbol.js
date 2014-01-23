@@ -8,6 +8,7 @@ define(['core/sandbox', 'infracciones/arbol/ManagerHistorial', 'perfil/IniciarLi
       that = this;
       this.sandbox = new sandbox(this);
       mh.iniciar();
+      this.sandbox.on('perfil-show-list', that.showListPerfil);
       that.colapsarComandancias();
       $(".view-profile-historial-folios").on('click', function(evento) {
         var her, id, ident;

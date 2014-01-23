@@ -9,6 +9,11 @@ class SaveInfraccion:
 		self.inf= loads(infraccion_str)
 	def do(self):
 		infraccion= self.inf
+		ff=infraccion.get('folio_infraccion',"")
+		l =Infraccion.objects.filter(folio_infraccion__exact =ff)
+		if len(lista)>0:
+			res='{"ERROR":' + '"SE INTENTA AGREGAR UNA INFRACCION QUE SU FOLIO YA EXISTE"}'
+			return res
 		tbinf= Infraccion()
 		tbinf.folio=infraccion.get('folio_infraccion',"")            
 		tbinf.servicio =infraccion.get('tipo_servicio',"")

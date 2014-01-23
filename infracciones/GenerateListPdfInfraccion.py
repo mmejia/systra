@@ -51,7 +51,6 @@ class GenerateListPdfInfraccion:
 		styles=getSampleStyleSheet()
 		ancho=self.por([15,15,20,15 ,15,15,15])
 		data= [['FOLIO:', 'AGENTE','PLACAS',"ESTADO","ARTICULO","DOC.","SERVICIO"]]
-		peinr "Vamos a ver que pex"
 		i=0
 		for d in self.data:
 			item= []

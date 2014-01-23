@@ -1,7 +1,7 @@
 td  
 	|<a id="edit_{{inf.id}}" class="editar-infraccion" href="#" title="Editar"><i class="icosystra-pencil"></i></a>
 	|<a id="frente_{{inf.id}}" class="print-infraccion" href="#" title="Ver infraccion"><i class="icosystra-file-pdf"></i></a>
-	|<a id="remove_{{inf.folio}}" class="remove-infraccion" href="#"><i class="icosystra-remove"  title="Eliminar infracción"></i></a>
+	|<a id="remove_{{inf.id}}" class="remove-infraccion" href="#"><i class="icosystra-remove"  title="Eliminar infracción"></i></a>
 	|<a id="view_{{inf.id}}" class="view-infraccion" href="#"><i class="icosystra-file3"  title="Ver infracción"></i></a>
 if usados.order_by == "folio"
 	td.td-seleccionado  {{inf.folio}}

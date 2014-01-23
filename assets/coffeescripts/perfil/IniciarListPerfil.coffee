@@ -1,7 +1,8 @@
 define [
 	'core/sandbox'
 	'perfil/UpdatePerfil'
-],(sandbox,updatePerfil)->
+	'perfil/CreatePerfil'
+],(sandbox,updatePerfil,createPerfil)->
 	tpl_noticia:null
 	IniciarListPerfil=
 		iniciar:()->
@@ -12,6 +13,17 @@ define [
 				her=ident.split('_')
 				id=her[1]
 				that.cargarPerfil(id)
+			$("#captura-perfil").on  'click', (evento)->
+				 that.cargarCapturaPerfil()
+		cargarCapturaPerfil:()->
+			$.ajax
+				type:"GET"
+				url:'/perfil/capturar/'
+				dataType:'html'
+				#data:datos
+				success:(res)->
+					$("#fichas-infracciones").html(res)
+					createPerfil.iniciar()
 		cargarPerfil:(id)->
 			$.ajax
 				type:"GET"

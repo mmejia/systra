@@ -202,7 +202,7 @@ define [
 								 
 								nombres.push item.estado
 							 
-							$("#estado_cv_spa_spa_inf").autocomplete
+							$("#estado_cv_spa_inf").autocomplete
 								source:nombres
 			return
 		llenarTipoVehiculos:->

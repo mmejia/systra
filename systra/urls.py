@@ -164,6 +164,7 @@ from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from perfil.views import modificar_perfil
 from perfil.views import perfil_captura
 from perfil.views import perfil_update
+from perfil.views import perfil_create
 from perfil.PerfilListView import  PerfilListView
 
 
@@ -279,7 +280,7 @@ urlpatterns = patterns('',
     #FOLIOS DE INVENTARIO
 
     url(r'^inventario/admin_folio$',inventarios_admin_folio,name='getUrlImagenesDeAccidente'), 
-    url(r'^inventario/foliosaniobypension/([^/]+)/$',inventarios_foliosaniobypension,name='getUrlImagenesDeAccidente'), 
+    url(r'^inventario/foliosaniobypension/([^/]+)/([^/]+)/$',inventarios_foliosaniobypension,name='getUrlImagenesDeAccidente'), 
     
     url(r'^content/content/([^/]+)/$',content_content,name='cargarInventario_inventario'),
     url(r'^content/upload_fotografia$',upload_fotografia,name='upload_fotografia'),
@@ -335,7 +336,8 @@ urlpatterns = patterns('',
     #URL PARA EL MANTENIMIENTO DE CATALOGOS
    
     url(r'^perfil/modificar/([^/]+)/$',modificar_perfil,name='Listar en custodia'),
-    url(r'^perfil/captura$',perfil_captura,name='Capturar perfil'),
+    url(r'^perfil/create/$',perfil_create,name='Crear perfil'),
+    url(r'^perfil/capturar/$',perfil_captura,name='Capturar perfil'),
     url(r'^perfil/list$',PerfilListView.as_view(),name='List Perfil'),
     url(r'^perfil/update$',perfil_update,name='Perfil update'),
 

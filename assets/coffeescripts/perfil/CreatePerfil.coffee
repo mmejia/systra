@@ -1,42 +1,21 @@
 define [
 	'core/sandbox'
 ],(sandbox)->
-	 UpdatePerfil=
+	 CreatePerfil=
 		iniciar:()->
 			that=this
 			this.sandbox= new sandbox(this)
-			this.formUpdatePerfil=$('#updatePerfil').ajaxForm
+			this.formCreatePerfil=$('#createPerfil').ajaxForm
 				mod:that
 				success:(data) ->
 					that.sandbox.emit 'perfil-show-list'
 				error:(err)->
 					alert 'Error al intentar actualizar perfil'
-			$('#update-perfil').on 'click',(evento)->
-				that.formUpdatePerfil.submit()
-			$.when(
-				$.ajax("/catalogos/delegaciones.json"),
-				$.ajax("/catalogos/comandancias.json"),
-				$.ajax("/catalogos/turnos.json"),
-			).done (delegaciones,comandancias,turnos)->
-				window.delegaciones= delegaciones[0]
-				window.comandancias= comandancias[0]
-				window.turnos= turnos[0]
-				that.llenarDelegaciones()
-				that.llenarComandancias()
-				that.llenarTurnos()
-				that.cargarPerfilEnView()
-		cargarPerfilEnView:()->
-			perfil= window.perfil
-			$('#perf_id').val(perfil.id)
-			$('#perf_cobro').val(perfil.cobro)
-			$('#perf_nombre').val(perfil.nombre)
-			$('#perf_comandancia').val(perfil.comandancia)
-			$('#perf_turno').val(perfil.turno)
-			$('#perf_delegacion').val(perfil.delegacion)
-			$('#perf_comision').val(perfil.comision)
-			$('#perf_color').val(perfil.color)
-			$('#perf_tam_tablas').val(perfil.tam_tabla)
-
+			$('#create-perfil').on 'click',(evento)->
+				that.formCreatePerfil.submit()
+			that.llenarDelegaciones()
+			that.llenarComandancias()
+			that.llenarTurnos()
 		llenarDelegaciones:->
 			if !window.delegaciones
 				window.cargarDelegaciones this.llenarDelegaciones

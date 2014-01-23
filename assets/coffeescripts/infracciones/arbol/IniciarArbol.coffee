@@ -10,6 +10,7 @@ define [
 			this.sandbox= new sandbox this
 			mh.iniciar()
 			#iniciar_lista_perfil.iniciar()
+			this.sandbox.on 'perfil-show-list', that.showListPerfil
 			that.colapsarComandancias()
 			$(".view-profile-historial-folios").on 'click',(evento)->
 				ident=evento.currentTarget.id
